@@ -11,6 +11,10 @@
 		04CF61E22BFF78090053FA09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61E12BFF78090053FA09 /* ContentView.swift */; };
 		04CF61E42BFF780B0053FA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF61E32BFF780B0053FA09 /* Assets.xcassets */; };
 		04CF61E72BFF780B0053FA09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF61E62BFF780B0053FA09 /* Preview Assets.xcassets */; };
+		04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */; };
+		04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
+		04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */; };
+		04CF62002BFF92730053FA09 /* SplashScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FF2BFF92730053FA09 /* SplashScreenItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		04CF61E12BFF78090053FA09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04CF61E32BFF780B0053FA09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CF61E62BFF780B0053FA09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView1.swift; sourceTree = "<group>"; };
+		04CF61F42BFF7F820053FA09 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
+		04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		04CF61FF2BFF92730053FA09 /* SplashScreenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,12 @@
 		04CF61DE2BFF78090053FA09 /* StyleSphere */ = {
 			isa = PBXGroup;
 			children = (
+				04CF61FE2BFF92630053FA09 /* Model */,
+				04CF61F32BFF7F420053FA09 /* Utils */,
 				04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */,
 				04CF61E12BFF78090053FA09 /* ContentView.swift */,
+				04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */,
+				04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */,
 				04CF61E32BFF780B0053FA09 /* Assets.xcassets */,
 				04CF61E52BFF780B0053FA09 /* Preview Content */,
 			);
@@ -65,6 +77,22 @@
 				04CF61E62BFF780B0053FA09 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04CF61F32BFF7F420053FA09 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04CF61F42BFF7F820053FA09 /* Color+Brand.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		04CF61FE2BFF92630053FA09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04CF61FF2BFF92730053FA09 /* SplashScreenItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CF61E22BFF78090053FA09 /* ContentView.swift in Sources */,
+				04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */,
 				04CF61E02BFF78090053FA09 /* StyleSphereApp.swift in Sources */,
+				04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */,
+				04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */,
+				04CF62002BFF92730053FA09 /* SplashScreenItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
