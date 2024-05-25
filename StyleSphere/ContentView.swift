@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("onboardingOpen") private var onboardingOpen = true
+
+    @State var showSplashScreen = true
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if showSplashScreen {
+            SplashScreenView1().onAppear {
+                DispatchQueue.main.asyncAfter(
+                    deadline: .now() + 2
+                ) {
+                    withAnimation {
+                        showSplashScreen = false
+                    }
+                }
+            }
+        } else {
+            NavigationStack {
+                HomeView()
+                
+            }.fullScreenCover(isPresented: $onboardingOpen){
+                SplashScreenView()
+            }
         }
-        .padding()
     }
 }
 

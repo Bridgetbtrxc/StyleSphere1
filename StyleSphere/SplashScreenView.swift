@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+    @AppStorage("onboardingOpen") private var onboardingOpen = true
     @State var splashIndex = 0
     
     let items: [SplashScreenItem] = [
         .init(mainImage: "Splash1_1", title: "Fashion Fun and Effortless", subtitle: "Discover your style, streamline your wardrobe, and unlock endless outfit possibilities with Clothing Pairing App"),
-        .init(mainImage: " Splash2_2", title: "Digitize Your Wardrobe", subtitle: "Begin by adding your clothing items to your digital closet. Paste pictures or import from your gallery, and let the magic begin!"),
-        .init(mainImage: "Splash3_3", title: "Plan Your Outfit", subtitle: "Define and plan your outfit for event or for travelling with our baggage and calendar feature")
+        .init(mainImage: "Splash2_2", title: "Digitize Your Wardrobe", subtitle: "Begin by adding your clothing items to your digital closet. Paste pictures or import from your gallery, and let the magic begin!"),
+        .init(mainImage: "Splash3_3", title: "Plan Your Outfit", subtitle: "Define and plan your outfit for event or for travelling with our baggage and calendar feature"),
+        .init(mainImage: "Splash4_4", title: "Copy - Paste", subtitle: "We utilize Iphone’s ability to auto-cut image Directly Copy > Paste to our app")
     ]
     
     var body: some View {
@@ -35,8 +37,7 @@ struct SplashScreenView: View {
                             
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(Color.mainColor)
-                                .frame(width:
-                                        splashIndex == index ? 30 : 10, height: 10)
+                                .frame(width: splashIndex == index ? 30 : 10, height: 10)
                                 .foregroundStyle(
                                     splashIndex == index ? Color.gray : Color.mainColor
                                 )
@@ -56,8 +57,12 @@ struct SplashScreenView: View {
                         .foregroundStyle(Color.subColor)
                     
                     Button("Continue") {
-                        withAnimation {
-                            splashIndex += 1
+                        withAnimation(.snappy) {
+                            if splashIndex == (items.count - 1) {
+                                onboardingOpen = false
+                            } else {
+                                splashIndex += 1
+                            }
                         }
                     }
                     .padding()

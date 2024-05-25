@@ -12,7 +12,7 @@ extension Color {
     static let mainColor = Color(hex: 0xDECEBF)
     static let subColor = Color(hex: 0x6C5038)
     static let subColor2 = Color(hex: 0xA68069)
-    static let neutral = Color(hex: 0xD7D7D7))
+    static let neutral = Color(hex: 0xD7D7D7)
 }
 
 extension Color {
