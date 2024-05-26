@@ -10,11 +10,17 @@
 		04BA1EAB2C0228BF006F4069 /* SplashScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */; };
 		04BA1EAC2C0228BF006F4069 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA12C0228BF006F4069 /* Banner.swift */; };
 		04BA1EAD2C0228BF006F4069 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA22C0228BF006F4069 /* Header.swift */; };
-		04BA1EAE2C0228BF006F4069 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA32C0228BF006F4069 /* HomeView.swift */; };
+		04BA1EAE2C0228BF006F4069 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA32C0228BF006F4069 /* Navigation.swift */; };
 		04BA1EAF2C0228BF006F4069 /* IconMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA42C0228BF006F4069 /* IconMenu.swift */; };
 		04BA1EB02C0228BF006F4069 /* StyleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */; };
 		04BA1EB12C0228BF006F4069 /* YourWardrobe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */; };
 		04BA1EB22C0228BF006F4069 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA92C0228BF006F4069 /* Color+Brand.swift */; };
+		04BA1EB92C039982006F4069 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EB82C039982006F4069 /* BackButton.swift */; };
+		04BA1EBF2C03A6B5006F4069 /* TrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EBE2C03A6B5006F4069 /* TrialView.swift */; };
+		04BA1EC12C03BAF1006F4069 /* HomeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC02C03BAF1006F4069 /* HomeView1.swift */; };
+		04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC22C03C163006F4069 /* WardrobeView.swift */; };
+		04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC42C03C435006F4069 /* CalendarView.swift */; };
+		04BA1EC72C03C46C006F4069 /* LooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC62C03C46C006F4069 /* LooksView.swift */; };
 		04CF61E02BFF78090053FA09 /* StyleSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */; };
 		04CF61E22BFF78090053FA09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61E12BFF78090053FA09 /* ContentView.swift */; };
 		04CF61E42BFF780B0053FA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF61E32BFF780B0053FA09 /* Assets.xcassets */; };
@@ -28,11 +34,17 @@
 		04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenItem.swift; sourceTree = "<group>"; };
 		04BA1EA12C0228BF006F4069 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		04BA1EA22C0228BF006F4069 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		04BA1EA32C0228BF006F4069 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		04BA1EA32C0228BF006F4069 /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		04BA1EA42C0228BF006F4069 /* IconMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconMenu.swift; sourceTree = "<group>"; };
 		04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleInfoView.swift; sourceTree = "<group>"; };
 		04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourWardrobe.swift; sourceTree = "<group>"; };
 		04BA1EA92C0228BF006F4069 /* Color+Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
+		04BA1EB82C039982006F4069 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		04BA1EBE2C03A6B5006F4069 /* TrialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialView.swift; sourceTree = "<group>"; };
+		04BA1EC02C03BAF1006F4069 /* HomeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView1.swift; sourceTree = "<group>"; };
+		04BA1EC22C03C163006F4069 /* WardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
+		04BA1EC42C03C435006F4069 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		04BA1EC62C03C46C006F4069 /* LooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksView.swift; sourceTree = "<group>"; };
 		04CF61DC2BFF78090053FA09 /* StyleSphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleSphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSphereApp.swift; sourceTree = "<group>"; };
 		04CF61E12BFF78090053FA09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,12 +77,17 @@
 		04BA1EA72C0228BF006F4069 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04BA1EB72C039970006F4069 /* Component */,
 				04BA1EA12C0228BF006F4069 /* Banner.swift */,
 				04BA1EA22C0228BF006F4069 /* Header.swift */,
-				04BA1EA32C0228BF006F4069 /* HomeView.swift */,
+				04BA1EA32C0228BF006F4069 /* Navigation.swift */,
 				04BA1EA42C0228BF006F4069 /* IconMenu.swift */,
 				04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */,
 				04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */,
+				04BA1EC02C03BAF1006F4069 /* HomeView1.swift */,
+				04BA1EC22C03C163006F4069 /* WardrobeView.swift */,
+				04BA1EC42C03C435006F4069 /* CalendarView.swift */,
+				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -89,6 +106,15 @@
 				04BA1EA92C0228BF006F4069 /* Color+Brand.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		04BA1EB72C039970006F4069 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EB82C039982006F4069 /* BackButton.swift */,
+				04BA1EBE2C03A6B5006F4069 /* TrialView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		04CF61D32BFF78090053FA09 = {
@@ -212,17 +238,23 @@
 			files = (
 				04BA1EAB2C0228BF006F4069 /* SplashScreenItem.swift in Sources */,
 				04BA1EAD2C0228BF006F4069 /* Header.swift in Sources */,
+				04BA1EBF2C03A6B5006F4069 /* TrialView.swift in Sources */,
 				04BA1EB02C0228BF006F4069 /* StyleInfoView.swift in Sources */,
 				04CF61E22BFF78090053FA09 /* ContentView.swift in Sources */,
-				04BA1EAE2C0228BF006F4069 /* HomeView.swift in Sources */,
+				04BA1EAE2C0228BF006F4069 /* Navigation.swift in Sources */,
 				04BA1EAF2C0228BF006F4069 /* IconMenu.swift in Sources */,
 				04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */,
 				04CF61E02BFF78090053FA09 /* StyleSphereApp.swift in Sources */,
+				04BA1EC12C03BAF1006F4069 /* HomeView1.swift in Sources */,
 				04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */,
 				04BA1EB12C0228BF006F4069 /* YourWardrobe.swift in Sources */,
+				04BA1EC72C03C46C006F4069 /* LooksView.swift in Sources */,
 				04BA1EAC2C0228BF006F4069 /* Banner.swift in Sources */,
 				04BA1EB22C0228BF006F4069 /* Color+Brand.swift in Sources */,
+				04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */,
 				04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */,
+				04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */,
+				04BA1EB92C039982006F4069 /* BackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,16 @@
-//  HomeView.swift
+//
+//  HomeView1.swift
 //  StyleSphere
 //
-//  Created by MacBook Pro on 22/05/24.
+//  Created by MacBook Pro on 27/05/24.
 //
 
 import SwiftUI
 
-struct HomeView: View {
+struct HomeView1: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
+            VStack(spacing:20){
                 Header()
                 Spacer()
                 Text("Style that Matches You🔥")
@@ -35,12 +36,8 @@ struct HomeView: View {
                     .padding(.top, 10)
             }
         }
-    }
-}
+    }}
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
+#Preview {
+    HomeView1()
 }
-
