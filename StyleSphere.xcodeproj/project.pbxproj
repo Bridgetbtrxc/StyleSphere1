@@ -21,6 +21,7 @@
 		04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC22C03C163006F4069 /* WardrobeView.swift */; };
 		04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC42C03C435006F4069 /* CalendarView.swift */; };
 		04BA1EC72C03C46C006F4069 /* LooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC62C03C46C006F4069 /* LooksView.swift */; };
+		04BA1EC92C04FA13006F4069 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC82C04FA13006F4069 /* TabItem.swift */; };
 		04CF61E02BFF78090053FA09 /* StyleSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */; };
 		04CF61E22BFF78090053FA09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61E12BFF78090053FA09 /* ContentView.swift */; };
 		04CF61E42BFF780B0053FA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF61E32BFF780B0053FA09 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		04BA1EC22C03C163006F4069 /* WardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
 		04BA1EC42C03C435006F4069 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		04BA1EC62C03C46C006F4069 /* LooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksView.swift; sourceTree = "<group>"; };
+		04BA1EC82C04FA13006F4069 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		04CF61DC2BFF78090053FA09 /* StyleSphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleSphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSphereApp.swift; sourceTree = "<group>"; };
 		04CF61E12BFF78090053FA09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */,
+				04BA1EC82C04FA13006F4069 /* TabItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */,
 				04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */,
 				04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */,
+				04BA1EC92C04FA13006F4069 /* TabItem.swift in Sources */,
 				04BA1EB92C039982006F4069 /* BackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,89 +1,37 @@
-//  HomeView.swift
-//  StyleSphere
-//
-//  Created by MacBook Pro on 22/05/24.
-//
-
 import SwiftUI
 
 struct Navigation: View {
-    @State var isHovered = false
+    @State private var visualSelectedIndex = 0
+    @State private var programmaticSelectedIndex = 0
+    @State private var hasAnot = false
+    
+    
     var body: some View {
-        
-        @State var selection = 0
-            
-        TabView(selection: $selection){
+        TabView(selection: $programmaticSelectedIndex) {
             HomeView1().tabItem {
-                VStack {
-                                        Image(selection == 0 ? "HomePressed" : "Home")
-                                            .resizable()
-                                            .frame(width: 30, height: 30)
-                                        Text("Home")
-                                    }
+                Image(visualSelectedIndex == 0 ? "HomePressed" : "Home")
+                Text("Home")
             }.tag(0)
+                .onAppear { self.visualSelectedIndex = 0 }
             
-            WardrobeView().tabItem{
-                VStack {
-                                       Image(selection == 1 ? "WardrobePressed" : "Wardrobe")
-                                           .resizable()
-                                           .frame(width: 30, height: 30)
-                                       Text("Wardrobe")
-                                   }
+            WardrobeView().tabItem {
+                Image(visualSelectedIndex == 1 ? "Wardrobe" : "WardrobePressed")
+                Text("Wardrobe")
             }.tag(1)
+                .onAppear { self.visualSelectedIndex = 1 }
             
-            CalendarView().tabItem{
-                VStack {
-                                       Image(selection == 1 ? "WardrobePressed" : "Wardrobe")
-                                           .resizable()
-                                           .frame(width: 30, height: 30)
-                                       Text("Wardrobe")
-                                   }
+            CalendarView().tabItem {
+                Image(visualSelectedIndex == 2 ? "CalendarPressed" : "Calendar")
+                Text("Calendar")
             }.tag(2)
+                .onAppear { self.visualSelectedIndex = 2}
             
-            LooksView().tabItem{
-                VStack {
-                                       Image(selection == 1 ? "WardrobePressed" : "Wardrobe")
-                                           .resizable()
-                                           .frame(width: 30, height: 30)
-                                       Text("Wardrobe")
-                                   }
+            LooksView().tabItem {
+                Image(visualSelectedIndex == 3 ? "LooksPressed" : "Looks")
+                Text("Looks")
             }.tag(3)
+                .onAppear { self.visualSelectedIndex = 3}
             
-            
-            
-           
-            }
-            
-            
-            
-        }
-        
-            
-          
-        
-    }
-    
-
-
-struct TabItemButton: View {
-    let label: String
-    @State private var isHovered = false
-    
-    var body: some View {
-        VStack {
-            Image(isHovered ? "HomePressed" : "Home")
-                .resizable()
-                .frame(width: 30, height: 30) // Adjust size as needed
-            
-            Text(label)
-                .foregroundColor(isHovered ? .red : .blue)
-        }
-        .padding(.vertical, 8)
-        .padding(.horizontal, 16)
-        .background(isHovered ? Color.yellow : Color.clear)
-        .cornerRadius(8)
-        .onHover { hovered in
-            self.isHovered = hovered
         }
     }
 }
@@ -95,4 +43,3 @@ struct HomeView_Previews: PreviewProvider {
         Navigation()
     }
 }
-
