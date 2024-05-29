@@ -16,7 +16,7 @@ struct AddClothes: View {
     let colors = ["Red", "Green", "Blue"] // Dummy data
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 30) {
             HStack(alignment: .top) {
                 Button(action: {
                     print("Back button pressed")
@@ -49,7 +49,7 @@ struct AddClothes: View {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color(red: 0.93, green: 0.90, blue: 0.85), lineWidth: 1)
                             .background(
-                                RoundedRectangle(cornerRadius: 20)
+                                RoundedRectangle(cornerRadius: 16)
                                     .fill(Color(red: 0.93, green: 0.90, blue: 0.85))
                             )
                     )
@@ -64,7 +64,9 @@ struct AddClothes: View {
                         
                         Picker(selection: $selectedCategory, label: Text("")) {
                             ForEach(0..<categories.count) { index in
-                                Text(categories[index]).tag(index)
+                                Text(categories[index])
+                                    .foregroundColor(.brown) // Change the text color in the dropdown menu
+                                    .tag(index)
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
@@ -82,7 +84,9 @@ struct AddClothes: View {
                         
                         Picker(selection: $selectedColor, label: Text("")) {
                             ForEach(0..<colors.count) { index in
-                                Text(colors[index]).tag(index)
+                                Text(colors[index])
+                                    .foregroundColor(.brown) // Change the text color in the dropdown menu
+                                    .tag(index)
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
@@ -92,8 +96,38 @@ struct AddClothes: View {
                         .padding(.horizontal)
                     }
                 }
+                Text("Image")
+                    .font(Font.custom("Inter", size: 16).weight(.heavy))
+                    .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
+                    .padding(.leading)
                 
+                Button(action: {
+                    // Action to add image
+                }) {
+                    Text("Add Image")
+                        .font(Font.custom("Inter", size: 16).weight(.heavy))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, maxHeight: 150)
+                        .padding()
+                        .background(Color(red: 0.93, green: 0.90, blue: 0.85))
+                        .cornerRadius(16)
+                        .padding(.horizontal)
+                      
+                }
                 Spacer()
+                Button(action: {
+                    // Action to add clothes
+                }) {
+                    Text("Add")
+                        .font(Font.custom("Inter", size: 16).weight(.heavy))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color(red: 0.42, green: 0.31, blue: 0.22))
+                        .cornerRadius(16)
+                        .padding(.horizontal)
+                }
+       Spacer()
             }
         }
     }
