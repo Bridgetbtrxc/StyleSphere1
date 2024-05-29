@@ -27,9 +27,14 @@ struct HomeView1: View {
                         .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
                     
                     Spacer()
-                    Text("See All")
-                        .font(Font.custom("Inter", size: 16))
-                        .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
+                    NavigationLink(destination: WardrobeView()) {
+                        
+                        Text("See All")
+                            .font(Font.custom("Inter", size: 16))
+                            .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
+                    }
+                    
+                    
                 }
                 .padding(.horizontal, 25)
                 YourWardrobe()
