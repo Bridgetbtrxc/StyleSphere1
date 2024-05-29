@@ -27,9 +27,8 @@ struct YourWardrobe: View {
                                 Image(imageName)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: 150, height: 150)
+                                    .frame(width: 110, height: 110)
                                     .clipped()
-                                    .cornerRadius(20)
                                 
                                 Text(clothingType)
                                     .font(Font.custom("Inter", size: 18))
@@ -39,7 +38,7 @@ struct YourWardrobe: View {
                                     .frame(width: 200, alignment: .center)
                                 
                             }
-                            .frame(width: 180, height: 200)
+                            .frame(width: 150, height: 160)
                             .background(Color(.systemBackground))
                             .cornerRadius(20)
                             .shadow(radius: 5)

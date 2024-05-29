@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B953CE2C06B4260015C45D /* AddClothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B953CD2C06B4260015C45D /* AddClothes.swift */; };
 		04BA1EAB2C0228BF006F4069 /* SplashScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */; };
 		04BA1EAC2C0228BF006F4069 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA12C0228BF006F4069 /* Banner.swift */; };
 		04BA1EAD2C0228BF006F4069 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA22C0228BF006F4069 /* Header.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B953CD2C06B4260015C45D /* AddClothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClothes.swift; sourceTree = "<group>"; };
 		04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenItem.swift; sourceTree = "<group>"; };
 		04BA1EA12C0228BF006F4069 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		04BA1EA22C0228BF006F4069 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				04BA1EB72C039970006F4069 /* Component */,
 				04BA1EA12C0228BF006F4069 /* Banner.swift */,
+				04B953CD2C06B4260015C45D /* AddClothes.swift */,
 				04BA1EA22C0228BF006F4069 /* Header.swift */,
 				04BA1EA32C0228BF006F4069 /* Navigation.swift */,
 				04BA1EA42C0228BF006F4069 /* IconMenu.swift */,
@@ -253,6 +256,7 @@
 				04BA1EB12C0228BF006F4069 /* YourWardrobe.swift in Sources */,
 				04BA1EC72C03C46C006F4069 /* LooksView.swift in Sources */,
 				04BA1EAC2C0228BF006F4069 /* Banner.swift in Sources */,
+				04B953CE2C06B4260015C45D /* AddClothes.swift in Sources */,
 				04BA1EB22C0228BF006F4069 /* Color+Brand.swift in Sources */,
 				04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */,
 				04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */,

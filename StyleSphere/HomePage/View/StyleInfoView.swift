@@ -22,11 +22,11 @@ struct StyleInfoView: View {
                             Image(imageName)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 180, height: 240)
+                                .frame(width: 150, height: 200)
                                 .clipped()
                                 .cornerRadius(20)
                         }
-                        .frame(width: 180)
+                        .frame(width: 150)
                         .background(Color(.systemBackground))
                         .cornerRadius(20)
                         .shadow(radius: 5)
