@@ -16,7 +16,7 @@ struct Header: View {
                     .frame(width: 10, height: 18)
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Beatrix Cahyadi")
+                    Text("Beatrix")
                         .font(Font.custom("Inter-Bold", size: 21).weight(.heavy))
                         .lineSpacing(26)
                         .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))

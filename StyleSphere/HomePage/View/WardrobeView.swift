@@ -7,17 +7,12 @@
 
 import SwiftUI
 
+
+
 struct WardrobeView: View {
+    @EnvironmentObject var wardrobeViewModel: WardrobeViewModel
     
-    
-    let wardrobeItems: [WardrobeItem] = [
-        WardrobeItem(id: UUID(), category: "Baju", name: "T-Shirt", color: "Red"),
-        WardrobeItem(id: UUID(), category: "Shirt", name: "Striped Shirt", color: "Blue"),
-        WardrobeItem(id: UUID(), category: "Pants", name: "Pants", color: "Black"),
-        WardrobeItem(id: UUID(), category: "Skirt", name: "Skirt", color: "Yellow"),
-        WardrobeItem(id: UUID(), category: "Sepatu", name: "Sneakers", color: "White"),
-        WardrobeItem(id: UUID(), category: "Sandal", name: "Flip Flops", color: "Green")
-    ]
+    @State private var selectedCategory: String? // State variable to track selected category
     
     var columns: [GridItem] = [
         GridItem(.flexible()),
@@ -25,31 +20,34 @@ struct WardrobeView: View {
     ]
     
     var body: some View {
-        VStack {
-            Spacer().frame(height: 20)
-            Text("Wardrobe")
-                .font(.headline)
-                .fontWeight(.bold)
-                .foregroundColor(Color.subColor)
-            
-            Spacer().frame(height: 30)
-            Divider()
-            
-            Spacer()
-            
-            ScrollView {
-                LazyVGrid(columns: self.columns) {
-                    ForEach(wardrobeItems) { item in
-                        ClothingItemView(imageName: item.category.lowercased(), clothingType: item.category)
+        NavigationView {
+            VStack {
+                Spacer().frame(height: 20)
+                Text("Wardrobe")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.subColor)
+                
+                Spacer().frame(height: 30)
+                Divider()
+                
+                Spacer()
+                
+                ScrollView {
+                    LazyVGrid(columns: self.columns) {
+                        ForEach(wardrobeViewModel.wardrobeItems, id: \.category) { item in
+                            NavigationLink(destination: CategoryDetail(selectedCategory: item.category)) {
+                                ClothingItemView(imageName: item.category.lowercased(), clothingType: item.category)
+                            }
+                        }
                     }
+                    .padding()
                 }
-                .padding()
             }
+            .navigationTitle("Wardrobe")
         }
     }
 }
-
-
 
 struct ClothingItemView: View {
     let imageName: String
@@ -77,4 +75,5 @@ struct ClothingItemView: View {
 
 #Preview {
     WardrobeView()
+        .environmentObject(WardrobeViewModel()) 
 }

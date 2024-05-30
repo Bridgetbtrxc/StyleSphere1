@@ -40,6 +40,10 @@ struct Navigation: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
+        @StateObject var wardrobeViewModel = WardrobeViewModel()
+        
         Navigation()
+            .environmentObject(wardrobeViewModel)
+            
     }
 }
