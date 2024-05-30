@@ -4,7 +4,7 @@ struct Navigation: View {
     @State private var visualSelectedIndex = 0
     @State private var programmaticSelectedIndex = 0
     @State private var hasAnot = false
-    
+    @State private var currentDate = Date()
     
     var body: some View {
         TabView(selection: $programmaticSelectedIndex) {
@@ -20,7 +20,7 @@ struct Navigation: View {
             }.tag(1)
                 .onAppear { self.visualSelectedIndex = 1 }
             
-            CalendarView().tabItem {
+            CalendarView(currentDate: $currentDate).tabItem {
                 Image(visualSelectedIndex == 2 ? "CalendarPressed" : "Calendar")
                 Text("Calendar")
             }.tag(2)

@@ -33,6 +33,7 @@
 		04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */; };
 		04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
 		04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */; };
+		04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView1.swift; sourceTree = "<group>"; };
 		04CF61F42BFF7F820053FA09 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
 		04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		04EF6ADC2C085CF500BA2B80 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */,
 				04BA1EC82C04FA13006F4069 /* TabItem.swift */,
 				04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */,
+				04EF6ADC2C085CF500BA2B80 /* DateValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				04CF61E02BFF78090053FA09 /* StyleSphereApp.swift in Sources */,
 				04BA1EC12C03BAF1006F4069 /* HomeView1.swift in Sources */,
 				04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */,
+				04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */,
 				04BA1EB12C0228BF006F4069 /* YourWardrobe.swift in Sources */,
 				04BA1EC72C03C46C006F4069 /* LooksView.swift in Sources */,
 				04BA1EAC2C0228BF006F4069 /* Banner.swift in Sources */,

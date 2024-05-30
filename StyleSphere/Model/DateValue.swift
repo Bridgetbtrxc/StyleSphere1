@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DataValue: Identifiable {
+struct DateValue: Identifiable {
     var id = UUID().uuidString
     var day: Int
     var date: Date
