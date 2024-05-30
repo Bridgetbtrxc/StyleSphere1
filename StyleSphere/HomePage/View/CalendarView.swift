@@ -10,6 +10,7 @@ import SwiftUI
 struct CalendarView: View {
     @Binding var currentDate: Date
     @State private var currentMonth: Int = 0
+    @State private var isShowingAddEvent = false
     
     var body: some View {
         ScrollView(.vertical) {
@@ -79,7 +80,7 @@ struct CalendarView: View {
                                 Text("\(value.day)")
                                     .font(.title3.bold())
                                     .foregroundColor(isToday(date: value.date) ? Color(red: 0.42, green: 0.31, blue: 0.22) : Color(red: 0.42, green: 0.31, blue: 0.22))
-                                    .background(isToday(date: value.date) ? Color(red: 0.36, green: 0.25, blue: 0.20).opacity(0.5) : Color.clear)
+                                    .background(isToday(date: value.date) ? Color(red: 0.36, green: 0.25, blue: 0.20).opacity(0.3) : Color.clear)
                                     .cornerRadius(10)
                             } else {
                                 Text("")
@@ -89,7 +90,27 @@ struct CalendarView: View {
                         }
                     }
                 }
+                EventShowcaseView()
+                
             }
+            .padding(.top, 20) // Add padding to move the button higher
+            
+            // Add button to navigate to AddEvent page
+            Button(action: {
+                isShowingAddEvent = true
+            }) {
+                Text("Add Event")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color(red: 0.42, green: 0.31, blue: 0.22))
+                    .cornerRadius(16)
+                    .frame(width: 300)
+            }
+            .sheet(isPresented: $isShowingAddEvent) {
+                AddEvent()
+            }
+            
         }
         .onChange(of: currentMonth) { newValue in
             currentDate = getCurrentMonth()
@@ -145,6 +166,7 @@ struct CalendarView_Previews: PreviewProvider {
     }
 }
 
+// Extensions and utility functions
 extension Date {
     func getAllDates() -> [Date] {
         let calendar = Calendar.current
@@ -156,4 +178,3 @@ extension Date {
         }
     }
 }
-
