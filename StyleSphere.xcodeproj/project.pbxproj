@@ -40,6 +40,9 @@
 		04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
 		04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */; };
 		04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
+		3FF0101D2C09627E00A1A375 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0101C2C09627E00A1A375 /* ContentView.swift */; };
+		3FF0101F2C09627F00A1A375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF0101E2C09627F00A1A375 /* Assets.xcassets */; };
+		3FF010222C09627F00A1A375 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF010212C09627F00A1A375 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,10 +80,21 @@
 		04CF61F42BFF7F820053FA09 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
 		04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		04EF6ADC2C085CF500BA2B80 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		3FF010182C09627E00A1A375 /* StyleSphereIpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleSphereIpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FF0101C2C09627E00A1A375 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3FF0101E2C09627F00A1A375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FF010212C09627F00A1A375 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		04CF61D92BFF78090053FA09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FF010152C09627E00A1A375 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,6 +107,7 @@
 		04BA1EA02C0228BF006F4069 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04CB9C822C073867001FC84F /* WardrobeViewModel.swift */,
 				04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */,
 				04BA1EC82C04FA13006F4069 /* TabItem.swift */,
 				04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */,
@@ -106,24 +121,13 @@
 		04BA1EA72C0228BF006F4069 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3FF0102A2C0969C600A1A375 /* SplashScreen */,
+				3FF010292C09698300A1A375 /* Calendar */,
+				3FF010282C09696C00A1A375 /* Looks */,
+				3FF010272C09693700A1A375 /* Wardrobe */,
+				3FF010262C0968F400A1A375 /* Homepage */,
 				04BA1EB72C039970006F4069 /* Component */,
-				04BA1EA12C0228BF006F4069 /* Banner.swift */,
-				04B953CD2C06B4260015C45D /* AddClothes.swift */,
-				04BA1EA22C0228BF006F4069 /* Header.swift */,
 				04BA1EA32C0228BF006F4069 /* Navigation.swift */,
-				04BA1EA42C0228BF006F4069 /* IconMenu.swift */,
-				04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */,
-				04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */,
-				04BA1EC02C03BAF1006F4069 /* HomeView1.swift */,
-				04BA1EC22C03C163006F4069 /* WardrobeView.swift */,
-				04BA1EC42C03C435006F4069 /* CalendarView.swift */,
-				046EFCFD2C08877E002C3E2A /* EventCard.swift */,
-				046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */,
-				046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */,
-				046EFCF92C08846E002C3E2A /* AddEvent.swift */,
-				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
-				04CB9C7E2C073772001FC84F /* CategoryDetail.swift */,
-				04CB9C822C073867001FC84F /* WardrobeViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +153,7 @@
 			children = (
 				04BA1EB82C039982006F4069 /* BackButton.swift */,
 				04BA1EBE2C03A6B5006F4069 /* TrialView.swift */,
+				04BA1EA42C0228BF006F4069 /* IconMenu.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				04CF61DE2BFF78090053FA09 /* StyleSphere */,
+				3FF010192C09627E00A1A375 /* StyleSphereIpad */,
 				04CF61DD2BFF78090053FA09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				04CF61DC2BFF78090053FA09 /* StyleSphere.app */,
+				3FF010182C09627E00A1A375 /* StyleSphereIpad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,8 +185,6 @@
 				04BA1EAA2C0228BF006F4069 /* Utils */,
 				04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */,
 				04CF61E12BFF78090053FA09 /* ContentView.swift */,
-				04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */,
-				04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */,
 				04CF61E32BFF780B0053FA09 /* Assets.xcassets */,
 				04CF61E52BFF780B0053FA09 /* Preview Content */,
 			);
@@ -202,6 +207,75 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		3FF010192C09627E00A1A375 /* StyleSphereIpad */ = {
+			isa = PBXGroup;
+			children = (
+				3FF0101C2C09627E00A1A375 /* ContentView.swift */,
+				3FF0101E2C09627F00A1A375 /* Assets.xcassets */,
+				3FF010202C09627F00A1A375 /* Preview Content */,
+			);
+			path = StyleSphereIpad;
+			sourceTree = "<group>";
+		};
+		3FF010202C09627F00A1A375 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3FF010212C09627F00A1A375 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FF010262C0968F400A1A375 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EA22C0228BF006F4069 /* Header.swift */,
+				04BA1EA12C0228BF006F4069 /* Banner.swift */,
+				04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */,
+				04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		3FF010272C09693700A1A375 /* Wardrobe */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EC22C03C163006F4069 /* WardrobeView.swift */,
+				04B953CD2C06B4260015C45D /* AddClothes.swift */,
+				04CB9C7E2C073772001FC84F /* CategoryDetail.swift */,
+				04BA1EC02C03BAF1006F4069 /* HomeView1.swift */,
+			);
+			path = Wardrobe;
+			sourceTree = "<group>";
+		};
+		3FF010282C09696C00A1A375 /* Looks */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
+			);
+			path = Looks;
+			sourceTree = "<group>";
+		};
+		3FF010292C09698300A1A375 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EC42C03C435006F4069 /* CalendarView.swift */,
+				046EFCF92C08846E002C3E2A /* AddEvent.swift */,
+				046EFCFD2C08877E002C3E2A /* EventCard.swift */,
+				046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */,
+				046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		3FF0102A2C0969C600A1A375 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */,
+				04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +296,23 @@
 			productReference = 04CF61DC2BFF78090053FA09 /* StyleSphere.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3FF010172C09627E00A1A375 /* StyleSphereIpad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FF010252C09627F00A1A375 /* Build configuration list for PBXNativeTarget "StyleSphereIpad" */;
+			buildPhases = (
+				3FF010142C09627E00A1A375 /* Sources */,
+				3FF010152C09627E00A1A375 /* Frameworks */,
+				3FF010162C09627E00A1A375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StyleSphereIpad;
+			productName = StyleSphereIpad;
+			productReference = 3FF010182C09627E00A1A375 /* StyleSphereIpad.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,11 +320,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					04CF61DB2BFF78090053FA09 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					3FF010172C09627E00A1A375 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -251,6 +345,7 @@
 			projectRoot = "";
 			targets = (
 				04CF61DB2BFF78090053FA09 /* StyleSphere */,
+				3FF010172C09627E00A1A375 /* StyleSphereIpad */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +357,15 @@
 			files = (
 				04CF61E72BFF780B0053FA09 /* Preview Assets.xcassets in Resources */,
 				04CF61E42BFF780B0053FA09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FF010162C09627E00A1A375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FF010222C09627F00A1A375 /* Preview Assets.xcassets in Resources */,
+				3FF0101F2C09627F00A1A375 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +407,14 @@
 				04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */,
 				04BA1EC92C04FA13006F4069 /* TabItem.swift in Sources */,
 				04BA1EB92C039982006F4069 /* BackButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FF010142C09627E00A1A375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FF0101D2C09627E00A1A375 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +596,64 @@
 			};
 			name = Release;
 		};
+		3FF010232C09627F00A1A375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StyleSphereIpad/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kimiharisen.StyleSphereIpad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FF010242C09627F00A1A375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StyleSphereIpad/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kimiharisen.StyleSphereIpad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,6 +671,15 @@
 			buildConfigurations = (
 				04CF61EB2BFF780B0053FA09 /* Debug */,
 				04CF61EC2BFF780B0053FA09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FF010252C09627F00A1A375 /* Build configuration list for PBXNativeTarget "StyleSphereIpad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FF010232C09627F00A1A375 /* Debug */,
+				3FF010242C09627F00A1A375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
