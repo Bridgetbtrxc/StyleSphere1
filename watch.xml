@@ -1,0 +1,39 @@
+//
+//  ContentView.swift
+//  MyWatchApp Watch App
+//
+//  Created by student on 30/05/24.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            List {
+                NavigationLink(destination: CalendarView()) {
+                    Text("Calendar")
+                }
+                NavigationLink(destination: ClocksView()) {
+                    Text("Clocks")
+                }
+                NavigationLink(destination: ContactsView()) {
+                    Text("Contacts")
+                }
+            }
+            .navigationTitle("WatchOS App")
+        }
+        .background(
+            Image("looks")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
+        )
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
