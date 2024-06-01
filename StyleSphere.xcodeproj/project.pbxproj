@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046171962C0B2C3800DA751E /* WardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046171952C0B2C3800DA751E /* WardrobeViewModel.swift */; };
 		046EFCF62C088158002C3E2A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF52C088158002C3E2A /* Event.swift */; };
 		046EFCF82C0881F6002C3E2A /* IdentifiableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */; };
 		046EFCFA2C08846E002C3E2A /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF92C08846E002C3E2A /* AddEvent.swift */; };
@@ -31,7 +32,6 @@
 		04BA1EC92C04FA13006F4069 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC82C04FA13006F4069 /* TabItem.swift */; };
 		04CB9C7D2C07265B001FC84F /* WardrobeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */; };
 		04CB9C7F2C073772001FC84F /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB9C7E2C073772001FC84F /* CategoryDetail.swift */; };
-		04CB9C832C073867001FC84F /* WardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB9C822C073867001FC84F /* WardrobeViewModel.swift */; };
 		04CF61E02BFF78090053FA09 /* StyleSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */; };
 		04CF61E22BFF78090053FA09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61E12BFF78090053FA09 /* ContentView.swift */; };
 		04CF61E42BFF780B0053FA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF61E32BFF780B0053FA09 /* Assets.xcassets */; };
@@ -43,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046171952C0B2C3800DA751E /* WardrobeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeViewModel.swift; sourceTree = "<group>"; };
 		046EFCF52C088158002C3E2A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableDate.swift; sourceTree = "<group>"; };
 		046EFCF92C08846E002C3E2A /* AddEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		04BA1EC82C04FA13006F4069 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItem.swift; sourceTree = "<group>"; };
 		04CB9C7E2C073772001FC84F /* CategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
-		04CB9C822C073867001FC84F /* WardrobeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeViewModel.swift; sourceTree = "<group>"; };
 		04CF61DC2BFF78090053FA09 /* StyleSphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleSphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSphereApp.swift; sourceTree = "<group>"; };
 		04CF61E12BFF78090053FA09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				046EFCF92C08846E002C3E2A /* AddEvent.swift */,
 				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
 				04CB9C7E2C073772001FC84F /* CategoryDetail.swift */,
-				04CB9C822C073867001FC84F /* WardrobeViewModel.swift */,
+				046171952C0B2C3800DA751E /* WardrobeViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,7 +277,6 @@
 				04BA1EBF2C03A6B5006F4069 /* TrialView.swift in Sources */,
 				04BA1EB02C0228BF006F4069 /* StyleInfoView.swift in Sources */,
 				046EFCFE2C08877E002C3E2A /* EventCard.swift in Sources */,
-				04CB9C832C073867001FC84F /* WardrobeViewModel.swift in Sources */,
 				046EFCFC2C088745002C3E2A /* EventShowcaseView.swift in Sources */,
 				04CF61E22BFF78090053FA09 /* ContentView.swift in Sources */,
 				04CB9C7F2C073772001FC84F /* CategoryDetail.swift in Sources */,
@@ -298,6 +297,7 @@
 				04B953CE2C06B4260015C45D /* AddClothes.swift in Sources */,
 				04BA1EB22C0228BF006F4069 /* Color+Brand.swift in Sources */,
 				04CB9C7D2C07265B001FC84F /* WardrobeItem.swift in Sources */,
+				046171962C0B2C3800DA751E /* WardrobeViewModel.swift in Sources */,
 				04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */,
 				04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */,
 				04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */,
