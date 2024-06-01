@@ -8,16 +8,16 @@
 import Foundation
 import SwiftData
 
-struct WardrobeItem: Identifiable {
-    var id = UUID()
+@Model
+class WardrobeItem {
+    var id: UUID = UUID()
     var category: String
     var name: String
     var color: String
-    
-    init(id: UUID = UUID(), category: String, name: String, color: String) {
-        self.id = id
-        self.category = category
+
+    init(name: String, category: String, color: String) {
         self.name = name
+        self.category = category
         self.color = color
     }
 }
