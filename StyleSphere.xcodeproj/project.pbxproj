@@ -107,33 +107,15 @@
 			isa = PBXGroup;
 			children = (
 				04BA1EB72C039970006F4069 /* Component */,
-				04BA1EA12C0228BF006F4069 /* Banner.swift */,
-				04B953CD2C06B4260015C45D /* AddClothes.swift */,
-				04BA1EA22C0228BF006F4069 /* Header.swift */,
 				04BA1EA32C0228BF006F4069 /* Navigation.swift */,
-				04BA1EA42C0228BF006F4069 /* IconMenu.swift */,
-				04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */,
-				04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */,
 				04BA1EC02C03BAF1006F4069 /* HomeView1.swift */,
 				04BA1EC22C03C163006F4069 /* WardrobeView.swift */,
 				04BA1EC42C03C435006F4069 /* CalendarView.swift */,
-				046EFCFD2C08877E002C3E2A /* EventCard.swift */,
-				046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */,
-				046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */,
 				046EFCF92C08846E002C3E2A /* AddEvent.swift */,
 				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
 				04CB9C7E2C073772001FC84F /* CategoryDetail.swift */,
-				04CB9C822C073867001FC84F /* WardrobeViewModel.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		04BA1EA82C0228BF006F4069 /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-				04BA1EA72C0228BF006F4069 /* View */,
-			);
-			path = HomePage;
 			sourceTree = "<group>";
 		};
 		04BA1EAA2C0228BF006F4069 /* Utils */ = {
@@ -147,10 +129,27 @@
 		04BA1EB72C039970006F4069 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				04BA1EA22C0228BF006F4069 /* Header.swift */,
+				04B953CD2C06B4260015C45D /* AddClothes.swift */,
+				046EFCFD2C08877E002C3E2A /* EventCard.swift */,
+				04BA1EA42C0228BF006F4069 /* IconMenu.swift */,
+				046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */,
+				04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */,
+				046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */,
+				04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */,
+				04BA1EA12C0228BF006F4069 /* Banner.swift */,
 				04BA1EB82C039982006F4069 /* BackButton.swift */,
 				04BA1EBE2C03A6B5006F4069 /* TrialView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		04CB9C882C08CC80001FC84F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04CB9C822C073867001FC84F /* WardrobeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		04CF61D32BFF78090053FA09 = {
@@ -172,7 +171,8 @@
 		04CF61DE2BFF78090053FA09 /* StyleSphere */ = {
 			isa = PBXGroup;
 			children = (
-				04BA1EA82C0228BF006F4069 /* HomePage */,
+				04CB9C882C08CC80001FC84F /* ViewModel */,
+				04BA1EA72C0228BF006F4069 /* View */,
 				04CF61F32BFF7F420053FA09 /* Utils */,
 				04BA1EA02C0228BF006F4069 /* Model */,
 				04BA1EAA2C0228BF006F4069 /* Utils */,
