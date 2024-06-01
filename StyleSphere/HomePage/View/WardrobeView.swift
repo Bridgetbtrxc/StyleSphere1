@@ -41,7 +41,6 @@ struct WardrobeView: View {
                     .padding()
                 }
             }
-            .navigationTitle("Wardrobe")
             .onAppear {
                 addSamples()  // Make sure this is called once or controlled to prevent duplicate entries
             }

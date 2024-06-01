@@ -21,6 +21,9 @@ struct CategoryDetail: View {
             return Array(uniqueColors).sorted()
         }
         
+        var filteredCategoryItems: [WardrobeItem] {
+               wardrobeitems.filter { $0.category == selectedCategory }
+           }
         VStack {
             
             Spacer().frame(height: 20)
@@ -78,7 +81,7 @@ struct CategoryDetail: View {
                     .cornerRadius(14)
                     
                     // Other items in the grid
-                    ForEach(wardrobeitems) { item in
+                    ForEach(filteredCategoryItems) { item in
                         ClothingDetails(name: item.name)
                             .frame(width: 170, height: 186) // Ensure consistent sizing for each grid item
                             .background(Color.black.opacity(0.2)) // Apply background to each item individually
