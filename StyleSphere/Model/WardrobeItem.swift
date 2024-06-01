@@ -1,12 +1,6 @@
-//
-//  WardrobeItem.swift
-//  StyleSphere
-//
-//  Created by MacBook Pro on 29/05/24.
-//
-
 import Foundation
 import SwiftData
+import SwiftUI
 
 @Model
 class WardrobeItem {
@@ -14,10 +8,19 @@ class WardrobeItem {
     var category: String
     var name: String
     var color: String
-
-    init(name: String, category: String, color: String) {
+    var imageData: Data?
+    
+    init(name: String, category: String, color: String, imageData: Data? = nil) {
         self.name = name
         self.category = category
         self.color = color
+        self.imageData = imageData
+    }
+    
+    var image: Image? {
+        if let data = imageData, let uiImage = UIImage(data: data) {
+            return Image(uiImage: uiImage)
+        }
+        return nil
     }
 }

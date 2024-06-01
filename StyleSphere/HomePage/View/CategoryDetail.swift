@@ -5,7 +5,7 @@ struct CategoryDetail: View {
     
     var selectedCategory: String // Property to store the selected
     var wardrobeitems: [WardrobeItem]
-    
+    @State private var showingAddNewItemModal = false
     
     var columns: [GridItem] = [
         GridItem(.flexible()),
@@ -46,6 +46,7 @@ struct CategoryDetail: View {
                 
             }.frame(height:50)
             
+            
             Divider()
             // Display image details or any other relevant information based on the selected category
             // You can use a switch statement or if-else conditions to customize the view based on the category
@@ -68,28 +69,46 @@ struct CategoryDetail: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     // First grid item for "Add New"
-                    VStack {
-                        Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 40)
-                        Text("Add New")
-                            .foregroundColor(Color.gray)
+                    if(filteredCategoryItems.isEmpty){
+                        VStack {
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                            Text("Theres No Clothing !")
+                            Text("Add Now")
+                                .foregroundColor(Color.gray)
+                        }
+                        .frame(width: 170, height: 186)
+                        .background(Color.black.opacity(0.1))
+                        .cornerRadius(14)
+                    }else{
+                        Button(action: {
+                                       showingAddNewItemModal = true
+                                   }) {
+                                       Label("Add New", systemImage: "plus.circle.fill")
+                                           .foregroundColor(.gray)
+                                           .padding()
+                                           .background(Color.black.opacity(0.1))
+                                           .cornerRadius(14)
+                                   }
+                                   .sheet(isPresented: $showingAddNewItemModal) {
+                                       AddNewItemView()
+                                   }
+                        // Other items in the grid
+                        ForEach(filteredCategoryItems) { item in
+                            ClothingDetails(name: item.name)
+                                .frame(width: 170, height: 186) // Ensure consistent sizing for each grid item
+                                .background(Color.black.opacity(0.2)) // Apply background to each item individually
+                                .cornerRadius(14)
+                        }
                     }
-                    .frame(width: 170, height: 186)
-                    .background(Color.black.opacity(0.1))
-                    .cornerRadius(14)
+                  
                     
-                    // Other items in the grid
-                    ForEach(filteredCategoryItems) { item in
-                        ClothingDetails(name: item.name)
-                            .frame(width: 170, height: 186) // Ensure consistent sizing for each grid item
-                            .background(Color.black.opacity(0.2)) // Apply background to each item individually
-                            .cornerRadius(14)
-                    }
                 }
                 .padding()
             }
+            
             
             
             
@@ -105,6 +124,43 @@ struct CategoryDetail: View {
             //              }
             
         }
+    }
+}
+
+struct AddNewItemView: View {
+    @Environment(\.modelContext) var modelContext
+    @Environment(\.dismiss) var dismiss
+    
+    @State private var name: String = ""
+    @State private var category: String = ""
+    @State private var color: String = ""
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                Section(header: Text("Clothing Details")) {
+                    TextField("Name", text: $name)
+                    TextField("Category", text: $category)
+                    TextField("Color", text: $color)
+                }
+                
+                Section {
+                    Button("Save") {
+                        saveNewItem()
+                        dismiss()
+                    }
+                }
+            }
+            .navigationTitle("Add New Item")
+            .navigationBarItems(trailing: Button("Dismiss") {
+                dismiss()
+            })
+        }
+    }
+    
+    private func saveNewItem() {
+        let newItem = WardrobeItem(name: name, category: category, color: color)
+        modelContext.insert(newItem)
     }
 }
 
