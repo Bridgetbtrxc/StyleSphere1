@@ -1,11 +1,15 @@
 import SwiftUI
 import SwiftData
+import PhotosUI
 
 struct CategoryDetail: View {
     
-    var selectedCategory: String // Property to store the selected
+    var selectedCategory: String // Property to store the   selected
     var wardrobeitems: [WardrobeItem]
     @State private var showingAddNewItemModal = false
+    
+    @State var selectedPhoto: PhotosPickerItem?
+    @State var selectedPhotoData: Data?
     
     var columns: [GridItem] = [
         GridItem(.flexible()),
@@ -134,6 +138,8 @@ struct AddNewItemView: View {
     @State private var name: String = ""
     @State private var category: String = ""
     @State private var color: String = ""
+    @State var selectedPhoto: PhotosPickerItem?
+    @State var selectedPhotoData: Data?
     
     var body: some View {
         NavigationView {
@@ -142,6 +148,36 @@ struct AddNewItemView: View {
                     TextField("Name", text: $name)
                     TextField("Category", text: $category)
                     TextField("Color", text: $color)
+                }
+                Section(header: Text("Import your clothing")){
+                    
+                    if let selectedPhotoData,
+                       let uiImage = UIImage(data: selectedPhotoData){
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(maxWidth: .infinity,maxHeight: 300 )
+                    }
+                    
+                    PhotosPicker(
+                        selection: $selectedPhoto,
+                        matching:.images,
+                        photoLibrary: .shared()
+                    ){
+                        Label("Add Image",systemImage: "photo ")
+                    }
+                    
+                    if selectedPhotoData != nil {
+                        Button(role: .destructive){
+                            withAnimation{
+                                selectedPhoto = nil
+                                selectedPhotoData = nil
+                            }
+                        } label: {
+                            Label("Remove Image", systemImage: "xmark")
+                                .foregroundStyle(.red)
+                        }
+                    }
                 }
                 
                 Section {
@@ -155,6 +191,11 @@ struct AddNewItemView: View {
             .navigationBarItems(trailing: Button("Dismiss") {
                 dismiss()
             })
+            .task(id: selectedPhoto){
+                if let data = try? await selectedPhoto?.loadTransferable(type: Data.self){
+                    selectedPhotoData = data
+                }
+            }
         }
     }
     

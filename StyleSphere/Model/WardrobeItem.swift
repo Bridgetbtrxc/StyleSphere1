@@ -8,7 +8,7 @@ class WardrobeItem {
     var category: String
     var name: String
     var color: String
-    var imageData: Data?
+    var imageData: Data? //optional image
     
     init(name: String, category: String, color: String, imageData: Data? = nil) {
         self.name = name
