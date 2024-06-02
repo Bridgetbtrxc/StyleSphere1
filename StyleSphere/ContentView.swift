@@ -24,7 +24,7 @@ struct ContentView: View {
             }
         } else {
             NavigationStack {
-                Navigation()
+                AppNavigationView()
                 
             }.fullScreenCover(isPresented: $onboardingOpen){
                 SplashScreenView()

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Header: View {
     var body: some View {
-        HStack(spacing: 160) {
+        HStack {
             HStack(spacing: 1) {
                 Ellipse()
                     .foregroundColor(.clear)
@@ -28,6 +28,7 @@ struct Header: View {
                 }
             }
             .frame(height: 48)
+            Spacer()
             IconMenu()
         }
     }

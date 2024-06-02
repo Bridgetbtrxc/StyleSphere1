@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Navigation: View {
+struct AppNavigationView: View {
     @State private var visualSelectedIndex = 0
     @State private var programmaticSelectedIndex = 0
     @State private var hasAnot = false
@@ -32,36 +32,41 @@ struct Navigation: View {
     
     var iPhoneNavigation: some View {
         TabView(selection: $programmaticSelectedIndex) {
-            HomeView1().tabItem {
+            HomeView1()
+                .padding()
+                .tabItem {
                 Image(visualSelectedIndex == 0 ? "HomePressed" : "Home")
                 Text("Home")
-            }.tag(0)
-                .onAppear { self.visualSelectedIndex = 0 }
+            }
+            .tag(0)
+            .onAppear { self.visualSelectedIndex = 0 }
             
             WardrobeView().tabItem {
                 Image(visualSelectedIndex == 1 ? "Wardrobe" : "WardrobePressed")
                 Text("Wardrobe")
-            }.tag(1)
-                .onAppear { self.visualSelectedIndex = 1 }
+            }
+            .tag(1)
+            .onAppear { self.visualSelectedIndex = 1 }
             
             CalendarView(currentDate: $currentDate).tabItem {
                 Image(visualSelectedIndex == 2 ? "CalendarPressed" : "Calendar")
                 Text("Calendar")
-            }.tag(2)
-                .onAppear { self.visualSelectedIndex = 2}
+            }
+            .tag(2)
+            .onAppear { self.visualSelectedIndex = 2}
             
             LooksView().tabItem {
                 Image(visualSelectedIndex == 3 ? "LooksPressed" : "Looks")
                 Text("Looks")
-            }.tag(3)
-                .onAppear { self.visualSelectedIndex = 3}
-            
+            }
+            .tag(3)
+            .onAppear { self.visualSelectedIndex = 3}
         }
     }
     
     
     var body: some View {
-        if UIDevice.current.userInterfaceIdiom == .pad {
+        if UIDevice.isIPad {
             iPadNavigation
         } else {
             iPhoneNavigation
@@ -71,11 +76,13 @@ struct Navigation: View {
 
 
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        Navigation()
-            .modelContainer(SwiftDataModel.container)
-        
+#Preview {
+    struct PreviewContent: View {
+        var body: some View {
+            AppNavigationView()
+                .modelContainer(SwiftDataModel.container)
+        }
     }
+    
+    return PreviewContent()
 }

@@ -12,7 +12,7 @@ import SwiftData
 struct StyleSphereApp: App {
     var body: some Scene {
         WindowGroup {
-            Navigation()
+            AppNavigationView()
         }.modelContainer(for: WardrobeItem.self)
         
     }

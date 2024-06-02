@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView1: View {
     var body: some View {
         ScrollView {
-            VStack(spacing:20){
+            VStack(alignment: .leading, spacing:20){
                 Header()
                 Spacer()
                 Text("Style that Matches You🔥")
@@ -35,20 +35,19 @@ struct HomeView1: View {
                     
                     
                 }
-                .padding(.horizontal, 25)
                 YourWardrobe()
-                    .padding(.top, 10)
             }
         }
     }
 }
 
-struct HomeView1_Previews: PreviewProvider {
-    static var previews: some View {
-        @StateObject var wardrobeViewModel = WardrobeViewModel()
-        
-        HomeView1()
-        // .environmentObject(wardrobeViewModel)
-        
+#Preview {
+    struct PreviewContent: View {
+        var body: some View {
+            AppNavigationView()
+                .modelContainer(SwiftDataModel.container)
+        }
     }
+    
+    return PreviewContent()
 }
