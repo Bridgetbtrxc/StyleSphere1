@@ -18,6 +18,22 @@ struct SplashScreenView: View {
         .init(mainImage: "Splash4_4", title: "Copy - Paste", subtitle: "We utilize Iphone’s ability to auto-cut image Directly Copy > Paste to our app")
     ]
     
+    var mainImageSizing: CGFloat {
+        UIDevice.isIPad ? 400 : 200
+    }
+    
+    var mainContentSizing: CGFloat {
+        UIDevice.isIPad ? 600 : .infinity
+    }
+    
+    var titleFont: Font {
+        UIDevice.isIPad ? .largeTitle : .title2
+    }
+    
+    var subtitleFont: Font {
+        UIDevice.isIPad ? .title2 : .headline
+    }
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -29,6 +45,10 @@ struct SplashScreenView: View {
             VStack {
                 Spacer()
                 Image(items[splashIndex].mainImage)
+                    .resizable()
+                    .frame(
+                        width: mainImageSizing, height: mainImageSizing
+                    )
                 Spacer()
                 
                 VStack(spacing: 10) {
@@ -41,35 +61,39 @@ struct SplashScreenView: View {
                                 .foregroundStyle(
                                     splashIndex == index ? Color.gray : Color.mainColor
                                 )
-                                
+                            
                         }
                     }
-
-                    Text(items[splashIndex].title)
-                        .font(.title2)
-                        .bold()
-                        .padding(.vertical, 20)
-                        .foregroundStyle(Color.subColor)
-                    Text(items[splashIndex].subtitle)
-                        .multilineTextAlignment(.center)
-                        .font(.subheadline)
-                        .padding(.bottom, 30)
-                        .foregroundStyle(Color.subColor)
                     
-                    Button("Continue") {
-                        withAnimation(.snappy) {
-                            if splashIndex == (items.count - 1) {
-                                onboardingOpen = false
-                            } else {
-                                splashIndex += 1
+                    VStack(alignment: .center) {
+                        Text(items[splashIndex].title)
+                            .font(titleFont)
+                            .bold()
+                            .padding(.vertical, 20)
+                            .foregroundStyle(Color.subColor)
+                            .multilineTextAlignment(.center)
+                        Text(items[splashIndex].subtitle)
+                            .multilineTextAlignment(.center)
+                            .font(subtitleFont)
+                            .padding(.bottom, 30)
+                            .foregroundStyle(Color.subColor)
+                        
+                        Button("Continue") {
+                            withAnimation(.snappy) {
+                                if splashIndex == (items.count - 1) {
+                                    onboardingOpen = false
+                                } else {
+                                    splashIndex += 1
+                                }
                             }
                         }
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.subColor)
+                        .foregroundStyle(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.subColor)
-                    .foregroundStyle(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .frame(maxWidth: mainContentSizing)
                 }
                 .padding()
                 .padding(.horizontal, 10)

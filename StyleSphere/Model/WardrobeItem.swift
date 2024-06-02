@@ -14,22 +14,14 @@ class WardrobeItem {
         self.name = name
         self.category = category
         self.color = color
-        self.image = image
+        self.imageData = imageData
     }
     
-//    var image: Image? {
-//            if let data = imageData, let uiImage = UIImage(data: data) {
-//                return Image(uiImage: uiImage)
-//            }
-//            return nil
-//        }
-//    
-    
-    
-//    var image: Image? {
-//        if let data = imageData, let uiImage = UIImage(data: data) {
-//            return Image(uiImage: uiImage)
-//        }
-//        return nil
-//    }
+    @Transient
+    var image: Image? {
+        if let data = imageData, let uiImage = UIImage(data: data) {
+            return Image(uiImage: uiImage)
+        }
+        return nil
+    }
 }

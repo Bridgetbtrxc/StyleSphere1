@@ -6,7 +6,43 @@ struct Navigation: View {
     @State private var hasAnot = false
     @State private var currentDate = Date()
     
-    var body: some View {
+    
+    
+    var iPadNavigation: some View {
+        NavigationSplitView(sidebar: {
+            List {
+                NavigationLink(destination: HomeView1()) {
+                    Label("Home", systemImage: "house")
+                }
+                NavigationLink(destination: WardrobeView()) {
+                    Label("Wardrobe", systemImage: "person")
+                }
+                NavigationLink(destination: CalendarView(currentDate: $currentDate)) {
+                    Label("Calendar", systemImage: "calendar")
+                }
+                NavigationLink(destination: LooksView()) {
+                    Label("Looks", systemImage: "eye")
+                }
+            }
+        }) {
+            VStack {
+                switch programmaticSelectedIndex {
+                case 0:
+                    HomeView1()
+                case 1:
+                    WardrobeView()
+                case 2:
+                    CalendarView(currentDate: $currentDate)
+                case 3:
+                    LooksView()
+                default:
+                    EmptyView()
+                }
+            }.frame(width: 600)
+        }
+    }
+    
+    var iPhoneNavigation: some View {
         TabView(selection: $programmaticSelectedIndex) {
             HomeView1().tabItem {
                 Image(visualSelectedIndex == 0 ? "HomePressed" : "Home")
@@ -34,16 +70,24 @@ struct Navigation: View {
             
         }
     }
+    
+    
+    var body: some View {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            iPadNavigation
+        } else {
+            iPhoneNavigation
+        }
+    }
 }
 
 
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        @StateObject var wardrobeViewModel = WardrobeViewModel()
         
         Navigation()
-            .environmentObject(wardrobeViewModel)
-            
+            .modelContainer(SwiftDataModel.container)
+        
     }
 }
