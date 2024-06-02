@@ -11,7 +11,8 @@ struct Navigation: View {
     var iPadNavigation: some View {
         NavigationSplitView(sidebar: {
             List {
-                NavigationLink(destination: HomeView1()) {
+                NavigationLink(destination: HomeView1().frame(maxWidth: 600)
+                ) {
                     Label("Home", systemImage: "house")
                 }
                 NavigationLink(destination: WardrobeView()) {
@@ -21,24 +22,11 @@ struct Navigation: View {
                     Label("Calendar", systemImage: "calendar")
                 }
                 NavigationLink(destination: LooksView()) {
-                    Label("Looks", systemImage: "eye")
+                    Label("Looks", systemImage: "photo")
                 }
             }
         }) {
-            VStack {
-                switch programmaticSelectedIndex {
-                case 0:
-                    HomeView1()
-                case 1:
-                    WardrobeView()
-                case 2:
-                    CalendarView(currentDate: $currentDate)
-                case 3:
-                    LooksView()
-                default:
-                    EmptyView()
-                }
-            }.frame(width: 600)
+            HomeView1().frame(maxWidth: 600)
         }
     }
     
