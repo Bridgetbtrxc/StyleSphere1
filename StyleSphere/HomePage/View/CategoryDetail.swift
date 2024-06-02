@@ -8,8 +8,9 @@ struct CategoryDetail: View {
     var wardrobeitems: [WardrobeItem]
     @State private var showingAddNewItemModal = false
     
+    
     @State var selectedPhoto: PhotosPickerItem?
-    @State var selectedPhotoData: Data?
+    
     
     var columns: [GridItem] = [
         GridItem(.flexible()),
@@ -26,8 +27,8 @@ struct CategoryDetail: View {
         }
         
         var filteredCategoryItems: [WardrobeItem] {
-               wardrobeitems.filter { $0.category == selectedCategory }
-           }
+            wardrobeitems.filter { $0.category == selectedCategory }
+        }
         VStack {
             
             Spacer().frame(height: 20)
@@ -86,28 +87,31 @@ struct CategoryDetail: View {
                         .frame(width: 170, height: 186)
                         .background(Color.black.opacity(0.1))
                         .cornerRadius(14)
+                        .sheet(isPresented: $showingAddNewItemModal) {
+                            AddNewItemView()
+                        }
                     }else{
                         Button(action: {
-                                       showingAddNewItemModal = true
-                                   }) {
-                                       Label("Add New", systemImage: "plus.circle.fill")
-                                           .foregroundColor(.gray)
-                                           .padding()
-                                           .background(Color.black.opacity(0.1))
-                                           .cornerRadius(14)
-                                   }
-                                   .sheet(isPresented: $showingAddNewItemModal) {
-                                       AddNewItemView()
-                                   }
+                            showingAddNewItemModal = true
+                        }) {
+                            Label("Add New", systemImage: "plus.circle.fill")
+                                .foregroundColor(.gray)
+                                .padding()
+                                .background(Color.black.opacity(0.1))
+                                .cornerRadius(14)
+                        }
+                        .sheet(isPresented: $showingAddNewItemModal) {
+                            AddNewItemView()
+                        }
                         // Other items in the grid
                         ForEach(filteredCategoryItems) { item in
-                            ClothingDetails(name: item.name)
+                            ClothingDetails(item: item)
                                 .frame(width: 170, height: 186) // Ensure consistent sizing for each grid item
                                 .background(Color.black.opacity(0.2)) // Apply background to each item individually
                                 .cornerRadius(14)
                         }
                     }
-                  
+                    
                     
                 }
                 .padding()
@@ -135,28 +139,40 @@ struct AddNewItemView: View {
     @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     
+    @State private var item = WardrobeItem()
+  
     @State private var name: String = ""
     @State private var category: String = ""
     @State private var color: String = ""
     @State var selectedPhoto: PhotosPickerItem?
     @State var selectedPhotoData: Data?
     
+    let categories = ["Celana", "Rok", "Baju", "Kemeja", "Kaos", "Sandal", "Sepatu"]
+  
+    
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Clothing Details")) {
                     TextField("Name", text: $name)
-                    TextField("Category", text: $category)
+                   
+                    Picker("Category", selection: $category) {
+                                            ForEach(categories, id: \.self) {
+                                                Text($0)
+                                            }
+                                        }
+                                        .pickerStyle(WheelPickerStyle())
                     TextField("Color", text: $color)
                 }
                 Section(header: Text("Import your clothing")){
                     
-                    if let selectedPhotoData,
-                       let uiImage = UIImage(data: selectedPhotoData){
+                    if let imageData =   item.image,
+                       let uiImage = UIImage(data: imageData){
                         Image(uiImage: uiImage)
                             .resizable()
                             .scaledToFill()
-                            .frame(maxWidth: .infinity,maxHeight: 300 )
+                            .frame(maxWidth:.infinity, maxHeight: 300 )
+                            
                     }
                     
                     PhotosPicker(
@@ -167,11 +183,11 @@ struct AddNewItemView: View {
                         Label("Add Image",systemImage: "photo ")
                     }
                     
-                    if selectedPhotoData != nil {
+                    if item.image != nil {
                         Button(role: .destructive){
                             withAnimation{
                                 selectedPhoto = nil
-                                selectedPhotoData = nil
+                                item.image = nil
                             }
                         } label: {
                             Label("Remove Image", systemImage: "xmark")
@@ -193,29 +209,42 @@ struct AddNewItemView: View {
             })
             .task(id: selectedPhoto){
                 if let data = try? await selectedPhoto?.loadTransferable(type: Data.self){
-                    selectedPhotoData = data
+                    item.image = data
                 }
             }
         }
     }
     
     private func saveNewItem() {
-        let newItem = WardrobeItem(name: name, category: category, color: color)
-        modelContext.insert(newItem)
-    }
+           item.name = name
+           item.category = category
+           item.color = color
+           item.image = selectedPhotoData
+           modelContext.insert(item)
+           try? modelContext.save()
+       }
 }
 
 struct ClothingDetails: View{
     
-    let name: String
+    let item: WardrobeItem
     
     var body: some View {
         
         VStack(alignment: .leading){
+            if let imageData = item.image, let uiImage = UIImage(data: imageData) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 170, height: 186)
+                                .clipped()
+                        }
+            
             Spacer()
                 .frame(height: 100)
-            Text(name)
+            Text(item.name)
                 .foregroundColor(Color.black)
+                .zIndex(1)
             
         }
         .foregroundColor(.clear)
@@ -230,13 +259,13 @@ struct ClothingDetails: View{
                 endPoint: UnitPoint(x: 0.5, y: 1)
             )
         )
-        .background(
-            Image(name)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 186, height: 186)
-                .clipped()
-        )
+//        .background(
+//            Image(item.image)
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+//                .frame(width: 186, height: 186)
+//                .clipped()
+        
     }
     
     

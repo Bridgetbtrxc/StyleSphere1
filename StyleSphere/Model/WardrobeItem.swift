@@ -8,19 +8,28 @@ class WardrobeItem {
     var category: String
     var name: String
     var color: String
-    var imageData: Data? //optional image
-    
-    init(name: String, category: String, color: String, imageData: Data? = nil) {
+    var image: Data? //optional image
+      
+    init(name: String = "", category: String = "", color: String = "", image: Data? = nil) {
         self.name = name
         self.category = category
         self.color = color
-        self.imageData = imageData
+        self.image = image
     }
     
-    var image: Image? {
-        if let data = imageData, let uiImage = UIImage(data: data) {
-            return Image(uiImage: uiImage)
-        }
-        return nil
-    }
+//    var image: Image? {
+//            if let data = imageData, let uiImage = UIImage(data: data) {
+//                return Image(uiImage: uiImage)
+//            }
+//            return nil
+//        }
+//    
+    
+    
+//    var image: Image? {
+//        if let data = imageData, let uiImage = UIImage(data: data) {
+//            return Image(uiImage: uiImage)
+//        }
+//        return nil
+//    }
 }
