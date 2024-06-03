@@ -5,9 +5,9 @@ import PhotosUI
 struct CategoryDetail: View {
     
     var selectedCategory: String // Property to store the   selected
-    var wardrobeitems: [WardrobeItem]
+    @Binding var wardrobeitems: [WardrobeItem]
     @State private var showingAddNewItemModal = false
-    
+    @Environment(\.modelContext) var modelContext
     
     @State var selectedPhoto: PhotosPickerItem?
     
@@ -27,8 +27,12 @@ struct CategoryDetail: View {
         }
         
         var filteredCategoryItems: [WardrobeItem] {
-            wardrobeitems.filter { $0.category == selectedCategory }
+            let items = wardrobeitems.filter { $0.category == selectedCategory }
+            return Array(Set(items)) // Convert to Set and back to Array to remove duplicates
         }
+        
+        let uniqueItems = Array(Set(filteredCategoryItems)) // Remove duplicates
+
         VStack {
             
             Spacer().frame(height: 20)
@@ -109,6 +113,20 @@ struct CategoryDetail: View {
                                 .frame(width: 170, height: 186) // Ensure consistent sizing for each grid item
                                 .background(Color.black.opacity(0.2)) // Apply background to each item individually
                                 .cornerRadius(14)
+                                .swipeActions {
+                                    
+                                    Button(role: .destructive) {
+                                        
+                                        withAnimation {
+                                            modelContext.delete(item)
+                                        }
+                                        
+                                    } label: {
+                                        Label("Delete", systemImage: "trash.fill")
+                                    }
+                                    
+                                    
+                                }
                         }
                     }
                     
@@ -209,7 +227,8 @@ struct AddNewItemView: View {
             })
             .task(id: selectedPhoto){
                 if let data = try? await selectedPhoto?.loadTransferable(type: Data.self){
-                    item.image = data
+                    selectedPhotoData = data
+                    item.image = data  // Ensure the item's image is updated here
                 }
             }
         }
@@ -227,17 +246,29 @@ struct AddNewItemView: View {
 
 struct ClothingDetails: View{
     
+    
+    
     let item: WardrobeItem
     
     var body: some View {
-        
+   
         VStack(alignment: .leading){
+           
+
             
             Spacer()
                 .frame(height: 100)
             Text(item.name)
                 .foregroundColor(Color.black)
                 .zIndex(1)
+            
+            if let imageData = item.image, let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 170, height: 300)
+                    .clipped()
+            }
             
         }
         .foregroundColor(.clear)
@@ -259,13 +290,7 @@ struct ClothingDetails: View{
 //                .aspectRatio(contentMode: .fill)
 //                .frame(width: 186, height: 186)
 //                .clipped()
-        if let selectedPhotoData = item.image, let uiImage = UIImage(data: selectedPhotoData) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 170, height: 186)
-                            .clipped()
-                    }
+       
     }
     
     
@@ -313,7 +338,7 @@ struct ColorButton: View {
     //    let item1 = WardrobeItem(name: "Favorite Blue Shirt", category: "Kaos", color: "Blue")
     //    container.mainContext.insert(item1)
     
-    return CategoryDetail(selectedCategory: "Pants", wardrobeitems: wardrobeItems).modelContainer(container)
+//    return CategoryDetail(selectedCategory: "Pants", wardrobeitems: $wardrobeItems).modelContainer(container)
     
 }
 
