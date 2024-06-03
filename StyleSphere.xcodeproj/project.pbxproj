@@ -23,7 +23,6 @@
 		04BA1EB12C0228BF006F4069 /* YourWardrobe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */; };
 		04BA1EB22C0228BF006F4069 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EA92C0228BF006F4069 /* Color+Brand.swift */; };
 		04BA1EB92C039982006F4069 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EB82C039982006F4069 /* BackButton.swift */; };
-		04BA1EBF2C03A6B5006F4069 /* TrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EBE2C03A6B5006F4069 /* TrialView.swift */; };
 		04BA1EC12C03BAF1006F4069 /* HomeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC02C03BAF1006F4069 /* HomeView1.swift */; };
 		04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC22C03C163006F4069 /* WardrobeView.swift */; };
 		04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC42C03C435006F4069 /* CalendarView.swift */; };
@@ -61,7 +60,6 @@
 		04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourWardrobe.swift; sourceTree = "<group>"; };
 		04BA1EA92C0228BF006F4069 /* Color+Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
 		04BA1EB82C039982006F4069 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
-		04BA1EBE2C03A6B5006F4069 /* TrialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialView.swift; sourceTree = "<group>"; };
 		04BA1EC02C03BAF1006F4069 /* HomeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView1.swift; sourceTree = "<group>"; };
 		04BA1EC22C03C163006F4069 /* WardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
 		04BA1EC42C03C435006F4069 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -94,6 +92,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040284242C0E16B000FCA16E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EC02C03BAF1006F4069 /* HomeView1.swift */,
+				04BA1EB72C039970006F4069 /* Component */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		040284252C0E173D00FCA16E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EA32C0228BF006F4069 /* AppNavigationView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		040284262C0E17BF00FCA16E /* Wardrobe */ = {
+			isa = PBXGroup;
+			children = (
+				04CB9C7E2C073772001FC84F /* CategoryDetail.swift */,
+				04BA1EC22C03C163006F4069 /* WardrobeView.swift */,
+			);
+			path = Wardrobe;
+			sourceTree = "<group>";
+		};
+		040284272C0E180000FCA16E /* Looks */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
+			);
+			path = Looks;
+			sourceTree = "<group>";
+		};
+		040284282C0E181400FCA16E /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				04BA1EC42C03C435006F4069 /* CalendarView.swift */,
+				046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */,
+				046EFCF92C08846E002C3E2A /* AddEvent.swift */,
+				046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */,
+				046EFCFD2C08877E002C3E2A /* EventCard.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		04BA1EA02C0228BF006F4069 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,23 +156,11 @@
 		04BA1EA72C0228BF006F4069 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04BA1EB72C039970006F4069 /* Component */,
-				04BA1EA12C0228BF006F4069 /* Banner.swift */,
-				04B953CD2C06B4260015C45D /* AddClothes.swift */,
-				04BA1EA22C0228BF006F4069 /* Header.swift */,
-				04BA1EA32C0228BF006F4069 /* AppNavigationView.swift */,
-				04BA1EA42C0228BF006F4069 /* IconMenu.swift */,
-				04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */,
-				04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */,
-				04BA1EC02C03BAF1006F4069 /* HomeView1.swift */,
-				04BA1EC22C03C163006F4069 /* WardrobeView.swift */,
-				04BA1EC42C03C435006F4069 /* CalendarView.swift */,
-				046EFCFD2C08877E002C3E2A /* EventCard.swift */,
-				046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */,
-				046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */,
-				046EFCF92C08846E002C3E2A /* AddEvent.swift */,
-				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
-				04CB9C7E2C073772001FC84F /* CategoryDetail.swift */,
+				040284282C0E181400FCA16E /* Calendar */,
+				040284272C0E180000FCA16E /* Looks */,
+				040284262C0E17BF00FCA16E /* Wardrobe */,
+				040284252C0E173D00FCA16E /* Navigation */,
+				040284242C0E16B000FCA16E /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,8 +184,13 @@
 		04BA1EB72C039970006F4069 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				04B953CD2C06B4260015C45D /* AddClothes.swift */,
+				04BA1EA52C0228BF006F4069 /* StyleInfoView.swift */,
+				04BA1EA62C0228BF006F4069 /* YourWardrobe.swift */,
+				04BA1EA42C0228BF006F4069 /* IconMenu.swift */,
+				04BA1EA22C0228BF006F4069 /* Header.swift */,
+				04BA1EA12C0228BF006F4069 /* Banner.swift */,
 				04BA1EB82C039982006F4069 /* BackButton.swift */,
-				04BA1EBE2C03A6B5006F4069 /* TrialView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -281,7 +318,6 @@
 				25464E682C0CB2720019A4B5 /* ModelPreview.swift in Sources */,
 				04BA1EAB2C0228BF006F4069 /* SplashScreenItem.swift in Sources */,
 				04BA1EAD2C0228BF006F4069 /* Header.swift in Sources */,
-				04BA1EBF2C03A6B5006F4069 /* TrialView.swift in Sources */,
 				04BA1EB02C0228BF006F4069 /* StyleInfoView.swift in Sources */,
 				046EFCFE2C08877E002C3E2A /* EventCard.swift in Sources */,
 				046EFCFC2C088745002C3E2A /* EventShowcaseView.swift in Sources */,
