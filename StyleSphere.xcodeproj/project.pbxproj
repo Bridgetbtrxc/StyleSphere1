@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		046171962C0B2C3800DA751E /* WardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046171952C0B2C3800DA751E /* WardrobeViewModel.swift */; };
 		046EFCF62C088158002C3E2A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF52C088158002C3E2A /* Event.swift */; };
 		046EFCF82C0881F6002C3E2A /* IdentifiableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */; };
 		046EFCFA2C08846E002C3E2A /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF92C08846E002C3E2A /* AddEvent.swift */; };
@@ -46,7 +45,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		046171952C0B2C3800DA751E /* WardrobeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeViewModel.swift; sourceTree = "<group>"; };
 		046EFCF52C088158002C3E2A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableDate.swift; sourceTree = "<group>"; };
 		046EFCF92C08846E002C3E2A /* AddEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				046EFCF92C08846E002C3E2A /* AddEvent.swift */,
 				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
 				04CB9C7E2C073772001FC84F /* CategoryDetail.swift */,
-				046171952C0B2C3800DA751E /* WardrobeViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,7 +305,6 @@
 				25464E662C0CB1330019A4B5 /* SwiftDataModel.swift in Sources */,
 				04BA1EB22C0228BF006F4069 /* Color+Brand.swift in Sources */,
 				04CB9C7D2C07265B001FC84F /* WardrobeItem.swift in Sources */,
-				046171962C0B2C3800DA751E /* WardrobeViewModel.swift in Sources */,
 				04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */,
 				25464E642C0CAC140019A4B5 /* UIDevice+Pad.swift in Sources */,
 				04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */,
