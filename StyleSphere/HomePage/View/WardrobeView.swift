@@ -20,113 +20,111 @@ struct WardrobeView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer().frame(height: 20)
-                Text("Wardrobe")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.subColor)
-                
-                Spacer().frame(height: 30)
-                Divider()
-                
-                ScrollView {
-                    LazyVGrid(columns: columns) {
-                        if(wardrobeItems.isEmpty){
-                            Button(action: {
-                                showingAddNewItemModal = true
-                            }) {
-                                Label("Add New", systemImage: "plus.circle.fill")
-                                    .foregroundColor(.gray)
-                                    .padding()
-                                    .background(Color.black.opacity(0.1))
-                                    .cornerRadius(14)
-                            }
-                            .sheet(isPresented: $showingAddNewItemModal) {
-                                AddNewItemView()
-                            }
+        VStack {
+            Spacer().frame(height: 20)
+            Text("Wardrobe")
+                .font(.headline)
+                .fontWeight(.bold)
+                .foregroundColor(Color.subColor)
+            
+            Spacer().frame(height: 30)
+            Divider()
+            
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    if(wardrobeItems.isEmpty){
+                        Button(action: {
+                            showingAddNewItemModal = true
+                        }) {
+                            Label("Add New", systemImage: "plus.circle.fill")
+                                .foregroundColor(.gray)
+                                .padding()
+                                .background(Color.black.opacity(0.1))
+                                .cornerRadius(14)
                         }
-                        ForEach(wardrobeItems) { wardrobeItem in
-                            NavigationLink(destination: CategoryDetail(selectedCategory: wardrobeItem.category, wardrobeitems: wardrobeItems)) {
-                                ClothingItemView(imageName: wardrobeItem.name, clothingType: wardrobeItem.category)
-                            }
+                        .sheet(isPresented: $showingAddNewItemModal) {
+                            AddNewItemView()
                         }
                     }
-                    .padding()
+                    ForEach(wardrobeItems) { wardrobeItem in
+                        NavigationLink(destination: CategoryDetail(selectedCategory: wardrobeItem.category, wardrobeitems: wardrobeItems)) {
+                            ClothingItemView(imageName: wardrobeItem.name, clothingType: wardrobeItem.category)
+                        }
+                    }
                 }
+                .padding()
             }
-            .onAppear {
-                 // Make sure this is called once or controlled to prevent duplicate entries
-            }
+        }
+        .onAppear {
+            // Make sure this is called once or controlled to prevent duplicate entries
         }
     }
     
-//    func addSamples(){
-//        
-//        
-//        // Create instances of WardrobeItem manually with updated categories
-//        let item1 = WardrobeItem(name: "Favorite Blue Shirt", category: "Kaos", color: "Blue")
-//        modelContext.insert(item1)
-//        
-//        let item2 = WardrobeItem(name: "Comfy Black Jeans", category: "Celana", color: "Black")
-//        modelContext.insert(item2)
-//        
-//        let item3 = WardrobeItem(name: "Red Summer Skirt", category: "Rok", color: "Red")
-//        modelContext.insert(item3)
-//        
-//        let item4 = WardrobeItem(name: "Elegant White Blouse", category: "Kemeja", color: "White")
-//        modelContext.insert(item4)
-//        
-//        let item5 = WardrobeItem(name: "Striped Office Shirt", category: "Kemeja", color: "Striped")
-//        modelContext.insert(item5)
-//        
-//        let item6 = WardrobeItem(name: "Gray Everyday T-shirt", category: "Kaos", color: "Gray")
-//        modelContext.insert(item6)
-//        
-//        let item7 = WardrobeItem(name: "Brown Leather Shoes", category: "Sepatu", color: "Brown")
-//        modelContext.insert(item7)
-//        
-//        let item8 = WardrobeItem(name: "Black Summer Sandals", category: "Sandal", color: "Black")
-//        modelContext.insert(item8)
-//        
-//        let item9 = WardrobeItem(name: "Green Outdoor Jacket", category: "Outerwear", color: "Green")
-//        modelContext.insert(item9)
-//        
-//        let item10 = WardrobeItem(name: "Pink Party Dress", category: "Dress", color: "Pink")
-//        modelContext.insert(item10)
-//        
-//        let item11 = WardrobeItem(name: "Gray Hoodie", category: "Outerwear", color: "Gray")
-//        modelContext.insert(item11)
-//        
-//        let item12 = WardrobeItem(name: "Purple Leggings", category: "Celana", color: "Purple")
-//        modelContext.insert(item12)
-//        
-//        let item13 = WardrobeItem(name: "Beige Summer Shorts", category: "Celana", color: "Beige")
-//        modelContext.insert(item13)
-//        
-//        let item14 = WardrobeItem(name: "Navy Winter Sweater", category: "Kaos", color: "Navy")
-//        modelContext.insert(item14)
-//        
-//        let item15 = WardrobeItem(name: "Yellow Graphic T-shirt", category: "Kaos", color: "Yellow")
-//        modelContext.insert(item15)
-//        
-//        let item16 = WardrobeItem(name: "Tan Leather Boots", category: "Sepatu", color: "Tan")
-//        modelContext.insert(item16)
-//        
-//        let item17 = WardrobeItem(name: "Silver High Heels", category: "Sandal", color: "Silver")
-//        modelContext.insert(item17)
-//        
-//        let item18 = WardrobeItem(name: "Black Formal Tie", category: "Accessory", color: "Black")
-//        modelContext.insert(item18)
-//        
-//        let item19 = WardrobeItem(name: "Brown Wool Scarf", category: "Accessory", color: "Brown")
-//        modelContext.insert(item19)
-//        
-//        let item20 = WardrobeItem(name: "White Winter Gloves", category: "Accessory", color: "White")
-//        modelContext.insert(item20)
-//        
-//    }
+    //    func addSamples(){
+    //
+    //
+    //        // Create instances of WardrobeItem manually with updated categories
+    //        let item1 = WardrobeItem(name: "Favorite Blue Shirt", category: "Kaos", color: "Blue")
+    //        modelContext.insert(item1)
+    //
+    //        let item2 = WardrobeItem(name: "Comfy Black Jeans", category: "Celana", color: "Black")
+    //        modelContext.insert(item2)
+    //
+    //        let item3 = WardrobeItem(name: "Red Summer Skirt", category: "Rok", color: "Red")
+    //        modelContext.insert(item3)
+    //
+    //        let item4 = WardrobeItem(name: "Elegant White Blouse", category: "Kemeja", color: "White")
+    //        modelContext.insert(item4)
+    //
+    //        let item5 = WardrobeItem(name: "Striped Office Shirt", category: "Kemeja", color: "Striped")
+    //        modelContext.insert(item5)
+    //
+    //        let item6 = WardrobeItem(name: "Gray Everyday T-shirt", category: "Kaos", color: "Gray")
+    //        modelContext.insert(item6)
+    //
+    //        let item7 = WardrobeItem(name: "Brown Leather Shoes", category: "Sepatu", color: "Brown")
+    //        modelContext.insert(item7)
+    //
+    //        let item8 = WardrobeItem(name: "Black Summer Sandals", category: "Sandal", color: "Black")
+    //        modelContext.insert(item8)
+    //
+    //        let item9 = WardrobeItem(name: "Green Outdoor Jacket", category: "Outerwear", color: "Green")
+    //        modelContext.insert(item9)
+    //
+    //        let item10 = WardrobeItem(name: "Pink Party Dress", category: "Dress", color: "Pink")
+    //        modelContext.insert(item10)
+    //
+    //        let item11 = WardrobeItem(name: "Gray Hoodie", category: "Outerwear", color: "Gray")
+    //        modelContext.insert(item11)
+    //
+    //        let item12 = WardrobeItem(name: "Purple Leggings", category: "Celana", color: "Purple")
+    //        modelContext.insert(item12)
+    //
+    //        let item13 = WardrobeItem(name: "Beige Summer Shorts", category: "Celana", color: "Beige")
+    //        modelContext.insert(item13)
+    //
+    //        let item14 = WardrobeItem(name: "Navy Winter Sweater", category: "Kaos", color: "Navy")
+    //        modelContext.insert(item14)
+    //
+    //        let item15 = WardrobeItem(name: "Yellow Graphic T-shirt", category: "Kaos", color: "Yellow")
+    //        modelContext.insert(item15)
+    //
+    //        let item16 = WardrobeItem(name: "Tan Leather Boots", category: "Sepatu", color: "Tan")
+    //        modelContext.insert(item16)
+    //
+    //        let item17 = WardrobeItem(name: "Silver High Heels", category: "Sandal", color: "Silver")
+    //        modelContext.insert(item17)
+    //
+    //        let item18 = WardrobeItem(name: "Black Formal Tie", category: "Accessory", color: "Black")
+    //        modelContext.insert(item18)
+    //
+    //        let item19 = WardrobeItem(name: "Brown Wool Scarf", category: "Accessory", color: "Brown")
+    //        modelContext.insert(item19)
+    //
+    //        let item20 = WardrobeItem(name: "White Winter Gloves", category: "Accessory", color: "White")
+    //        modelContext.insert(item20)
+    //
+    //    }
 }
 
 
