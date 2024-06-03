@@ -232,13 +232,6 @@ struct ClothingDetails: View{
     var body: some View {
         
         VStack(alignment: .leading){
-            if let imageData = item.image, let uiImage = UIImage(data: imageData) {
-                            Image(uiImage: uiImage)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 170, height: 186)
-                                .clipped()
-                        }
             
             Spacer()
                 .frame(height: 100)
@@ -258,6 +251,7 @@ struct ClothingDetails: View{
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 1)
             )
+            
         )
 //        .background(
 //            Image(item.image)
@@ -265,7 +259,13 @@ struct ClothingDetails: View{
 //                .aspectRatio(contentMode: .fill)
 //                .frame(width: 186, height: 186)
 //                .clipped()
-        
+        if let selectedPhotoData = item.image, let uiImage = UIImage(data: selectedPhotoData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 170, height: 186)
+                            .clipped()
+                    }
     }
     
     
