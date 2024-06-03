@@ -15,7 +15,7 @@ struct AddEvent: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 30) {
                 HStack(alignment: .top) {
-                  
+                    
                     Spacer()
                     Text("Add Event")
                         .font(Font.custom("Inter", size: 18).weight(.medium))

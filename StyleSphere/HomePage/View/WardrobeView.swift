@@ -14,6 +14,8 @@ struct WardrobeView: View {
     @Environment(\.modelContext) var modelContext
     @Query var wardrobeItems: [WardrobeItem]
     
+    let categories = ["Celana", "Rok", "Kemeja", "Kaos", "Sandal", "Sepatu"]
+    
     var columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -47,12 +49,22 @@ struct WardrobeView: View {
                                 AddNewItemView()
                             }
                         } else {
-                            ForEach(wardrobeItems) { item in
-                                NavigationLink(destination: CategoryDetail(selectedCategory: item.category, wardrobeitems: wardrobeItems)) {
-                                    ClothingItemView(imageName: item.name, clothingType: item.category)
+                            ForEach(categories, id: \.self) { category in
+                                NavigationLink(destination: CategoryDetail(selectedCategory: category)) {
+                                    ClothingItemView(
+                                        imageName: category,
+                                        clothingType: category
+                                    )
                                 }
                             }
+                            //                            ForEach(wardrobeItems) { item in
+                            //                                NavigationLink(destination: CategoryDetail(selectedCategory: item.category, wardrobeitems: wardrobeItems)) {
+                            //                                    ClothingItemView(imageName: item.name, clothingType: item.category)
+                            //                                }
+                            //                            }
                         }
+                        
+                        
                     }
                     .padding()
                 }
