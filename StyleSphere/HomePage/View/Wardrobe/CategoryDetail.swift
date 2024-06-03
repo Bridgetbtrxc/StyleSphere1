@@ -7,13 +7,18 @@ struct CategoryDetail: View {
     let selectedCategory: String
     @State private var showingAddNewItemModal = false
     @Environment(\.modelContext) var modelContext
-    @State var selectedPhoto: PhotosPickerItem?
     
-    @Query var wardrobeItems: [WardrobeItem]
+    @State var selectedPhoto: PhotosPickerItem?
+    @State var selectedColor: String = ""
+    
+    @Query var allWardrobeItems: [WardrobeItem]
+    @State var wardrobeItems: [WardrobeItem] = []
+    
+    
     
     init(selectedCategory: String) {
         self.selectedCategory = selectedCategory
-        _wardrobeItems = Query(filter: #Predicate<WardrobeItem> {
+        _allWardrobeItems = Query(filter: #Predicate<WardrobeItem> {
             $0.category == selectedCategory
         })
     }
@@ -23,69 +28,59 @@ struct CategoryDetail: View {
         GridItem(.flexible())
     ]
     
+    var filteredColors: [String] {
+        let uniqueColors = Set(allWardrobeItems.map { $0.color })
+        return Array(uniqueColors).sorted()
+    }
+    
+    func syncSearchedColor() {
+        withAnimation {
+            if selectedColor.isEmpty {
+                wardrobeItems = allWardrobeItems
+            } else {
+                wardrobeItems = allWardrobeItems.filter {
+                    $0.color == selectedColor
+                }
+            }
+        }
+    }
     
     var body: some View {
-        
-        var filteredColors: [String] {
-            let uniqueColors = Set(wardrobeItems.map { $0.color })
-            return Array(uniqueColors).sorted()
-        }
-        
-        
-        //        func deleteItem(item: WardrobeItem) {
-        //                if let index = wardrobeitems.firstIndex(of: item) {
-        //                    wardrobeitems.remove(at: index)
-        //                    modelContext.delete(item)
-        //                }
-        //            }
-        
-        
         
         VStack {
             
             Spacer().frame(height: 20)
-            Text(selectedCategory) // Display the selected category
+            Text(selectedCategory)
                 .font(.headline)
                 .fontWeight(.bold)
                 .foregroundColor(Color.subColor)
-            
-            
-            //color button
-            
+                .onAppear {
+                   syncSearchedColor()
+                }
             
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack {
                     ForEach(filteredColors, id: \.self) { color in
-                        ColorButton(color: color)
+                        ColorButton(selection: $selectedColor, color: color)
                     }
                 }
                 .padding(.horizontal)
+                .onChange(of: selectedColor) {
+                   syncSearchedColor()
+                }
                 
             }.frame(height:50)
             
             
             Divider()
-            // Display image details or any other relevant information based on the selected category
-            // You can use a switch statement or if-else conditions to customize the view based on the category
+            
             
             
             Spacer()
             
-            //            VStack() {
-            //                Spacer()
-            //                    .frame(height: 45)
-            //                Image("Plus")
-            //                    .resizable()
-            //                    .frame(width: 40, height: 40)
-            //                Text("Add New")
-            //                    .foregroundColor(Color.gray)
-            //
-            //
-            //            }
             
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
-                    // First grid item for "Add New"
                     if(wardrobeItems.isEmpty){
                         Button(action: {
                             showingAddNewItemModal = true
@@ -107,7 +102,7 @@ struct CategoryDetail: View {
                         .sheet(isPresented: $showingAddNewItemModal) {
                             AddNewItemView()
                         }
-                       
+                        
                     }else{
                         Button(action: {
                             showingAddNewItemModal = true
@@ -121,11 +116,11 @@ struct CategoryDetail: View {
                         .sheet(isPresented: $showingAddNewItemModal) {
                             AddNewItemView()
                         }
-                        // Other items in the grid
+                        
                         ForEach(wardrobeItems) { item in
                             ClothingDetails(item: item)
-                                .frame(width: 170, height: 186) // Ensure consistent sizing for each grid item
-                                .background(Color.black.opacity(0.2)) // Apply background to each item individually
+                                .frame(width: 170, height: 186)
+                                .background(Color.black.opacity(0.2))
                                 .cornerRadius(14)
                                 .swipeActions {
                                     
@@ -149,186 +144,19 @@ struct CategoryDetail: View {
                 .padding()
             }
             
-            
-            
-            
-            
-            
             Spacer()
             Spacer()
             Spacer()
-            //            func colorsForCategory() -> [String] {
-            //                  let filteredItems = wardrobeitems.filter { $0.category == selectedCategory }
-            //                  let uniqueColors = Set(filteredItems.map { $0.color })
-            //                  return Array(uniqueColors).sorted()
-            //              }
             
         }
     }
 }
 
-struct AddNewItemView: View {
-    @Environment(\.modelContext) var modelContext
-    @Environment(\.dismiss) var dismiss
-    
-    @State private var item = WardrobeItem()
-    
-    @State private var name: String = ""
-    @State private var category: String = "Celana"
-    @State private var color: String = ""
-    @State var selectedPhoto: PhotosPickerItem?
-    @State var selectedPhotoData: Data?
-    
-    let categories = ["Celana", "Rok", "Baju", "Kemeja", "Kaos", "Sandal", "Sepatu"]
-    
-    
-    var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Clothing Details")) {
-                    TextField("Name", text: $name)
-                    Picker("Category", selection: $category) {
-                        ForEach(categories, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                    .pickerStyle(WheelPickerStyle())
-                    TextField("Color", text: $color)
-                }
-                Section(header: Text("Import your clothing")){
-                    
-                    if let imageData =   item.image,
-                       let uiImage = UIImage(data: imageData){
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(maxWidth:.infinity, maxHeight: 300 )
-                        
-                    }
-                    
-                    PhotosPicker(
-                        selection: $selectedPhoto,
-                        matching:.images,
-                        photoLibrary: .shared()
-                    ){
-                        Label("Add Image",systemImage: "photo")
-                    }
-                    
-                    if item.image != nil {
-                        Button(role: .destructive){
-                            withAnimation{
-                                selectedPhoto = nil
-                                item.image = nil
-                            }
-                        } label: {
-                            Label("Remove Image", systemImage: "xmark")
-                                .foregroundStyle(.red)
-                        }
-                    }
-                }
-                
-                Section {
-                    Button("Save") {
-                        saveNewItem()
-                        dismiss()
-                    }
-                }
-            }
-            .navigationTitle("Add New Item")
-            .navigationBarItems(trailing: Button("Dismiss") {
-                dismiss()
-            })
-            .task(id: selectedPhoto){
-                if let data = try? await selectedPhoto?.loadTransferable(type: Data.self){
-                    selectedPhotoData = data
-                    item.image = data  // Ensure the item's image is updated here
-                }
-            }
-        }
-    }
-    
-    private func saveNewItem() {
-        item.name = name
-        item.category = category
-        item.color = color
-        item.image = selectedPhotoData
-        modelContext.insert(item)
-        try? modelContext.save()
-    }
-}
 
-struct ClothingDetails: View{
-    
-    
-    
-    let item: WardrobeItem
-    
-    var body: some View {
-        
-        VStack(alignment: .leading){
-            
-            
-            
-            Spacer()
-                .frame(height: 100)
-            Text(item.name)
-                .foregroundColor(Color.black)
-                .zIndex(1)
-            
-            if let imageData = item.image, let uiImage = UIImage(data: imageData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 170, height: 300)
-                    .clipped()
-            }
-            
-        }
-        .foregroundColor(.clear)
-        .frame(width: 215, height: 186)
-        .background(
-            LinearGradient(
-                stops: [
-                    Gradient.Stop(color: .black.opacity(0), location: 0.41),
-                    Gradient.Stop(color: .black.opacity(0.32), location: 0.85),
-                ],
-                startPoint: UnitPoint(x: 0.5, y: 0),
-                endPoint: UnitPoint(x: 0.5, y: 1)
-            )
-            
-        )
-        //        .background(
-        //            Image(item.image)
-        //                .resizable()
-        //                .aspectRatio(contentMode: .fill)
-        //                .frame(width: 186, height: 186)
-        //                .clipped()
-        
-    }
-    
-    
-}
 
-struct ColorButton: View {
-    let color: String
-    
-    var body: some View {
-        
-        
-        Text(color)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 5)
-            .background(Color.mainColor) // Ensure mainColor is defined
-            .cornerRadius(16)
-            .overlay(
-                RoundedRectangle(cornerRadius: 16)
-                    .inset(by: 0.5)
-                    .stroke(Color.subColor, lineWidth: 1) )
-        
-        
-        
-    }
-}
+
+
+
 
 
 //#Preview {
