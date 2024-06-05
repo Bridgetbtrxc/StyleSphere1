@@ -8,7 +8,7 @@ class WardrobeItem {
     var category: String
     var name: String
     var color: String
-    var image: Data? //optional image
+    @Attribute(.externalStorage) var image: Data?
       
     init(name: String = "", category: String = "", color: String = "", image: Data? = nil) {
         self.name = name

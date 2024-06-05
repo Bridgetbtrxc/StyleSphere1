@@ -35,7 +35,7 @@ struct CategoryDetail: View {
     
     func syncSearchedColor() {
         withAnimation {
-            if selectedColor.isEmpty {
+            if selectedColor == "" {
                 wardrobeItems = allWardrobeItems
             } else {
                 wardrobeItems = allWardrobeItems.filter {
@@ -55,7 +55,7 @@ struct CategoryDetail: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.subColor)
                 .onAppear {
-                   syncSearchedColor()
+                    syncSearchedColor()
                 }
             
             ScrollView(.horizontal, showsIndicators: false) {
@@ -66,19 +66,12 @@ struct CategoryDetail: View {
                 }
                 .padding(.horizontal)
                 .onChange(of: selectedColor) {
-                   syncSearchedColor()
+                    syncSearchedColor()
                 }
                 
             }.frame(height:50)
-            
-            
             Divider()
-            
-            
-            
             Spacer()
-            
-            
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     if(wardrobeItems.isEmpty){
@@ -99,9 +92,6 @@ struct CategoryDetail: View {
                             .cornerRadius(14)
                         }
                         .contentShape(Rectangle())
-                        .sheet(isPresented: $showingAddNewItemModal) {
-                            AddNewItemView()
-                        }
                         
                     }else{
                         Button(action: {
@@ -113,40 +103,37 @@ struct CategoryDetail: View {
                                 .background(Color.black.opacity(0.1))
                                 .cornerRadius(14)
                         }
-                        .sheet(isPresented: $showingAddNewItemModal) {
-                            AddNewItemView()
-                        }
-                        
                         ForEach(wardrobeItems) { item in
                             ClothingDetails(item: item)
                                 .frame(width: 170, height: 186)
                                 .background(Color.black.opacity(0.2))
                                 .cornerRadius(14)
                                 .swipeActions {
-                                    
                                     Button(role: .destructive) {
-                                        
                                         withAnimation {
                                             modelContext.delete(item)
                                         }
-                                        
                                     } label: {
                                         Label("Delete", systemImage: "trash.fill")
                                     }
-                                    
-                                    
                                 }
                         }
                     }
-                    
-                    
                 }
                 .padding()
             }
-            
             Spacer()
             Spacer()
             Spacer()
+                .onChange(of: showingAddNewItemModal) {
+                    // if the sheet is closed, resync the searched color
+                    if !showingAddNewItemModal {
+                        syncSearchedColor()
+                    }
+                }
+                .sheet(isPresented: $showingAddNewItemModal) {
+                    AddNewItemView()
+                }
             
         }
     }
