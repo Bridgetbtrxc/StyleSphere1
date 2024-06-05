@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 import SwiftData
 
-struct ClothingDetails: View {
+struct ClothImageDisplayView: View {
     let item: WardrobeItem
     @State private var decodedImage: UIImage?
 
@@ -71,7 +71,7 @@ struct ClothingDetails: View {
 #Preview {
     ModelPreview<WardrobeItem, VStack> { item in
         VStack {
-            ClothingDetails(item: item).frame(width: 215, height: 186)
+            ClothImageDisplayView(item: item).frame(width: 215, height: 186)
         }
     }
 }
