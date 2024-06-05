@@ -55,7 +55,8 @@ struct CategoryDetail: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.subColor)
                 .onAppear {
-                    syncSearchedColor()
+                    selectedColor = ""
+                    wardrobeItems = allWardrobeItems
                 }
             
             ScrollView(.horizontal, showsIndicators: false) {

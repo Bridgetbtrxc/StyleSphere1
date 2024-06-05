@@ -59,7 +59,7 @@ struct ClothingDetails: View {
     }
     
     private func loadDecodedImage() {
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .userInteractive).async {
             let loadedImage = item.image.flatMap(UIImage.init(data:)) ?? UIImage(named: "Wardrobe2")!
             DispatchQueue.main.async {
                 self.decodedImage = loadedImage
