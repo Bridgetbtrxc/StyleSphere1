@@ -1,23 +1,27 @@
-//
-//  WardrobeItem.swift
-//  StyleSphere
-//
-//  Created by MacBook Pro on 29/05/24.
-//
-
 import Foundation
 import SwiftData
+import SwiftUI
 
-struct WardrobeItem: Identifiable {
-    var id = UUID()
+@Model
+class WardrobeItem {
+    var id: UUID = UUID()
     var category: String
     var name: String
     var color: String
-    
-    init(id: UUID = UUID(), category: String, name: String, color: String) {
-        self.id = id
-        self.category = category
+    var image: Data? //optional image
+      
+    init(name: String = "", category: String = "", color: String = "", image: Data? = nil) {
         self.name = name
+        self.category = category
         self.color = color
+       // self.imageData = imageData
     }
+    
+//    @Transient
+//    var image: Image? {
+//        if let data = imageData, let uiImage = UIImage(data: data) {
+//            return Image(uiImage: uiImage)
+//        }
+//        return nil
+//    }
 }

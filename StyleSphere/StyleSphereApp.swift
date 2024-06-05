@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct StyleSphereApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            AppNavigationView()
+        }.modelContainer(for: WardrobeItem.self)
+        
     }
 }

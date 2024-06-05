@@ -10,6 +10,7 @@ import SwiftUI
 struct SplashScreenView1: View {
     @State var showLogo = false
     
+
     var body: some View {
         ZStack {
             Rectangle()

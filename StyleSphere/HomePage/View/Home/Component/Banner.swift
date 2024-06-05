@@ -12,7 +12,7 @@ struct Banner: View {
             Rectangle()
                 .foregroundColor(Color(red: 0.93, green: 0.90, blue: 0.85))
                 .cornerRadius(20)
-                .frame(width: 340, height: 170)
+                .frame(height: 170)
             
             VStack(alignment: .center, spacing: 10) {
                 Text("Want to find out clothes?")

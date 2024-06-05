@@ -17,21 +17,19 @@ struct EventShowcaseView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: 20) {
-                    ForEach(events) { event in
-                        NavigationLink(destination: EventDetailView(event: event)) {
-                            EventCard(event: event)
-                        }
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: 20) {
+                ForEach(events) { event in
+                    NavigationLink(destination: EventDetailView(event: event)) {
+                        EventCard(event: event)
                     }
                 }
-                .padding(.horizontal, 20)
             }
-            .shadow(radius: 3)
-            .padding(.top, -180)
-            .navigationBarTitle("Events")
-                .navigationBarTitleTextColor(Color(red: 0.42, green: 0.31, blue: 0.22))        }
+            .padding(.horizontal, 20)
+        }
+        .shadow(radius: 3)
+        .navigationBarTitle("Events")
+        .navigationBarTitleTextColor(Color(red: 0.42, green: 0.31, blue: 0.22))
     }
 }
 
