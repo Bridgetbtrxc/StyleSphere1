@@ -22,53 +22,48 @@ struct WardrobeView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer().frame(height: 20)
-                Text("Wardrobe")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.subColor)
-                
-                Spacer().frame(height: 30)
-                Divider()
-                
-                ScrollView {
-                    LazyVGrid(columns: columns) {
-                        if wardrobeItems.isEmpty {
-                            Button(action: {
-                                showingAddNewItemModal = true
-                            }) {
-                                Label("Add New", systemImage: "plus.circle.fill")
-                                    .foregroundColor(.gray)
-                                    .padding()
-                                    .background(Color.black.opacity(0.1))
-                                    .cornerRadius(14)
-                            }
-                            .sheet(isPresented: $showingAddNewItemModal) {
-                                AddNewItemView()
-                            }
-                        } else {
-                            ForEach(categories, id: \.self) { category in
-                                NavigationLink(destination: CategoryDetail(selectedCategory: category)) {
-                                    ClothingItemView(
-                                        imageName: category,
-                                        clothingType: category
-                                    )
-                                }
+        VStack {
+            Spacer().frame(height: 20)
+            Text("Wardrobe")
+                .font(.headline)
+                .fontWeight(.bold)
+                .foregroundColor(Color.subColor)
+            
+            Spacer().frame(height: 30)
+            Divider()
+            
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    if wardrobeItems.isEmpty {
+                        Button(action: {
+                            showingAddNewItemModal = true
+                        }) {
+                            Label("Add New", systemImage: "plus.circle.fill")
+                                .foregroundColor(.gray)
+                                .padding()
+                                .background(Color.black.opacity(0.1))
+                                .cornerRadius(14)
+                        }
+                        .sheet(isPresented: $showingAddNewItemModal) {
+                            AddNewItemView()
+                        }
+                    } else {
+                        ForEach(categories, id: \.self) { category in
+                            NavigationLink(destination: CategoryDetail(selectedCategory: category)) {
+                                ClothingItemView(
+                                    imageName: category,
+                                    clothingType: category
+                                )
                             }
                         }
-                        
-                        
                     }
-                    .padding()
+                    
+                    
                 }
+                .padding()
             }
-            .navigationTitle("Your Wardrobe")
         }
-        .onAppear {
-            
-        }
+        .navigationTitle("Your Wardrobe")
     }
 }
 
