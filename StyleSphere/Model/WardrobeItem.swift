@@ -15,7 +15,18 @@ class WardrobeItem {
         self.category = category
         self.color = color
        // self.imageData = imageData
-    }
+}
+//class LooksItem{
+//    let name: String
+//    var items: [WardrobeItem]
+//    
+//    init(name: String, items: [WardrobeItem]) {
+//        self.name = name
+//        self.items = items
+//    }
+//}
+
+
     
 //    @Transient
 //    var image: Image? {
