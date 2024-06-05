@@ -35,11 +35,11 @@ struct AppNavigationView: View {
             HomeView1()
                 .padding()
                 .tabItem {
-                Image(visualSelectedIndex == 0 ? "HomePressed" : "Home")
-                Text("Home")
-            }
-            .tag(0)
-            .onAppear { self.visualSelectedIndex = 0 }
+                    Image(visualSelectedIndex == 0 ? "HomePressed" : "Home")
+                    Text("Home")
+                }
+                .tag(0)
+                .onAppear { self.visualSelectedIndex = 0 }
             
             WardrobeView().tabItem {
                 Image(visualSelectedIndex == 1 ? "Wardrobe" : "WardrobePressed")
@@ -66,11 +66,13 @@ struct AppNavigationView: View {
     
     
     var body: some View {
+        
         if UIDevice.isIPad {
             iPadNavigation
         } else {
             iPhoneNavigation
         }
+        
     }
 }
 

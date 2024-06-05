@@ -13,9 +13,7 @@ struct CategoryDetail: View {
     
     @Query var allWardrobeItems: [WardrobeItem]
     @State var wardrobeItems: [WardrobeItem] = []
-    
-    
-    
+
     init(selectedCategory: String) {
         self.selectedCategory = selectedCategory
         _allWardrobeItems = Query(filter: #Predicate<WardrobeItem> {

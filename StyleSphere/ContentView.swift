@@ -23,7 +23,7 @@ struct ContentView: View {
                 }
             }
         } else {
-            NavigationStack {
+            Group {
                 AppNavigationView()
                 
             }.fullScreenCover(isPresented: $onboardingOpen){
