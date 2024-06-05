@@ -7,6 +7,7 @@
 import UIKit
 import CalendarKit
 import EventKit
+import SwiftUI
 
 class CalendarViewController: DayViewController {
     private let eventStore = EKEventStore()
@@ -22,4 +23,20 @@ class CalendarViewController: DayViewController {
 
         }
     }
+}
+
+struct CalendarViewControllerRepresentable: UIViewControllerRepresentable {
+    typealias UIViewControllerType = CalendarViewController
+
+    func makeUIViewController(context: Context) -> CalendarViewController {
+        return CalendarViewController()
+    }
+
+    func updateUIViewController(_ uiViewController: CalendarViewController, context: Context) {
+        // Update the view controller if needed
+    }
+}
+
+#Preview {
+    CalendarViewControllerRepresentable()
 }
