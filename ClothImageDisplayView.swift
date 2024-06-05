@@ -1,5 +1,5 @@
 //
-//  ClothingDetails.swift
+//  ClothImageDisplayView.swift
 //  StyleSphere
 //
 //  Created by MacBook Pro on 03/06/24.
@@ -12,7 +12,7 @@ import SwiftData
 struct ClothImageDisplayView: View {
     let item: WardrobeItem
     @State private var decodedImage: UIImage?
-
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -27,7 +27,7 @@ struct ClothImageDisplayView: View {
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .background(Color.gray.opacity(0.1)) // Optional: a placeholder color
                 }
-
+                
                 Rectangle()
                     .fill(LinearGradient(
                         stops: [
@@ -37,15 +37,19 @@ struct ClothImageDisplayView: View {
                         startPoint: .top,
                         endPoint: .bottom
                     ))
-
+                
                 VStack(alignment: .leading) {
                     Spacer()
                     Text(item.name)
                         .foregroundColor(.white)
                         .font(.headline.bold())
-                    Text(item.color)
-                        .foregroundColor(.white)
-                        .font(.subheadline)
+                    HStack {
+                        Image(systemName: "paintbrush")
+                        Text(item.color)
+                    }
+                    .foregroundColor(.white)
+                    .font(.subheadline)
+                    
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.bottom, .leading], 15)

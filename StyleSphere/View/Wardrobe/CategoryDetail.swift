@@ -105,7 +105,7 @@ struct CategoryDetail: View {
                                 .cornerRadius(14)
                         }
                         ForEach(wardrobeItems) { item in
-                            ClothingDetails(item: item)
+                            ClothImageDisplayView(item: item)
                                 .frame(width: 170, height: 186)
                                 .background(Color.black.opacity(0.2))
                                 .cornerRadius(14)
