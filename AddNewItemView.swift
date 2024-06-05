@@ -94,8 +94,17 @@ struct AddNewItemView: View {
         item.category = category
         item.color = color
         item.image = selectedPhotoData
-        modelContext.insert(item)
-        try? modelContext.save()
+        
+        
+            modelContext.insert(item)
+        
+        
+        do {
+            try modelContext.save()
+        } catch {
+            print("Failed to save model context: \(error)")
+        }
+        
     }
 }
 
