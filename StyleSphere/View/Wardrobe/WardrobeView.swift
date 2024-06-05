@@ -29,8 +29,7 @@ struct WardrobeView: View {
                         .foregroundColor(Color.subColor)
                     
                     Spacer().frame(height: 20)
-                    SearchbarView(text: $searchText)
-                        .padding()
+                    SearchbarView(text: $searchText).padding()
                     Divider()
                 }
                 GeometryReader { geometry in

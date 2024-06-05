@@ -1,5 +1,5 @@
 {
-  "originHash" : "7602035a99ba50b0768fdb54492bc840854fc6043368857eda2ecc56e6f9cc1a",
+  "originHash" : "63cef95c753b1e24cc5cf8bfac5afd70c71ae5e786dfa0c096fd48bce0f40616",
   "pins" : [
     {
       "identity" : "calendarkit",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "92684acdffb76941268b6627f894274754771e41",
         "version" : "1.1.10"
+      }
+    },
+    {
+      "identity" : "swiftuimasonry",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ciaranrobrien/SwiftUIMasonry.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "651f84e32edd11919874fbd9167b50ecb60a72db"
       }
     }
   ],

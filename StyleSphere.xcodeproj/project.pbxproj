@@ -13,7 +13,6 @@
 		045F3C822C108C9A003F4430 /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C7E2C108C9A003F4430 /* AddNewItemView.swift */; };
 		045F3C832C108C9A003F4430 /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C7F2C108C9A003F4430 /* ColorButton.swift */; };
 		046C68D22C109741000553F9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C68D12C109741000553F9 /* CalendarViewController.swift */; };
-		046C68D52C10975D000553F9 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 046C68D42C10975D000553F9 /* CalendarKit */; };
 		046C68D72C109781000553F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C68D62C109781000553F9 /* SceneDelegate.swift */; };
 		046EFCF62C088158002C3E2A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF52C088158002C3E2A /* Event.swift */; };
 		046EFCF82C0881F6002C3E2A /* IdentifiableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */; };
@@ -21,7 +20,7 @@
 		046EFCFC2C088745002C3E2A /* EventShowcaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */; };
 		046EFCFE2C08877E002C3E2A /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCFD2C08877E002C3E2A /* EventCard.swift */; };
 		046EFD002C0887C8002C3E2A /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */; };
-		04B43CF22C10C57E00E99242 /* AddLooksItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B43CF12C10C57E00E99242 /* AddLooksItemView.swift */; };
+		04B43CF22C10C57E00E99242 /* CreateLookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B43CF12C10C57E00E99242 /* CreateLookView.swift */; };
 		04B43CF42C10C89F00E99242 /* LooksItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B43CF32C10C89F00E99242 /* LooksItemView.swift */; };
 		04B953CE2C06B4260015C45D /* AddClothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B953CD2C06B4260015C45D /* AddClothes.swift */; };
 		04BA1EAB2C0228BF006F4069 /* SplashScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */; };
@@ -49,6 +48,9 @@
 		04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
 		25072D7F2C10B2690020CB76 /* LooksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D7E2C10B2690020CB76 /* LooksItem.swift */; };
 		25072D832C10CB610020CB76 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D822C10CB610020CB76 /* SearchbarView.swift */; };
+		25072D882C10CD890020CB76 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 25072D872C10CD890020CB76 /* CalendarKit */; };
+		25072D8A2C10D29F0020CB76 /* LookCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D892C10D29F0020CB76 /* LookCardView.swift */; };
+		25072D8D2C10D7290020CB76 /* SwiftUIMasonry in Frameworks */ = {isa = PBXBuildFile; productRef = 25072D8C2C10D7290020CB76 /* SwiftUIMasonry */; };
 		25464E642C0CAC140019A4B5 /* UIDevice+Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */; };
 		25464E662C0CB1330019A4B5 /* SwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */; };
 		25464E682C0CB2720019A4B5 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E672C0CB2720019A4B5 /* ModelPreview.swift */; };
@@ -68,7 +70,7 @@
 		046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventShowcaseView.swift; sourceTree = "<group>"; };
 		046EFCFD2C08877E002C3E2A /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
-		04B43CF12C10C57E00E99242 /* AddLooksItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLooksItemView.swift; sourceTree = "<group>"; };
+		04B43CF12C10C57E00E99242 /* CreateLookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLookView.swift; sourceTree = "<group>"; };
 		04B43CF32C10C89F00E99242 /* LooksItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksItemView.swift; sourceTree = "<group>"; };
 		04B953CD2C06B4260015C45D /* AddClothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClothes.swift; sourceTree = "<group>"; };
 		04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenItem.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		04EF6ADC2C085CF500BA2B80 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		25072D7E2C10B2690020CB76 /* LooksItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksItem.swift; sourceTree = "<group>"; };
 		25072D822C10CB610020CB76 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
+		25072D892C10D29F0020CB76 /* LookCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookCardView.swift; sourceTree = "<group>"; };
 		25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Pad.swift"; sourceTree = "<group>"; };
 		25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModel.swift; sourceTree = "<group>"; };
 		25464E672C0CB2720019A4B5 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
@@ -107,7 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046C68D52C10975D000553F9 /* CalendarKit in Frameworks */,
+				25072D8D2C10D7290020CB76 /* SwiftUIMasonry in Frameworks */,
+				25072D882C10CD890020CB76 /* CalendarKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				04BA1EC62C03C46C006F4069 /* LooksView.swift */,
-				04B43CF12C10C57E00E99242 /* AddLooksItemView.swift */,
+				04B43CF12C10C57E00E99242 /* CreateLookView.swift */,
 				04B43CF32C10C89F00E99242 /* LooksItemView.swift */,
+				25072D892C10D29F0020CB76 /* LookCardView.swift */,
 			);
 			path = Looks;
 			sourceTree = "<group>";
@@ -294,7 +299,8 @@
 			);
 			name = StyleSphere;
 			packageProductDependencies = (
-				046C68D42C10975D000553F9 /* CalendarKit */,
+				25072D872C10CD890020CB76 /* CalendarKit */,
+				25072D8C2C10D7290020CB76 /* SwiftUIMasonry */,
 			);
 			productName = StyleSphere;
 			productReference = 04CF61DC2BFF78090053FA09 /* StyleSphere.app */;
@@ -325,7 +331,8 @@
 			);
 			mainGroup = 04CF61D32BFF78090053FA09;
 			packageReferences = (
-				046C68D32C10975D000553F9 /* XCRemoteSwiftPackageReference "CalendarKit" */,
+				25072D862C10CD890020CB76 /* XCRemoteSwiftPackageReference "CalendarKit" */,
+				25072D8B2C10D7290020CB76 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */,
 			);
 			productRefGroup = 04CF61DD2BFF78090053FA09 /* Products */;
 			projectDirPath = "";
@@ -371,7 +378,7 @@
 				04BA1EAE2C0228BF006F4069 /* AppNavigationView.swift in Sources */,
 				04BA1EAF2C0228BF006F4069 /* IconMenu.swift in Sources */,
 				04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */,
-				04B43CF22C10C57E00E99242 /* AddLooksItemView.swift in Sources */,
+				04B43CF22C10C57E00E99242 /* CreateLookView.swift in Sources */,
 				046EFD002C0887C8002C3E2A /* EventDetailView.swift in Sources */,
 				04CF61E02BFF78090053FA09 /* StyleSphereApp.swift in Sources */,
 				04B43CF42C10C89F00E99242 /* LooksItemView.swift in Sources */,
@@ -392,6 +399,7 @@
 				04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */,
 				25464E642C0CAC140019A4B5 /* UIDevice+Pad.swift in Sources */,
 				04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */,
+				25072D8A2C10D29F0020CB76 /* LookCardView.swift in Sources */,
 				04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */,
 				04BA1EC92C04FA13006F4069 /* TabItem.swift in Sources */,
 				04BA1EB92C039982006F4069 /* BackButton.swift in Sources */,
@@ -606,7 +614,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		046C68D32C10975D000553F9 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+		25072D862C10CD890020CB76 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
 			requirement = {
@@ -614,13 +622,26 @@
 				minimumVersion = 1.1.10;
 			};
 		};
+		25072D8B2C10D7290020CB76 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ciaranrobrien/SwiftUIMasonry.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		046C68D42C10975D000553F9 /* CalendarKit */ = {
+		25072D872C10CD890020CB76 /* CalendarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 046C68D32C10975D000553F9 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			package = 25072D862C10CD890020CB76 /* XCRemoteSwiftPackageReference "CalendarKit" */;
 			productName = CalendarKit;
+		};
+		25072D8C2C10D7290020CB76 /* SwiftUIMasonry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25072D8B2C10D7290020CB76 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */;
+			productName = SwiftUIMasonry;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

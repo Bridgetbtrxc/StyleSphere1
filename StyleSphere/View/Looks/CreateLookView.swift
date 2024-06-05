@@ -18,11 +18,13 @@ struct CreateLookView: View {
                 }
                 Section(header: Text("Select Wardrobe Items")) {
                     List(WardrobeItems, id: \.self) { item in
-                        MultipleSelectionRow(title: item.name, isSelected: selectedItems.contains(item)) {
-                            if selectedItems.contains(item) {
-                                selectedItems.remove(item)
-                            } else {
-                                selectedItems.insert(item)
+                        MultipleSelectionRow(item: item, isSelected: selectedItems.contains(item)) {
+                            withAnimation {
+                                if selectedItems.contains(item) {
+                                    selectedItems.remove(item)
+                                } else {
+                                    selectedItems.insert(item)
+                                }
                             }
                         }
                     }
@@ -37,21 +39,36 @@ struct CreateLookView: View {
                 }
             }
             .navigationTitle("Create New Look")
-            .navigationBarItems(trailing: Button("Dismiss") {
-                dismiss()
-            })
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
 struct MultipleSelectionRow: View {
-    var title: String
+    var item: WardrobeItem
     var isSelected: Bool
     var action: () -> Void
 
     var body: some View {
         HStack {
-            Text(title)
+            VStack(alignment: .leading) {
+                Text(item.name)
+                    .font(.headline)
+                HStack {
+                    HStack {
+                        Image(systemName: "tag")
+                        Text(item.category)
+                    }
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    HStack {
+                        Image(systemName: "paintpalette")
+                        Text(item.color)
+                    }
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                }
+            }
             Spacer()
             if isSelected {
                 Image(systemName: "checkmark")

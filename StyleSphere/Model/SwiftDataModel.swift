@@ -20,8 +20,7 @@ final class SwiftDataModel {
             let placeholderImageData: Data = placeholderUIImage.pngData() ?? Data()  // Ensures that we have some data even if pngData fails
             let categories = ["Celana", "Rok", "Kemeja", "Kaos", "Sandal", "Sepatu"]
             let commonColors = ["Red", "Green", "Blue", "Yellow", "Black", "White", "Gray", "Brown", "Purple", "Orange"]
-            let container = try ModelContainer(for: WardrobeItem.self, configurations: config)
-            
+            let container = try ModelContainer(for: WardrobeItem.self, LooksItem.self, configurations: config)
             categories.forEach { category in
                 for i in 1..<5 {
                     let wardrobe = WardrobeItem(name: "Placeholder \(i)",
@@ -32,7 +31,14 @@ final class SwiftDataModel {
                     container.mainContext.insert(wardrobe)
                 }
             }
-           
+            
+            
+            for i in 1..<5 {
+                let wardrobes = try container.mainContext.fetch(FetchDescriptor<WardrobeItem>())
+                let randomWardrobePrefix = wardrobes.shuffled().prefix(3)
+                let look = LooksItem(name: "Look \(i)", items: Array(randomWardrobePrefix))
+                container.mainContext.insert(look)
+            }
             
             return container
         } catch {

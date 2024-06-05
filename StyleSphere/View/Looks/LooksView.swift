@@ -10,9 +10,8 @@ import SwiftData
 
 
 struct LooksView: View {
-    @State private var showingAddNewItemModal = false
     @Environment(\.modelContext) var modelContext
-    @Query var LooksItems: [LooksItem]
+    @Query var looksItem: [LooksItem]
     
     let categories = ["Celana", "Rok", "Kemeja", "Kaos", "Sandal", "Sepatu"]
     
@@ -22,69 +21,39 @@ struct LooksView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            Text("Create a look from your wardrobe here !")
-            VStack {
-                Spacer().frame(height: 20)
-                Text("Wardrobe")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.subColor)
-                
-                Spacer().frame(height: 30)
-                Divider()
-                
-                ScrollView {
-                    LazyVGrid(columns: columns) {
-                        if LooksItems.isEmpty {
-                            Button(action: {
-                                showingAddNewItemModal = true
-                            }) {
-                                Label("Add New", systemImage: "plus.circle.fill")
-                                    .foregroundColor(.gray)
-                                    .padding()
-                                    .background(Color.black.opacity(0.1))
-                                    .cornerRadius(14)
-                            }
-                            .sheet(isPresented: $showingAddNewItemModal) {
-                                CreateLookView()
-                            }
-                        } else {
-                            ForEach(categories, id: \.self) { category in
-                                NavigationLink(destination: CategoryDetail(selectedCategory: category)) {
-                                    LooksItemView(
-                                        name: name
-                                        imageName: category,
-                                        clothingType: category
-                                    )
+        NavigationStack {
+            Group {
+                if looksItem.isEmpty {
+                    ContentUnavailableView("No looks yet", systemImage: "questionmark")
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 16) {
+                            ForEach(looksItem, id: \.self) { look in
+                                NavigationLink(destination: EmptyView()) {
+                                    LookCardView(look: look)
                                 }
                             }
                         }
-                        
-                        
+                        .padding()
                     }
-                    .padding()
                 }
             }
             .navigationTitle("Looks")
-            
-            
-        }
-        .onAppear {
-            
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleTextColor(Color.subColor)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: CreateLookView()) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
     }
 }
 
 
-
-
-
-
-
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: LooksItem.self, configurations: config)
-    return LooksView().modelContainer(container)
+    return LooksView().modelContainer(SwiftDataModel.container)
     
 }
