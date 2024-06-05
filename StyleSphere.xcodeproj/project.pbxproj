@@ -42,10 +42,39 @@
 		04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
 		04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */; };
 		04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
+		3FFB61982C106AA200838068 /* WatchStyleSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB61972C106AA200838068 /* WatchStyleSphereApp.swift */; };
+		3FFB619A2C106AA200838068 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB61992C106AA200838068 /* ContentView.swift */; };
+		3FFB619C2C106AA300838068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB619B2C106AA300838068 /* Assets.xcassets */; };
+		3FFB619F2C106AA300838068 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB619E2C106AA300838068 /* Preview Assets.xcassets */; };
+		3FFB61A22C106AA300838068 /* WatchStyleSphere Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3FFB61952C106AA200838068 /* WatchStyleSphere Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		25464E642C0CAC140019A4B5 /* UIDevice+Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */; };
 		25464E662C0CB1330019A4B5 /* SwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */; };
 		25464E682C0CB2720019A4B5 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E672C0CB2720019A4B5 /* ModelPreview.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FFB61A02C106AA300838068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CF61D42BFF78090053FA09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FFB61942C106AA200838068;
+			remoteInfo = "WatchStyleSphere Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3FFB61A32C106AA300838068 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3FFB61A22C106AA300838068 /* WatchStyleSphere Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		040284292C0E19FC00FCA16E /* AddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddNewItemView.swift; path = "../../../../../../Downloads/See How To Store An Image In SwiftData 📸 | SwiftData Tutorial/Source Code/Final/ToDos/AddNewItemView.swift"; sourceTree = "<group>"; };
@@ -84,6 +113,11 @@
 		04CF61F42BFF7F820053FA09 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
 		04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		04EF6ADC2C085CF500BA2B80 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		3FFB61952C106AA200838068 /* WatchStyleSphere Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchStyleSphere Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FFB61972C106AA200838068 /* WatchStyleSphereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStyleSphereApp.swift; sourceTree = "<group>"; };
+		3FFB61992C106AA200838068 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3FFB619B2C106AA300838068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FFB619E2C106AA300838068 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Pad.swift"; sourceTree = "<group>"; };
 		25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModel.swift; sourceTree = "<group>"; };
 		25464E672C0CB2720019A4B5 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
@@ -91,6 +125,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		04CF61D92BFF78090053FA09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FFB61922C106AA200838068 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				04CF61DE2BFF78090053FA09 /* StyleSphere */,
+				3FFB61962C106AA200838068 /* WatchStyleSphere Watch App */,
 				04CF61DD2BFF78090053FA09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -219,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				04CF61DC2BFF78090053FA09 /* StyleSphere.app */,
+				3FFB61952C106AA200838068 /* WatchStyleSphere Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,6 +300,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		3FFB61962C106AA200838068 /* WatchStyleSphere Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				3FFB61972C106AA200838068 /* WatchStyleSphereApp.swift */,
+				3FFB61992C106AA200838068 /* ContentView.swift */,
+				3FFB619B2C106AA300838068 /* Assets.xcassets */,
+				3FFB619D2C106AA300838068 /* Preview Content */,
+			);
+			path = "WatchStyleSphere Watch App";
+			sourceTree = "<group>";
+		};
+		3FFB619D2C106AA300838068 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3FFB619E2C106AA300838068 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,14 +329,33 @@
 				04CF61D82BFF78090053FA09 /* Sources */,
 				04CF61D92BFF78090053FA09 /* Frameworks */,
 				04CF61DA2BFF78090053FA09 /* Resources */,
+				3FFB61A32C106AA300838068 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FFB61A12C106AA300838068 /* PBXTargetDependency */,
+			);
+			name = StyleSphere;
+			productName = StyleSphere;
+			productReference = 04CF61DC2BFF78090053FA09 /* StyleSphere.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FFB61942C106AA200838068 /* WatchStyleSphere Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FFB61A62C106AA300838068 /* Build configuration list for PBXNativeTarget "WatchStyleSphere Watch App" */;
+			buildPhases = (
+				3FFB61912C106AA200838068 /* Sources */,
+				3FFB61922C106AA200838068 /* Frameworks */,
+				3FFB61932C106AA200838068 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = StyleSphere;
-			productName = StyleSphere;
-			productReference = 04CF61DC2BFF78090053FA09 /* StyleSphere.app */;
+			name = "WatchStyleSphere Watch App";
+			productName = "WatchStyleSphere Watch App";
+			productReference = 3FFB61952C106AA200838068 /* WatchStyleSphere Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -284,11 +365,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					04CF61DB2BFF78090053FA09 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					3FFB61942C106AA200838068 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -306,6 +390,7 @@
 			projectRoot = "";
 			targets = (
 				04CF61DB2BFF78090053FA09 /* StyleSphere */,
+				3FFB61942C106AA200838068 /* WatchStyleSphere Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -317,6 +402,15 @@
 			files = (
 				04CF61E72BFF780B0053FA09 /* Preview Assets.xcassets in Resources */,
 				04CF61E42BFF780B0053FA09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FFB61932C106AA200838068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FFB619F2C106AA300838068 /* Preview Assets.xcassets in Resources */,
+				3FFB619C2C106AA300838068 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +460,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FFB61912C106AA200838068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FFB619A2C106AA200838068 /* ContentView.swift in Sources */,
+				3FFB61982C106AA200838068 /* WatchStyleSphereApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FFB61A12C106AA300838068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FFB61942C106AA200838068 /* WatchStyleSphere Watch App */;
+			targetProxy = 3FFB61A02C106AA300838068 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		04CF61E82BFF780B0053FA09 /* Debug */ = {
@@ -491,6 +602,7 @@
 		04CF61EB2BFF780B0053FA09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -521,6 +633,7 @@
 		04CF61EC2BFF780B0053FA09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +661,64 @@
 			};
 			name = Release;
 		};
+		3FFB61A42C106AA300838068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchStyleSphere Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchStyleSphere;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = uc.StyleSphere;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uc.StyleSphere.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		3FFB61A52C106AA300838068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchStyleSphere Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchStyleSphere;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = uc.StyleSphere;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uc.StyleSphere.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,6 +736,15 @@
 			buildConfigurations = (
 				04CF61EB2BFF780B0053FA09 /* Debug */,
 				04CF61EC2BFF780B0053FA09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FFB61A62C106AA300838068 /* Build configuration list for PBXNativeTarget "WatchStyleSphere Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FFB61A42C106AA300838068 /* Debug */,
+				3FFB61A52C106AA300838068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
