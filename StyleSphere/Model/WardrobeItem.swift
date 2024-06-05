@@ -14,6 +14,7 @@ class WardrobeItem {
         self.name = name
         self.category = category
         self.color = color
+        self.image = image
        // self.imageData = imageData
 }
 //class LooksItem{

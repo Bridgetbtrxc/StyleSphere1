@@ -46,6 +46,7 @@
 		04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
 		04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */; };
 		04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
+		25072D7F2C10B2690020CB76 /* LooksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D7E2C10B2690020CB76 /* LooksItem.swift */; };
 		25464E642C0CAC140019A4B5 /* UIDevice+Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */; };
 		25464E662C0CB1330019A4B5 /* SwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */; };
 		25464E682C0CB2720019A4B5 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E672C0CB2720019A4B5 /* ModelPreview.swift */; };
@@ -91,6 +92,7 @@
 		04CF61F42BFF7F820053FA09 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
 		04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		04EF6ADC2C085CF500BA2B80 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		25072D7E2C10B2690020CB76 /* LooksItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksItem.swift; sourceTree = "<group>"; };
 		25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Pad.swift"; sourceTree = "<group>"; };
 		25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModel.swift; sourceTree = "<group>"; };
 		25464E672C0CB2720019A4B5 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */,
 				25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */,
 				25464E672C0CB2720019A4B5 /* ModelPreview.swift */,
+				25072D7E2C10B2690020CB76 /* LooksItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045F3C802C108C9A003F4430 /* ClothingDetails.swift in Sources */,
+				25072D7F2C10B2690020CB76 /* LooksItem.swift in Sources */,
 				045F3C812C108C9A003F4430 /* ClothingItemView.swift in Sources */,
 				045F3C822C108C9A003F4430 /* AddNewItemView.swift in Sources */,
 				045F3C832C108C9A003F4430 /* ColorButton.swift in Sources */,
