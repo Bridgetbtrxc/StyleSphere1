@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 import PhotosUI
 
-struct CategoryDetail: View {
+struct CategoryContentView: View {
     
     let selectedCategory: String
     @State private var showingAddNewItemModal = false
@@ -10,10 +10,11 @@ struct CategoryDetail: View {
     
     @State var selectedPhoto: PhotosPickerItem?
     @State var selectedColor: String = ""
+    @State var searchClothing: String = ""
     
     @Query var allWardrobeItems: [WardrobeItem]
     @State var wardrobeItems: [WardrobeItem] = []
-
+    
     init(selectedCategory: String) {
         self.selectedCategory = selectedCategory
         _allWardrobeItems = Query(filter: #Predicate<WardrobeItem> {
@@ -44,33 +45,41 @@ struct CategoryDetail: View {
     }
     
     var body: some View {
-        
         VStack {
-            
-            Spacer().frame(height: 20)
-            Text(selectedCategory)
-                .font(.headline)
-                .fontWeight(.bold)
-                .foregroundColor(Color.subColor)
-                .onAppear {
-                    selectedColor = ""
-                    wardrobeItems = allWardrobeItems
-                }
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack {
-                    ForEach(filteredColors, id: \.self) { color in
-                        ColorButton(selection: $selectedColor, color: color)
+            VStack {
+                SearchbarView(text: $searchClothing)
+                    .padding()
+                    .navigationTitle(selectedCategory)
+                    .navigationBarTitleTextColor(Color.subColor)
+                    .onChange(of: searchClothing) {
+                        if searchClothing == "" {
+                            wardrobeItems = allWardrobeItems
+                        } else {
+                            wardrobeItems = allWardrobeItems.filter {
+                                $0.name.lowercased().contains(searchClothing.lowercased())
+                            }
+                        }
                     }
-                }
-                .padding(.horizontal)
-                .onChange(of: selectedColor) {
-                    syncSearchedColor()
+                    .onAppear {
+                        selectedColor = ""
+                        wardrobeItems = allWardrobeItems
+                    }
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(filteredColors, id: \.self) { color in
+                            ColorButton(selection: $selectedColor, color: color)
+                        }
+                    }
+                    .padding(.horizontal)
+                    .onChange(of: selectedColor) {
+                        syncSearchedColor()
+                    }
+                    
                 }
                 
-            }.frame(height:50)
-            Divider()
-            Spacer()
+                Divider().padding(.top)
+            }
+           
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     if(wardrobeItems.isEmpty){
@@ -99,6 +108,7 @@ struct CategoryDetail: View {
                             Label("Add New", systemImage: "plus.circle.fill")
                                 .foregroundColor(.gray)
                                 .padding()
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                                 .background(Color.black.opacity(0.1))
                                 .cornerRadius(14)
                         }
@@ -122,8 +132,6 @@ struct CategoryDetail: View {
                 .padding()
             }
             Spacer()
-            Spacer()
-            Spacer()
                 .onChange(of: showingAddNewItemModal) {
                     // if the sheet is closed, resync the searched color
                     if !showingAddNewItemModal {
@@ -138,34 +146,13 @@ struct CategoryDetail: View {
     }
 }
 
-
-
-
-
-
-
-
-//#Preview {
-//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-//    let container = try! ModelContainer(for: WardrobeItem.self, configurations: config)
-//    let wardrobeItems = [
-//        WardrobeItem(name: "Favorite Blue Shirt", category: "Shirts", color: "Blue"),
-//        WardrobeItem(name: "Comfy Black Jeans", category: "Pants", color: "Black"),
-//        WardrobeItem(name: "Comfy Black Jeans", category: "Pants", color: "Black")
-//        ,
-//        WardrobeItem(name: "Comfy Black Jeans", category: "Pants", color: "Black")
-//        ,
-//        WardrobeItem(name: "Comfy Black Jeans", category: "Pants", color: "Black")
-//        // Add more wardrobe items as needed
-//    ]    //    for i in 1..<10{
-//    //        let wardrobe = WardrobeItem(name: "Data", category: "data", color: "data")
-//    //        container.mainContext.insert(wardrobe)
-//    //    }
-//
-//    //    let item1 = WardrobeItem(name: "Favorite Blue Shirt", category: "Kaos", color: "Blue")
-//    //    container.mainContext.insert(item1)
-//
-////    return CategoryDetail(selectedCategory: "Pants", wardrobeitems: $wardrobeItems).modelContainer(container)
-//
-//}
-
+#Preview {
+    struct PreviewContent: View {
+        var body: some View {
+            CategoryContentView(selectedCategory: "Celana")
+                .modelContainer(SwiftDataModel.container)
+        }
+    }
+    
+    return PreviewContent()
+}
