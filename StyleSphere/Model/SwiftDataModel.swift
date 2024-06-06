@@ -18,7 +18,7 @@ final class SwiftDataModel {
             
             let placeholderUIImage = UIImage(named: "Wardrobe1") ?? UIImage() // Using a fallback empty image
             let placeholderImageData: Data = placeholderUIImage.pngData() ?? Data()  // Ensures that we have some data even if pngData fails
-            let categories = ["Celana", "Rok", "Kemeja", "Kaos", "Sandal", "Sepatu"]
+            let categories = WardrobeItem.categories
             let commonColors = ["Red", "Green", "Blue", "Yellow", "Black", "White", "Gray", "Brown", "Purple", "Orange"]
             let container = try ModelContainer(for: WardrobeItem.self, LooksItem.self, configurations: config)
             categories.forEach { category in

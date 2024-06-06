@@ -13,7 +13,7 @@ struct LooksView: View {
     @Environment(\.modelContext) var modelContext
     @Query var looksItem: [LooksItem]
     
-    let categories = ["Celana", "Rok", "Kemeja", "Kaos", "Sandal", "Sepatu"]
+    let categories = WardrobeItem.categories
     
     var columns: [GridItem] = [
         GridItem(.flexible()),
@@ -27,11 +27,11 @@ struct LooksView: View {
                     ContentUnavailableView("No looks yet", systemImage: "questionmark")
                 } else {
                     ScrollView {
-                        LazyVGrid(columns: columns, spacing: 16) {
+                        LazyVGrid(columns: columns) {
                             ForEach(looksItem, id: \.self) { look in
                                 NavigationLink(destination: EmptyView()) {
                                     LookCardView(look: look)
-                                }
+                                }.padding(.all, 3)
                             }
                         }
                         .padding()

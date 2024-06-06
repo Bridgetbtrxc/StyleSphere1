@@ -16,7 +16,7 @@ struct WardrobeView: View {
     @Environment(\.modelContext) var modelContext
     @Query var wardrobeItems: [WardrobeItem]
     
-    let categories = ["Celana", "Rok", "Kemeja", "Kaos", "Sandal", "Sepatu"]
+    let categories = WardrobeItem.categories
     
     var body: some View {
         NavigationStack {

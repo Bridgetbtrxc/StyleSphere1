@@ -16,12 +16,12 @@ struct AddNewItemView: View {
     @State private var item = WardrobeItem()
     
     @State private var name: String = ""
-    @State private var category: String = "Celana"
+    @State private var category: String = WardrobeItem.categories.first!
     @State private var color: String = ""
     @State var selectedPhoto: PhotosPickerItem?
     @State var selectedPhotoData: Data?
     
-    let categories = ["Celana", "Rok", "Baju", "Kemeja", "Kaos", "Sandal", "Sepatu"]
+    let categories = WardrobeItem.categories
     
     
     var body: some View {

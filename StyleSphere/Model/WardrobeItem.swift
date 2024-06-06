@@ -4,6 +4,9 @@ import SwiftUI
 
 @Model
 class WardrobeItem {
+    // Categories for the wardrobe items
+    @Transient static let categories = ["Pants", "Skirt", "Clothing", "Shirt", "T-Shirt", "Sandal", "Shoes"]
+    
     var id: UUID = UUID()
     var category: String
     var name: String
