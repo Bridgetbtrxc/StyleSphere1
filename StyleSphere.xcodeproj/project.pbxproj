@@ -36,25 +36,10 @@
 		04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */; };
 		04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
 		04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */; };
-<<<<<<< Updated upstream
 		04FE216E2C11F3E60075F53A /* StyleSphereMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */; };
 		04FE21702C11F3E60075F53A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE216F2C11F3E60075F53A /* ContentView.swift */; };
 		04FE21722C11F3E80075F53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21712C11F3E80075F53A /* Assets.xcassets */; };
 		04FE21752C11F3E80075F53A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21742C11F3E80075F53A /* Preview Assets.xcassets */; };
-=======
-		04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
-		04FE218F2C1214460075F53A /* StyleSphereMac1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE218E2C1214460075F53A /* StyleSphereMac1App.swift */; };
-		04FE21932C1214480075F53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21922C1214480075F53A /* Assets.xcassets */; };
-		04FE21962C1214480075F53A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21952C1214480075F53A /* Preview Assets.xcassets */; };
-		04FE219C2C1214BE0075F53A /* WardrobeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */; };
-		04FE219D2C1214CA0075F53A /* LooksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D7E2C10B2690020CB76 /* LooksItem.swift */; };
-		04FE219F2C1215290075F53A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE219E2C1215290075F53A /* Home.swift */; };
-		04FE21A12C121A8D0075F53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF61E32BFF780B0053FA09 /* Assets.xcassets */; };
-		04FE21A42C121ADB0075F53A /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21A32C121ADB0075F53A /* Header.swift */; };
-		04FE21A62C121EBC0075F53A /* StyleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21A52C121EBC0075F53A /* StyleInfoView.swift */; };
-		04FE21A82C1220940075F53A /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21A72C1220940075F53A /* Banner.swift */; };
-		04FE21AA2C12210B0075F53A /* YourWardrobe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21A92C12210B0075F53A /* YourWardrobe.swift */; };
->>>>>>> Stashed changes
 		25072D7F2C10B2690020CB76 /* LooksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D7E2C10B2690020CB76 /* LooksItem.swift */; };
 		25072D832C10CB610020CB76 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D822C10CB610020CB76 /* SearchbarView.swift */; };
 		25072D882C10CD890020CB76 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 25072D872C10CD890020CB76 /* CalendarKit */; };
@@ -111,21 +96,12 @@
 		04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView1.swift; sourceTree = "<group>"; };
 		04CF61F42BFF7F820053FA09 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
 		04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
-=======
-		04EF6ADC2C085CF500BA2B80 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 		04FE216B2C11F3E60075F53A /* StyleSphereMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleSphereMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04FE218C2C1214460075F53A /* StyleSphereMac1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleSphereMac1.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04FE218E2C1214460075F53A /* StyleSphereMac1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSphereMac1App.swift; sourceTree = "<group>"; };
-		04FE21922C1214480075F53A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04FE21952C1214480075F53A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		04FE21972C1214480075F53A /* StyleSphereMac1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StyleSphereMac1.entitlements; sourceTree = "<group>"; };
-		04FE219E2C1215290075F53A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		04FE21A32C121ADB0075F53A /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		04FE21A52C121EBC0075F53A /* StyleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleInfoView.swift; sourceTree = "<group>"; };
-		04FE21A72C1220940075F53A /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
-		04FE21A92C12210B0075F53A /* YourWardrobe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWardrobe.swift; sourceTree = "<group>"; };
+		04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSphereMacApp.swift; sourceTree = "<group>"; };
+		04FE216F2C11F3E60075F53A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04FE21712C11F3E80075F53A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04FE21742C11F3E80075F53A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04FE21762C11F3E80075F53A /* StyleSphereMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StyleSphereMac.entitlements; sourceTree = "<group>"; };
 		25072D7E2C10B2690020CB76 /* LooksItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksItem.swift; sourceTree = "<group>"; };
 		25072D822C10CB610020CB76 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
 		25072D892C10D29F0020CB76 /* LookCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookCardView.swift; sourceTree = "<group>"; };
@@ -147,16 +123,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04FE21682C11F3E60075F53A /* Frameworks */ = {
-<<<<<<< Updated upstream
-=======
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04FE21892C1214460075F53A /* Frameworks */ = {
->>>>>>> Stashed changes
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,11 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				04CF61DE2BFF78090053FA09 /* StyleSphere */,
-<<<<<<< Updated upstream
 				04FE216C2C11F3E60075F53A /* StyleSphereMac */,
-=======
-				04FE218D2C1214460075F53A /* StyleSphereMac1 */,
->>>>>>> Stashed changes
 				04CF61DD2BFF78090053FA09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -266,7 +228,6 @@
 			children = (
 				04CF61DC2BFF78090053FA09 /* StyleSphere.app */,
 				04FE216B2C11F3E60075F53A /* StyleSphereMac.app */,
-				04FE218C2C1214460075F53A /* StyleSphereMac1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,40 +265,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-<<<<<<< Updated upstream
 		04FE216C2C11F3E60075F53A /* StyleSphereMac */ = {
-=======
-		04FE218D2C1214460075F53A /* StyleSphereMac1 */ = {
 			isa = PBXGroup;
 			children = (
-				04FE21A22C121AC80075F53A /* Component */,
-				04FE218E2C1214460075F53A /* StyleSphereMac1App.swift */,
-				04FE21922C1214480075F53A /* Assets.xcassets */,
-				04FE21972C1214480075F53A /* StyleSphereMac1.entitlements */,
-				04FE21942C1214480075F53A /* Preview Content */,
-				04FE219E2C1215290075F53A /* Home.swift */,
+				04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */,
+				04FE216F2C11F3E60075F53A /* ContentView.swift */,
+				04FE21712C11F3E80075F53A /* Assets.xcassets */,
+				04FE21762C11F3E80075F53A /* StyleSphereMac.entitlements */,
+				04FE21732C11F3E80075F53A /* Preview Content */,
 			);
-			path = StyleSphereMac1;
+			path = StyleSphereMac;
 			sourceTree = "<group>";
 		};
-		04FE21942C1214480075F53A /* Preview Content */ = {
+		04FE21732C11F3E80075F53A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				04FE21952C1214480075F53A /* Preview Assets.xcassets */,
+				04FE21742C11F3E80075F53A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		04FE21A22C121AC80075F53A /* Component */ = {
->>>>>>> Stashed changes
-			isa = PBXGroup;
-			children = (
-				04FE21A32C121ADB0075F53A /* Header.swift */,
-				04FE21A52C121EBC0075F53A /* StyleInfoView.swift */,
-				04FE21A72C1220940075F53A /* Banner.swift */,
-				04FE21A92C12210B0075F53A /* YourWardrobe.swift */,
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		25714D442C120CFE008AE4B3 /* Calendar */ = {
@@ -391,23 +336,6 @@
 			productReference = 04FE216B2C11F3E60075F53A /* StyleSphereMac.app */;
 			productType = "com.apple.product-type.application";
 		};
-		04FE218B2C1214460075F53A /* StyleSphereMac1 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04FE21982C1214480075F53A /* Build configuration list for PBXNativeTarget "StyleSphereMac1" */;
-			buildPhases = (
-				04FE21882C1214460075F53A /* Sources */,
-				04FE21892C1214460075F53A /* Frameworks */,
-				04FE218A2C1214460075F53A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = StyleSphereMac1;
-			productName = StyleSphereMac1;
-			productReference = 04FE218C2C1214460075F53A /* StyleSphereMac1.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -422,12 +350,6 @@
 						CreatedOnToolsVersion = 15.3;
 					};
 					04FE216A2C11F3E60075F53A = {
-<<<<<<< Updated upstream
-=======
-						CreatedOnToolsVersion = 15.3;
-					};
-					04FE218B2C1214460075F53A = {
->>>>>>> Stashed changes
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -451,7 +373,6 @@
 			targets = (
 				04CF61DB2BFF78090053FA09 /* StyleSphere */,
 				04FE216A2C11F3E60075F53A /* StyleSphereMac */,
-				04FE218B2C1214460075F53A /* StyleSphereMac1 */,
 			);
 		};
 /* End PBXProject section */
@@ -470,16 +391,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04FE218A2C1214460075F53A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04FE21962C1214480075F53A /* Preview Assets.xcassets in Resources */,
-				04FE21A12C121A8D0075F53A /* Assets.xcassets in Resources */,
-				04FE21932C1214480075F53A /* Assets.xcassets in Resources */,
+				04FE21752C11F3E80075F53A /* Preview Assets.xcassets in Resources */,
+				04FE21722C11F3E80075F53A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,21 +445,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04FE21882C1214460075F53A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04FE21A42C121ADB0075F53A /* Header.swift in Sources */,
-				04FE219C2C1214BE0075F53A /* WardrobeItem.swift in Sources */,
-				04FE21AA2C12210B0075F53A /* YourWardrobe.swift in Sources */,
-				04FE21A62C121EBC0075F53A /* StyleInfoView.swift in Sources */,
-				04FE219D2C1214CA0075F53A /* LooksItem.swift in Sources */,
-				04FE21A82C1220940075F53A /* Banner.swift in Sources */,
-				04FE219F2C1215290075F53A /* Home.swift in Sources */,
-				04FE218F2C1214460075F53A /* StyleSphereMac1App.swift in Sources */,
+				04FE21702C11F3E60075F53A /* ContentView.swift in Sources */,
+				04FE216E2C11F3E60075F53A /* StyleSphereMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,60 +690,6 @@
 			};
 			name = Release;
 		};
-		04FE21992C1214480075F53A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = StyleSphereMac1/StyleSphereMac1.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StyleSphereMac1/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uc.StyleSphereMac1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		04FE219A2C1214480075F53A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = StyleSphereMac1/StyleSphereMac1.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StyleSphereMac1/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uc.StyleSphereMac1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -870,15 +716,6 @@
 			buildConfigurations = (
 				04FE21782C11F3E80075F53A /* Debug */,
 				04FE21792C11F3E80075F53A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04FE21982C1214480075F53A /* Build configuration list for PBXNativeTarget "StyleSphereMac1" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04FE21992C1214480075F53A /* Debug */,
-				04FE219A2C1214480075F53A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
