@@ -2,7 +2,7 @@
 //  SearchbarView.swift
 //  StyleSphere
 //
-//  Created by Rama Adi Nugraha on 05/06/24.
+//  = on 05/06/24.
 //
 
 import SwiftUI

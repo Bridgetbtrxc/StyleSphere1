@@ -2,7 +2,7 @@
 //  LooksItem.swift
 //  StyleSphere
 //
-//  Created by Rama Adi Nugraha on 05/06/24.
+//  Created on 05/06/24.
 //
 
 import Foundation

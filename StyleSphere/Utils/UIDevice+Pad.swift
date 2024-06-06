@@ -2,7 +2,7 @@
 //  UIDevice+Pad.swift
 //  StyleSphere
 //
-//  Created by Rama Adi Nugraha on 02/06/24.
+//  on 02/06/24.
 //
 
 import Foundation

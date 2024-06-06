@@ -2,7 +2,7 @@
 //  NewCalendarView.swift
 //  StyleSphere
 //
-//  Created by Rama Adi Nugraha on 06/06/24.
+//   on 06/06/24.
 //
 
 import SwiftUI
