@@ -9,39 +9,38 @@ import SwiftUI
 
 struct YourWardrobe: View {
     @State private var data = Array(1...10)
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) { // Increased spacing for a more spacious layout
+                LazyHGrid(rows: [GridItem(.fixed(200))], spacing: 30) {
                     ForEach(data.indices, id: \.self) { index in
                         let imageIndex = index % 2
                         let imageName = "Wardrobe\(imageIndex + 1)"
                         let clothingType = imageIndex == 0 ? "Shirt" : "Pants"
                         
                         Button(action: {
-                            // Button action
+                            // Add action
                         }) {
                             VStack(alignment: .center, spacing: 10) {
                                 Image(imageName)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: 90, height: 110)
-                                    .cornerRadius(20)
+                                    .frame(width: 130, height: 130)
+                                    .clipped()
                                 
                                 Text(clothingType)
-                                    .font(Font.custom("Inter", size: 18))
-                                    .foregroundColor(Color(NSColor.textColor))
-                                    .padding(.top, 10)
+                                    .font(.system(size: 18))
                                     .frame(width: 200, alignment: .center)
                             }
-                            .background(Color(NSColor.windowBackgroundColor))
+                            .frame(width: 180, height: 200)
+                            .background(Color(nsColor: .windowBackgroundColor))
                             .cornerRadius(20)
                             .shadow(radius: 5)
                         }
-                        .buttonStyle(PlainButtonStyle())
                     }
                 }
+                .padding(.horizontal)
             }
         }
     }

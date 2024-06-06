@@ -9,21 +9,22 @@ import SwiftUI
 
 struct Header: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Bridget Beatrix Claire")
-                .font(.title3)
-                .fontWeight(.bold)
-            Text("Choose Your Style")
-                .font(.body)
-            Text("Style That Matches You 🔥")
-                .font(.headline)
+        HStack {
+            Text("Beatrix")
+                .font(.system(size: 24, weight: .bold))
+                .padding(.leading, 20)
+            
+            Text("Choose your style")
+                .font(.system(size: 18))
+                .padding(.leading, 5)
+            
             Spacer()
-            Image("dots")
-                .padding(12)
-                .background(Color(NSColor.windowBackgroundColor)) // macOS specific color
-                .cornerRadius(32)
+            
+            IconMenu()
+                .padding(.trailing, 20)
         }
-        .padding(.horizontal)
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(height: 50)
+        .background(Color(nsColor: .windowFrameColor))
+        .cornerRadius(10)
     }
 }
