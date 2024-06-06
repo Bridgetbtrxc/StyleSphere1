@@ -3,11 +3,7 @@ import SwiftUI
 struct AppNavigationView: View {
     @State private var visualSelectedIndex = 0
     @State private var programmaticSelectedIndex = 0
-    @State private var hasAnot = false
-    @State private var currentDate = Date()
-    
-    
-    
+
     var iPadNavigation: some View {
         NavigationSplitView(sidebar: {
             List {
@@ -18,7 +14,7 @@ struct AppNavigationView: View {
                 NavigationLink(destination: WardrobeView()) {
                     Label("Wardrobe", systemImage: "person")
                 }
-                NavigationLink(destination: CalendarView(currentDate: $currentDate)) {
+                NavigationLink(destination: CalendarView()) {
                     Label("Calendar", systemImage: "calendar")
                 }
                 NavigationLink(destination: LooksView()) {
@@ -48,7 +44,7 @@ struct AppNavigationView: View {
             .tag(1)
             .onAppear { self.visualSelectedIndex = 1 }
             
-            CalendarView(currentDate: $currentDate).tabItem {
+            CalendarView().tabItem {
                 Image(visualSelectedIndex == 2 ? "CalendarPressed" : "Calendar")
                 Text("Calendar")
             }

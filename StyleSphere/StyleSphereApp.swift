@@ -13,7 +13,7 @@ struct StyleSphereApp: App {
     var body: some Scene {
         WindowGroup {
             AppNavigationView()
-        }.modelContainer(for: [WardrobeItem.self, LooksItem.self])
+        }.modelContainer(for: [WardrobeItem.self, LooksItem.self, CalendarEvent.self])
         
     }
 }

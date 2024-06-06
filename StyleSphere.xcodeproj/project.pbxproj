@@ -7,19 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		045F3C792C1037D7003F4430 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C782C1037D7003F4430 /* ViewController.swift */; };
 		045F3C802C108C9A003F4430 /* ClothImageDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C7C2C108C9A003F4430 /* ClothImageDisplayView.swift */; };
 		045F3C812C108C9A003F4430 /* ClothingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C7D2C108C9A003F4430 /* ClothingItemView.swift */; };
 		045F3C822C108C9A003F4430 /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C7E2C108C9A003F4430 /* AddNewItemView.swift */; };
 		045F3C832C108C9A003F4430 /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C7F2C108C9A003F4430 /* ColorButton.swift */; };
-		046C68D22C109741000553F9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C68D12C109741000553F9 /* CalendarViewController.swift */; };
-		046C68D72C109781000553F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C68D62C109781000553F9 /* SceneDelegate.swift */; };
-		046EFCF62C088158002C3E2A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF52C088158002C3E2A /* Event.swift */; };
-		046EFCF82C0881F6002C3E2A /* IdentifiableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */; };
-		046EFCFA2C08846E002C3E2A /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF92C08846E002C3E2A /* AddEvent.swift */; };
-		046EFCFC2C088745002C3E2A /* EventShowcaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */; };
-		046EFCFE2C08877E002C3E2A /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCFD2C08877E002C3E2A /* EventCard.swift */; };
-		046EFD002C0887C8002C3E2A /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */; };
+		046EFCF62C088158002C3E2A /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF52C088158002C3E2A /* CalendarEvent.swift */; };
 		04B43CF22C10C57E00E99242 /* CreateLookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B43CF12C10C57E00E99242 /* CreateLookView.swift */; };
 		04B43CF42C10C89F00E99242 /* LooksItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B43CF32C10C89F00E99242 /* LooksItemView.swift */; };
 		04B953CE2C06B4260015C45D /* AddClothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B953CD2C06B4260015C45D /* AddClothes.swift */; };
@@ -33,7 +25,6 @@
 		04BA1EB92C039982006F4069 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EB82C039982006F4069 /* BackButton.swift */; };
 		04BA1EC12C03BAF1006F4069 /* HomeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC02C03BAF1006F4069 /* HomeView1.swift */; };
 		04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC22C03C163006F4069 /* WardrobeView.swift */; };
-		04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC42C03C435006F4069 /* CalendarView.swift */; };
 		04BA1EC72C03C46C006F4069 /* LooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC62C03C46C006F4069 /* LooksView.swift */; };
 		04BA1EC92C04FA13006F4069 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC82C04FA13006F4069 /* TabItem.swift */; };
 		04CB9C7D2C07265B001FC84F /* WardrobeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */; };
@@ -45,27 +36,6 @@
 		04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */; };
 		04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
 		04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */; };
-		04E150CB2C11B8E2007C423F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E150CA2C11B8E2007C423F /* ContentView.swift */; };
-		04E150CD2C11B8E4007C423F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E150CC2C11B8E4007C423F /* Assets.xcassets */; };
-		04E150D02C11B8E4007C423F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E150CF2C11B8E4007C423F /* Preview Assets.xcassets */; };
-		04E150D32C11B8E4007C423F /* StyleSphereWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04E150C62C11B8E2007C423F /* StyleSphereWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		04E150D82C11BB52007C423F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF61E32BFF780B0053FA09 /* Assets.xcassets */; };
-		04E150D92C11BB52007C423F /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
-		04E150DA2C11BB52007C423F /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC82C04FA13006F4069 /* TabItem.swift */; };
-		04E150DB2C11BB52007C423F /* StyleSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */; };
-		04E150DC2C11BB52007C423F /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
-		04E150DD2C11BB52007C423F /* UIDevice+Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */; };
-		04E150DE2C11BB52007C423F /* IdentifiableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */; };
-		04E150DF2C11BB52007C423F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C68D62C109781000553F9 /* SceneDelegate.swift */; };
-		04E150E02C11BB52007C423F /* WardrobeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */; };
-		04E150E12C11BB52007C423F /* SwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */; };
-		04E150E22C11BB52007C423F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF52C088158002C3E2A /* Event.swift */; };
-		04E150E32C11BB52007C423F /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E672C0CB2720019A4B5 /* ModelPreview.swift */; };
-		04E150E42C11BB52007C423F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C782C1037D7003F4430 /* ViewController.swift */; };
-		04E150E52C11BB52007C423F /* LooksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D7E2C10B2690020CB76 /* LooksItem.swift */; };
-		04E150E62C11BB52007C423F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C68D12C109741000553F9 /* CalendarViewController.swift */; };
-		04E150E72C11BB52007C423F /* SplashScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */; };
-		04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
 		04FE216E2C11F3E60075F53A /* StyleSphereMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */; };
 		04FE21702C11F3E60075F53A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE216F2C11F3E60075F53A /* ContentView.swift */; };
 		04FE21722C11F3E80075F53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21712C11F3E80075F53A /* Assets.xcassets */; };
@@ -78,17 +48,9 @@
 		25464E642C0CAC140019A4B5 /* UIDevice+Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */; };
 		25464E662C0CB1330019A4B5 /* SwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */; };
 		25464E682C0CB2720019A4B5 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E672C0CB2720019A4B5 /* ModelPreview.swift */; };
+		25714D462C120D09008AE4B3 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25714D452C120D09008AE4B3 /* CalendarView.swift */; };
+		25714D482C1219D8008AE4B3 /* NewCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25714D472C1219D8008AE4B3 /* NewCalendarView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		04E150D12C11B8E4007C423F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04CF61D42BFF78090053FA09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04E150C52C11B8E2007C423F;
-			remoteInfo = "StyleSphereWatch Watch App";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		04E150D42C11B8E4007C423F /* Embed Watch Content */ = {
@@ -97,7 +59,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				04E150D32C11B8E4007C423F /* StyleSphereWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,19 +66,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		045F3C782C1037D7003F4430 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		045F3C7C2C108C9A003F4430 /* ClothImageDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClothImageDisplayView.swift; path = ../../../ClothImageDisplayView.swift; sourceTree = "<group>"; };
 		045F3C7D2C108C9A003F4430 /* ClothingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClothingItemView.swift; path = ../../../ClothingItemView.swift; sourceTree = "<group>"; };
 		045F3C7E2C108C9A003F4430 /* AddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddNewItemView.swift; path = ../../../AddNewItemView.swift; sourceTree = "<group>"; };
 		045F3C7F2C108C9A003F4430 /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorButton.swift; path = ../../../ColorButton.swift; sourceTree = "<group>"; };
-		046C68D12C109741000553F9 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		046C68D62C109781000553F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		046EFCF52C088158002C3E2A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableDate.swift; sourceTree = "<group>"; };
-		046EFCF92C08846E002C3E2A /* AddEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
-		046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventShowcaseView.swift; sourceTree = "<group>"; };
-		046EFCFD2C08877E002C3E2A /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
-		046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		046EFCF52C088158002C3E2A /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
 		04B43CF12C10C57E00E99242 /* CreateLookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLookView.swift; sourceTree = "<group>"; };
 		04B43CF32C10C89F00E99242 /* LooksItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksItemView.swift; sourceTree = "<group>"; };
 		04B953CD2C06B4260015C45D /* AddClothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClothes.swift; sourceTree = "<group>"; };
@@ -131,7 +84,6 @@
 		04BA1EB82C039982006F4069 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		04BA1EC02C03BAF1006F4069 /* HomeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView1.swift; sourceTree = "<group>"; };
 		04BA1EC22C03C163006F4069 /* WardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeView.swift; sourceTree = "<group>"; };
-		04BA1EC42C03C435006F4069 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		04BA1EC62C03C46C006F4069 /* LooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksView.swift; sourceTree = "<group>"; };
 		04BA1EC82C04FA13006F4069 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItem.swift; sourceTree = "<group>"; };
@@ -144,11 +96,6 @@
 		04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView1.swift; sourceTree = "<group>"; };
 		04CF61F42BFF7F820053FA09 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
 		04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		04E150C62C11B8E2007C423F /* StyleSphereWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StyleSphereWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04E150CA2C11B8E2007C423F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		04E150CC2C11B8E4007C423F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04E150CF2C11B8E4007C423F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		04EF6ADC2C085CF500BA2B80 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		04FE216B2C11F3E60075F53A /* StyleSphereMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleSphereMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSphereMacApp.swift; sourceTree = "<group>"; };
 		04FE216F2C11F3E60075F53A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +108,8 @@
 		25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Pad.swift"; sourceTree = "<group>"; };
 		25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModel.swift; sourceTree = "<group>"; };
 		25464E672C0CB2720019A4B5 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
+		25714D452C120D09008AE4B3 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		25714D472C1219D8008AE4B3 /* NewCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,13 +119,6 @@
 			files = (
 				25072D8D2C10D7290020CB76 /* SwiftUIMasonry in Frameworks */,
 				25072D882C10CD890020CB76 /* CalendarKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04E150C32C11B8E2007C423F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,44 +174,13 @@
 			path = Looks;
 			sourceTree = "<group>";
 		};
-		040284282C0E181400FCA16E /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				04BA1EC42C03C435006F4069 /* CalendarView.swift */,
-				046EFCFF2C0887C8002C3E2A /* EventDetailView.swift */,
-				046EFCF92C08846E002C3E2A /* AddEvent.swift */,
-				046EFCFB2C088745002C3E2A /* EventShowcaseView.swift */,
-				046EFCFD2C08877E002C3E2A /* EventCard.swift */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		045F3C772C103799003F4430 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				045F3C782C1037D7003F4430 /* ViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		046C68D02C10971E000553F9 /* CalendarFix */ = {
-			isa = PBXGroup;
-			children = (
-				046C68D12C109741000553F9 /* CalendarViewController.swift */,
-				046C68D62C109781000553F9 /* SceneDelegate.swift */,
-			);
-			path = CalendarFix;
-			sourceTree = "<group>";
-		};
 		04BA1EA02C0228BF006F4069 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */,
 				04BA1EC82C04FA13006F4069 /* TabItem.swift */,
 				04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */,
-				04EF6ADC2C085CF500BA2B80 /* DateValue.swift */,
-				046EFCF52C088158002C3E2A /* Event.swift */,
-				046EFCF72C0881F6002C3E2A /* IdentifiableDate.swift */,
+				046EFCF52C088158002C3E2A /* CalendarEvent.swift */,
 				25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */,
 				25464E672C0CB2720019A4B5 /* ModelPreview.swift */,
 				25072D7E2C10B2690020CB76 /* LooksItem.swift */,
@@ -280,8 +191,7 @@
 		04BA1EA72C0228BF006F4069 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				046C68D02C10971E000553F9 /* CalendarFix */,
-				040284282C0E181400FCA16E /* Calendar */,
+				25714D442C120CFE008AE4B3 /* Calendar */,
 				040284272C0E180000FCA16E /* Looks */,
 				040284262C0E17BF00FCA16E /* Wardrobe */,
 				040284252C0E173D00FCA16E /* Navigation */,
@@ -308,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				04CF61DE2BFF78090053FA09 /* StyleSphere */,
-				04E150C72C11B8E2007C423F /* StyleSphereWatch Watch App */,
 				04FE216C2C11F3E60075F53A /* StyleSphereMac */,
 				04CF61DD2BFF78090053FA09 /* Products */,
 			);
@@ -318,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				04CF61DC2BFF78090053FA09 /* StyleSphere.app */,
-				04E150C62C11B8E2007C423F /* StyleSphereWatch Watch App.app */,
 				04FE216B2C11F3E60075F53A /* StyleSphereMac.app */,
 			);
 			name = Products;
@@ -327,7 +235,6 @@
 		04CF61DE2BFF78090053FA09 /* StyleSphere */ = {
 			isa = PBXGroup;
 			children = (
-				045F3C772C103799003F4430 /* Controller */,
 				04BA1EA72C0228BF006F4069 /* View */,
 				04CF61F32BFF7F420053FA09 /* Utils */,
 				04BA1EA02C0228BF006F4069 /* Model */,
@@ -358,24 +265,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		04E150C72C11B8E2007C423F /* StyleSphereWatch Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				04E150CA2C11B8E2007C423F /* ContentView.swift */,
-				04E150CC2C11B8E4007C423F /* Assets.xcassets */,
-				04E150CE2C11B8E4007C423F /* Preview Content */,
-			);
-			path = "StyleSphereWatch Watch App";
-			sourceTree = "<group>";
-		};
-		04E150CE2C11B8E4007C423F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				04E150CF2C11B8E4007C423F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		04FE216C2C11F3E60075F53A /* StyleSphereMac */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +285,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		25714D442C120CFE008AE4B3 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				25714D452C120D09008AE4B3 /* CalendarView.swift */,
+				25714D472C1219D8008AE4B3 /* NewCalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,7 +309,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				04E150D22C11B8E4007C423F /* PBXTargetDependency */,
 			);
 			name = StyleSphere;
 			packageProductDependencies = (
@@ -420,23 +317,6 @@
 			);
 			productName = StyleSphere;
 			productReference = 04CF61DC2BFF78090053FA09 /* StyleSphere.app */;
-			productType = "com.apple.product-type.application";
-		};
-		04E150C52C11B8E2007C423F /* StyleSphereWatch Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04E150D72C11B8E4007C423F /* Build configuration list for PBXNativeTarget "StyleSphereWatch Watch App" */;
-			buildPhases = (
-				04E150C22C11B8E2007C423F /* Sources */,
-				04E150C32C11B8E2007C423F /* Frameworks */,
-				04E150C42C11B8E2007C423F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "StyleSphereWatch Watch App";
-			productName = "StyleSphereWatch Watch App";
-			productReference = 04E150C62C11B8E2007C423F /* StyleSphereWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		04FE216A2C11F3E60075F53A /* StyleSphereMac */ = {
@@ -469,9 +349,6 @@
 					04CF61DB2BFF78090053FA09 = {
 						CreatedOnToolsVersion = 15.3;
 					};
-					04E150C52C11B8E2007C423F = {
-						CreatedOnToolsVersion = 15.3;
-					};
 					04FE216A2C11F3E60075F53A = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -495,7 +372,6 @@
 			projectRoot = "";
 			targets = (
 				04CF61DB2BFF78090053FA09 /* StyleSphere */,
-				04E150C52C11B8E2007C423F /* StyleSphereWatch Watch App */,
 				04FE216A2C11F3E60075F53A /* StyleSphereMac */,
 			);
 		};
@@ -508,16 +384,6 @@
 			files = (
 				04CF61E72BFF780B0053FA09 /* Preview Assets.xcassets in Resources */,
 				04CF61E42BFF780B0053FA09 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04E150C42C11B8E2007C423F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04E150D02C11B8E4007C423F /* Preview Assets.xcassets in Resources */,
-				04E150D82C11BB52007C423F /* Assets.xcassets in Resources */,
-				04E150CD2C11B8E4007C423F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,63 +412,32 @@
 				04BA1EAB2C0228BF006F4069 /* SplashScreenItem.swift in Sources */,
 				04BA1EAD2C0228BF006F4069 /* Header.swift in Sources */,
 				04BA1EB02C0228BF006F4069 /* StyleInfoView.swift in Sources */,
-				046C68D72C109781000553F9 /* SceneDelegate.swift in Sources */,
-				046EFCFE2C08877E002C3E2A /* EventCard.swift in Sources */,
-				046EFCFC2C088745002C3E2A /* EventShowcaseView.swift in Sources */,
 				25072D832C10CB610020CB76 /* SearchbarView.swift in Sources */,
 				04CF61E22BFF78090053FA09 /* ContentView.swift in Sources */,
 				04CB9C7F2C073772001FC84F /* CategoryContentView.swift in Sources */,
 				04BA1EAE2C0228BF006F4069 /* AppNavigationView.swift in Sources */,
 				04BA1EAF2C0228BF006F4069 /* IconMenu.swift in Sources */,
 				04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */,
+				25714D462C120D09008AE4B3 /* CalendarView.swift in Sources */,
+				25714D482C1219D8008AE4B3 /* NewCalendarView.swift in Sources */,
 				04B43CF22C10C57E00E99242 /* CreateLookView.swift in Sources */,
-				046EFD002C0887C8002C3E2A /* EventDetailView.swift in Sources */,
 				04CF61E02BFF78090053FA09 /* StyleSphereApp.swift in Sources */,
 				04B43CF42C10C89F00E99242 /* LooksItemView.swift in Sources */,
-				046EFCF82C0881F6002C3E2A /* IdentifiableDate.swift in Sources */,
-				046EFCFA2C08846E002C3E2A /* AddEvent.swift in Sources */,
 				04BA1EC12C03BAF1006F4069 /* HomeView1.swift in Sources */,
-				046C68D22C109741000553F9 /* CalendarViewController.swift in Sources */,
-				045F3C792C1037D7003F4430 /* ViewController.swift in Sources */,
-				046EFCF62C088158002C3E2A /* Event.swift in Sources */,
+				046EFCF62C088158002C3E2A /* CalendarEvent.swift in Sources */,
 				04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */,
-				04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */,
 				04BA1EB12C0228BF006F4069 /* YourWardrobe.swift in Sources */,
 				04BA1EC72C03C46C006F4069 /* LooksView.swift in Sources */,
 				04BA1EAC2C0228BF006F4069 /* Banner.swift in Sources */,
 				04B953CE2C06B4260015C45D /* AddClothes.swift in Sources */,
 				25464E662C0CB1330019A4B5 /* SwiftDataModel.swift in Sources */,
 				04CB9C7D2C07265B001FC84F /* WardrobeItem.swift in Sources */,
-				04BA1EC52C03C435006F4069 /* CalendarView.swift in Sources */,
 				25464E642C0CAC140019A4B5 /* UIDevice+Pad.swift in Sources */,
 				04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */,
 				25072D8A2C10D29F0020CB76 /* LookCardView.swift in Sources */,
 				04BA1EC32C03C163006F4069 /* WardrobeView.swift in Sources */,
 				04BA1EC92C04FA13006F4069 /* TabItem.swift in Sources */,
 				04BA1EB92C039982006F4069 /* BackButton.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04E150C22C11B8E2007C423F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04E150CB2C11B8E2007C423F /* ContentView.swift in Sources */,
-				04E150D92C11BB52007C423F /* Color+Brand.swift in Sources */,
-				04E150DA2C11BB52007C423F /* TabItem.swift in Sources */,
-				04E150DB2C11BB52007C423F /* StyleSphereApp.swift in Sources */,
-				04E150DC2C11BB52007C423F /* DateValue.swift in Sources */,
-				04E150DD2C11BB52007C423F /* UIDevice+Pad.swift in Sources */,
-				04E150DE2C11BB52007C423F /* IdentifiableDate.swift in Sources */,
-				04E150DF2C11BB52007C423F /* SceneDelegate.swift in Sources */,
-				04E150E02C11BB52007C423F /* WardrobeItem.swift in Sources */,
-				04E150E12C11BB52007C423F /* SwiftDataModel.swift in Sources */,
-				04E150E22C11BB52007C423F /* Event.swift in Sources */,
-				04E150E32C11BB52007C423F /* ModelPreview.swift in Sources */,
-				04E150E42C11BB52007C423F /* ViewController.swift in Sources */,
-				04E150E52C11BB52007C423F /* LooksItem.swift in Sources */,
-				04E150E62C11BB52007C423F /* CalendarViewController.swift in Sources */,
-				04E150E72C11BB52007C423F /* SplashScreenItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,14 +451,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		04E150D22C11B8E4007C423F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04E150C52C11B8E2007C423F /* StyleSphereWatch Watch App */;
-			targetProxy = 04E150D12C11B8E4007C423F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		04CF61E82BFF780B0053FA09 /* Debug */ = {
@@ -809,68 +636,6 @@
 			};
 			name = Release;
 		};
-		04E150D52C11B8E4007C423F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StyleSphereWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = QH9X33Y55J;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = StyleSphereWatch;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = uc.StyleSphere;
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uc.StyleSphere.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
-			};
-			name = Debug;
-		};
-		04E150D62C11B8E4007C423F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StyleSphereWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = QH9X33Y55J;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = StyleSphereWatch;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = uc.StyleSphere;
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uc.StyleSphere.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
-			};
-			name = Release;
-		};
 		04FE21782C11F3E80075F53A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -942,15 +707,6 @@
 			buildConfigurations = (
 				04CF61EB2BFF780B0053FA09 /* Debug */,
 				04CF61EC2BFF780B0053FA09 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04E150D72C11B8E4007C423F /* Build configuration list for PBXNativeTarget "StyleSphereWatch Watch App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04E150D52C11B8E4007C423F /* Debug */,
-				04E150D62C11B8E4007C423F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,179 +2,113 @@
 //  CalendarView.swift
 //  StyleSphere
 //
-//  Created by MacBook Pro on 27/05/24.
+//  Created by Rama Adi Nugraha on 06/06/24.
 //
 
 import SwiftUI
+import SwiftData
 
 struct CalendarView: View {
-    @Binding var currentDate: Date
-    @State private var currentMonth: Int = 0
-    @State private var isShowingAddEvent = false
+    @Query var events: [CalendarEvent]
+    
+    @State var eventsDates: [String] = []
+    @State var eventsByDate: [String: [CalendarEvent]] = [:]
     
     var body: some View {
-        ScrollView(.vertical) {
-            VStack(spacing: 35) {
-                let days: [String] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-                
-                VStack(spacing: 20) {
-                    HStack {
-                        Spacer()
-                        Text(extraDate()[0])
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Spacer()
-                        Text(extraDate()[1])
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Spacer()
-                        Button {
-                            withAnimation {
-                                currentMonth -= 1
-                            }
-                        } label: {
-                            Image(systemName: "chevron.left")
-                                .font(.title2)
-                                .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
-                        }
-                        
-                        Spacer()
-                        
-                        Button {
-                            withAnimation {
-                                currentMonth += 1
-                            }
-                        } label: {
-                            Image(systemName: "chevron.right")
-                                .font(.title2)
-                                .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
-                        }
-                        
-                        Spacer()
-                    }
-                    .padding()
-                    
-                    HStack(spacing: 0) {
-                        ForEach(days, id: \.self) { day in
-                            Text(day)
-                                .font(.callout)
-                                .fontWeight(.bold)
-                                .frame(maxWidth: .infinity)
-                                .foregroundColor(Color(red: 0.42, green: 0.31, blue: 0.22))
-                        }
-                    }
-                    
-                    let columns = Array(repeating: GridItem(.flexible()), count: 7)
-                    
-                    LazyVGrid(columns: columns, spacing: 15) {
-                        ForEach(extractDate()) { value in
-                            if value.day != -1 {
-                                Text("\(value.day)")
-                                    .font(.title3.bold())
-                                    .foregroundColor(isToday(date: value.date) ? Color(red: 0.42, green: 0.31, blue: 0.22) : Color(red: 0.42, green: 0.31, blue: 0.22))
-                                    .background(isToday(date: value.date) ? Color(red: 0.36, green: 0.25, blue: 0.20).opacity(0.3) : Color.clear)
-                                    .cornerRadius(10)
-                            } else {
-                                Text("")
-                                    .font(.title3.bold())
-                                    .foregroundColor(.clear)
-                            }
-                        }
-                    }
+        NavigationStack {
+            Group{
+                if events.isEmpty {
+                    ContentUnavailableView("No events added",
+                                           systemImage: "hanger",
+                                           description: Text("Add a new event to start")
+                    )
+                } else {
+                    eventList
+                        .onAppear(perform: groupEvents)
+                        .listStyle(.inset)
                 }
-                EventShowcaseView()
-                
             }
-            .padding(.top, 20) // Add padding to move the button higher
-            
-            // Add button to navigate to AddEvent page
-            Button(action: {
-                isShowingAddEvent = true
-            }) {
-                Text("Add Event")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color(red: 0.42, green: 0.31, blue: 0.22))
-                    .cornerRadius(16)
-                    .frame(width: 300)
+            .navigationTitle("Calendar")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleTextColor(.subColor)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    addButton
+                }
             }
-            .sheet(isPresented: $isShowingAddEvent) {
-                AddEvent()
-            }
-            
-        }
-        .onChange(of: currentMonth) { newValue in
-            currentDate = getCurrentMonth()
         }
     }
     
-    // Year and month display
-    func extraDate() -> [String] {
+    private var eventList: some View {
+        List {
+            ForEach(eventsDates, id: \.self) { date in
+                eventSection(for: date)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private func eventSection(for date: String) -> some View {
+        Section(date) {
+            ForEach(eventsByDate[date] ?? [], id: \.id) { event in
+                EventRow(event: event)
+            }
+        }
+    }
+    
+    private var addButton: some View {
+        NavigationLink(destination: NewCalendarView()) {
+            Label("Add new event", systemImage: "plus")
+        }
+    }
+    
+    private func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy MMMM"
-        
-        let date = formatter.string(from: getCurrentMonth())
-        
-        return date.components(separatedBy: " ")
+        formatter.dateStyle = .medium
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.locale = Locale(identifier: "en_US")
+        return formatter.string(from: date)
     }
     
-    func getCurrentMonth() -> Date {
-        let calendar = Calendar.current
+    private func groupEvents() {
+        eventsDates = []
+        eventsByDate = [:]
         
-        guard let currentMonth = calendar.date(byAdding: .month, value: self.currentMonth, to: currentDate) else {
-            return Date()
+        let sortedEvents = events.sorted { $0.date > $1.date }
+        for event in sortedEvents {
+            let date = formatDate(event.date)
+            if eventsByDate[date] == nil {
+                eventsDates.append(date)
+                eventsByDate[date] = [event]
+            } else {
+                eventsByDate[date]!.append(event)
+            }
         }
-        return currentMonth
     }
     
-    func extractDate() -> [DateValue] {
-        let calendar = Calendar.current
-        let currentMonth = getCurrentMonth()
+    struct EventRow: View {
+        var event: CalendarEvent
         
-        var days = currentMonth.getAllDates().compactMap { date -> DateValue in
-            let day = calendar.component(.day, from: date)
-            return DateValue(day: day, date: date)
+        var body: some View {
+            HStack {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(event.title).font(.headline)
+                    HStack {
+                        Image(systemName: "hanger")
+                        Text(event.look.name)
+                    }.font(.subheadline)
+                }
+                Spacer()
+                
+                NavigationLink(destination: LooksView()) {
+                    EmptyView()
+                }
+            }
         }
-        
-        let firstWeekday = calendar.component(.weekday, from: days.first?.date ?? Date())
-        
-        for _ in 0..<firstWeekday - 1 {
-            days.insert(DateValue(day: -1, date: Date()), at: 0)
-        }
-        
-        return days
     }
     
-    func isToday(date: Date) -> Bool {
-        let calendar = Calendar.current
-        return calendar.isDateInToday(date)
-    }
 }
 
-struct CalendarView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalendarView(currentDate: .constant(Date()))
-    }
-}
-
-// Extensions and utility functions
-extension Date {
-    func getAllDates() -> [Date] {
-        let calendar = Calendar.current
-        let startDate = calendar.date(from: calendar.dateComponents([.year, .month], from: self))!
-        let range = calendar.range(of: .day, in: .month, for: startDate)!
-        
-        return range.compactMap { day -> Date in
-            calendar.date(byAdding: .day, value: day - 1, to: startDate)!
-        }
-    }
+#Preview {
+    CalendarView().modelContainer(SwiftDataModel.container)
 }
