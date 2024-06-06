@@ -14,7 +14,7 @@ struct Home: View {
                         .font(.system(size: 24, weight: .heavy))
                     
                     Spacer()
-                    NavigationLink(destination: WardrobeView()) {
+                    NavigationLink(destination: Wardrobe()) {
                         Text("See All")
                             .font(.system(size: 16))
                     }
@@ -39,7 +39,7 @@ struct Home: View {
                         .font(.system(size: 24, weight: .heavy))
                     
                     Spacer()
-                    NavigationLink(destination: WardrobeView()) {
+                    NavigationLink(destination: Wardrobe()) {
                         Text("See All")
                             .font(.system(size: 16))
                     }

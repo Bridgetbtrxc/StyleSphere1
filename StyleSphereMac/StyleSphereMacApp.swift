@@ -25,14 +25,14 @@ struct Sidebar: View {
             NavigationLink(destination: Home()) {
                 Label("Home", systemImage: "house")
             }
-            NavigationLink(destination: DetailView(text: "Wardrobe")) {
-                Label("Wardrobe", systemImage: "star")
+            NavigationLink(destination: Wardrobe()) {
+                Label("Wardrobe", systemImage: "hanger")
             }
             NavigationLink(destination: DetailView(text: "Looks")) {
-                Label("Looks", systemImage: "star")
+                Label("Looks", systemImage: "suitcase")
             }
             NavigationLink(destination: DetailView(text: "Calendar")) {
-                Label("Calendar", systemImage: "star")
+                Label("Calendar", systemImage: "calendar")
             }
         }
         .listStyle(SidebarListStyle())
