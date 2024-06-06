@@ -66,6 +66,10 @@
 		04E150E62C11BB52007C423F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C68D12C109741000553F9 /* CalendarViewController.swift */; };
 		04E150E72C11BB52007C423F /* SplashScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */; };
 		04EF6ADD2C085CF500BA2B80 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF6ADC2C085CF500BA2B80 /* DateValue.swift */; };
+		04FE216E2C11F3E60075F53A /* StyleSphereMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */; };
+		04FE21702C11F3E60075F53A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE216F2C11F3E60075F53A /* ContentView.swift */; };
+		04FE21722C11F3E80075F53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21712C11F3E80075F53A /* Assets.xcassets */; };
+		04FE21752C11F3E80075F53A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21742C11F3E80075F53A /* Preview Assets.xcassets */; };
 		25072D7F2C10B2690020CB76 /* LooksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D7E2C10B2690020CB76 /* LooksItem.swift */; };
 		25072D832C10CB610020CB76 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D822C10CB610020CB76 /* SearchbarView.swift */; };
 		25072D882C10CD890020CB76 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 25072D872C10CD890020CB76 /* CalendarKit */; };
@@ -145,6 +149,12 @@
 		04E150CC2C11B8E4007C423F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E150CF2C11B8E4007C423F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04EF6ADC2C085CF500BA2B80 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		04FE216B2C11F3E60075F53A /* StyleSphereMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleSphereMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSphereMacApp.swift; sourceTree = "<group>"; };
+		04FE216F2C11F3E60075F53A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04FE21712C11F3E80075F53A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04FE21742C11F3E80075F53A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04FE21762C11F3E80075F53A /* StyleSphereMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StyleSphereMac.entitlements; sourceTree = "<group>"; };
 		25072D7E2C10B2690020CB76 /* LooksItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksItem.swift; sourceTree = "<group>"; };
 		25072D822C10CB610020CB76 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
 		25072D892C10D29F0020CB76 /* LookCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookCardView.swift; sourceTree = "<group>"; };
@@ -164,6 +174,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04E150C32C11B8E2007C423F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE21682C11F3E60075F53A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,6 +309,7 @@
 			children = (
 				04CF61DE2BFF78090053FA09 /* StyleSphere */,
 				04E150C72C11B8E2007C423F /* StyleSphereWatch Watch App */,
+				04FE216C2C11F3E60075F53A /* StyleSphereMac */,
 				04CF61DD2BFF78090053FA09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -301,6 +319,7 @@
 			children = (
 				04CF61DC2BFF78090053FA09 /* StyleSphere.app */,
 				04E150C62C11B8E2007C423F /* StyleSphereWatch Watch App.app */,
+				04FE216B2C11F3E60075F53A /* StyleSphereMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,7 +361,6 @@
 		04E150C72C11B8E2007C423F /* StyleSphereWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				04E150E82C11BE58007C423F /* View */,
 				04E150CA2C11B8E2007C423F /* ContentView.swift */,
 				04E150CC2C11B8E4007C423F /* Assets.xcassets */,
 				04E150CE2C11B8E4007C423F /* Preview Content */,
@@ -358,35 +376,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		04E150E82C11BE58007C423F /* View */ = {
+		04FE216C2C11F3E60075F53A /* StyleSphereMac */ = {
 			isa = PBXGroup;
 			children = (
-				04E150EB2C11C158007C423F /* Wardrobe */,
-				04E150EA2C11BE72007C423F /* Calendar */,
-				04E150E92C11BE62007C423F /* Component */,
+				04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */,
+				04FE216F2C11F3E60075F53A /* ContentView.swift */,
+				04FE21712C11F3E80075F53A /* Assets.xcassets */,
+				04FE21762C11F3E80075F53A /* StyleSphereMac.entitlements */,
+				04FE21732C11F3E80075F53A /* Preview Content */,
 			);
-			path = View;
+			path = StyleSphereMac;
 			sourceTree = "<group>";
 		};
-		04E150E92C11BE62007C423F /* Component */ = {
+		04FE21732C11F3E80075F53A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				04FE21742C11F3E80075F53A /* Preview Assets.xcassets */,
 			);
-			path = Component;
-			sourceTree = "<group>";
-		};
-		04E150EA2C11BE72007C423F /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		04E150EB2C11C158007C423F /* Wardrobe */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wardrobe;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +439,23 @@
 			productReference = 04E150C62C11B8E2007C423F /* StyleSphereWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04FE216A2C11F3E60075F53A /* StyleSphereMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04FE21772C11F3E80075F53A /* Build configuration list for PBXNativeTarget "StyleSphereMac" */;
+			buildPhases = (
+				04FE21672C11F3E60075F53A /* Sources */,
+				04FE21682C11F3E60075F53A /* Frameworks */,
+				04FE21692C11F3E60075F53A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StyleSphereMac;
+			productName = StyleSphereMac;
+			productReference = 04FE216B2C11F3E60075F53A /* StyleSphereMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -446,6 +470,9 @@
 						CreatedOnToolsVersion = 15.3;
 					};
 					04E150C52C11B8E2007C423F = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					04FE216A2C11F3E60075F53A = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -469,6 +496,7 @@
 			targets = (
 				04CF61DB2BFF78090053FA09 /* StyleSphere */,
 				04E150C52C11B8E2007C423F /* StyleSphereWatch Watch App */,
+				04FE216A2C11F3E60075F53A /* StyleSphereMac */,
 			);
 		};
 /* End PBXProject section */
@@ -490,6 +518,15 @@
 				04E150D02C11B8E4007C423F /* Preview Assets.xcassets in Resources */,
 				04E150D82C11BB52007C423F /* Assets.xcassets in Resources */,
 				04E150CD2C11B8E4007C423F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE21692C11F3E60075F53A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE21752C11F3E80075F53A /* Preview Assets.xcassets in Resources */,
+				04FE21722C11F3E80075F53A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +603,15 @@
 				04E150E52C11BB52007C423F /* LooksItem.swift in Sources */,
 				04E150E62C11BB52007C423F /* CalendarViewController.swift in Sources */,
 				04E150E72C11BB52007C423F /* SplashScreenItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE21672C11F3E60075F53A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE21702C11F3E60075F53A /* ContentView.swift in Sources */,
+				04FE216E2C11F3E60075F53A /* StyleSphereMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +871,60 @@
 			};
 			name = Release;
 		};
+		04FE21782C11F3E80075F53A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StyleSphereMac/StyleSphereMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StyleSphereMac/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uc.StyleSphereMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		04FE21792C11F3E80075F53A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StyleSphereMac/StyleSphereMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StyleSphereMac/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uc.StyleSphereMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -851,6 +951,15 @@
 			buildConfigurations = (
 				04E150D52C11B8E4007C423F /* Debug */,
 				04E150D62C11B8E4007C423F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04FE21772C11F3E80075F53A /* Build configuration list for PBXNativeTarget "StyleSphereMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FE21782C11F3E80075F53A /* Debug */,
+				04FE21792C11F3E80075F53A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
