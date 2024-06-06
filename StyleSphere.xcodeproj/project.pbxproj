@@ -431,14 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FE21752C11F3E80075F53A /* Preview Assets.xcassets in Resources */,
-<<<<<<< HEAD
-<<<<<<< HEAD
 				04FE21BA2C122C8D0075F53A /* Assets.xcassets in Resources */,
-=======
-				04E150F62C12375B007C423F /* Assets.xcassets in Resources */,
->>>>>>> 49c4614057b623ed27d9777f755a0ac9dde1651c
-=======
->>>>>>> parent of 49c4614 (target MacOS???)
 				04FE21722C11F3E80075F53A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,26 +485,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-<<<<<<< HEAD
 				04FE21B62C122B960075F53A /* StyleInfoView.swift in Sources */,
 				04FE21B82C122BEE0075F53A /* LooksItem.swift in Sources */,
 				04FE21B22C122B5A0075F53A /* YourWardrobe.swift in Sources */,
-=======
-				04E150EC2C12375B007C423F /* TabItem.swift in Sources */,
-				04E150ED2C12375B007C423F /* Color+Brand.swift in Sources */,
-				04E150EE2C12375B007C423F /* CalendarEvent.swift in Sources */,
-				04E150EF2C12375B007C423F /* LooksItem.swift in Sources */,
-				04E150F02C12375B007C423F /* WardrobeItem.swift in Sources */,
-				04E150F12C12375B007C423F /* SplashScreenItem.swift in Sources */,
-				04E150F22C12375B007C423F /* UIDevice+Pad.swift in Sources */,
-				04E150F32C12375B007C423F /* SwiftDataModel.swift in Sources */,
-				04E150F42C12375B007C423F /* StyleSphereApp.swift in Sources */,
-				04E150F52C12375B007C423F /* ModelPreview.swift in Sources */,
-=======
->>>>>>> parent of 49c4614 (target MacOS???)
-				04FE21702C11F3E60075F53A /* ContentView.swift in Sources */,
->>>>>>> 49c4614057b623ed27d9777f755a0ac9dde1651c
 				04FE216E2C11F3E60075F53A /* StyleSphereMacApp.swift in Sources */,
 				04FE21B02C122B050075F53A /* Home.swift in Sources */,
 				04FE21B92C122BF20075F53A /* WardrobeItem.swift in Sources */,
