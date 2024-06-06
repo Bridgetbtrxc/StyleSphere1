@@ -36,6 +36,17 @@
 		04CF61F02BFF7D880053FA09 /* SplashScreenView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61EF2BFF7D880053FA09 /* SplashScreenView1.swift */; };
 		04CF61F52BFF7F820053FA09 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
 		04CF61FD2BFF911A0053FA09 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61FC2BFF911A0053FA09 /* SplashScreenView.swift */; };
+		04E150EC2C12375B007C423F /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1EC82C04FA13006F4069 /* TabItem.swift */; };
+		04E150ED2C12375B007C423F /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61F42BFF7F820053FA09 /* Color+Brand.swift */; };
+		04E150EE2C12375B007C423F /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF52C088158002C3E2A /* CalendarEvent.swift */; };
+		04E150EF2C12375B007C423F /* LooksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D7E2C10B2690020CB76 /* LooksItem.swift */; };
+		04E150F02C12375B007C423F /* WardrobeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB9C7C2C07265B001FC84F /* WardrobeItem.swift */; };
+		04E150F12C12375B007C423F /* SplashScreenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA1E9F2C0228BF006F4069 /* SplashScreenItem.swift */; };
+		04E150F22C12375B007C423F /* UIDevice+Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */; };
+		04E150F32C12375B007C423F /* SwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */; };
+		04E150F42C12375B007C423F /* StyleSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF61DF2BFF78090053FA09 /* StyleSphereApp.swift */; };
+		04E150F52C12375B007C423F /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E672C0CB2720019A4B5 /* ModelPreview.swift */; };
+		04E150F62C12375B007C423F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF61E32BFF780B0053FA09 /* Assets.xcassets */; };
 		04FE216E2C11F3E60075F53A /* StyleSphereMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE216D2C11F3E60075F53A /* StyleSphereMacApp.swift */; };
 		04FE21702C11F3E60075F53A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE216F2C11F3E60075F53A /* ContentView.swift */; };
 		04FE21722C11F3E80075F53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21712C11F3E80075F53A /* Assets.xcassets */; };
@@ -392,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FE21752C11F3E80075F53A /* Preview Assets.xcassets in Resources */,
+				04E150F62C12375B007C423F /* Assets.xcassets in Resources */,
 				04FE21722C11F3E80075F53A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +457,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E150EC2C12375B007C423F /* TabItem.swift in Sources */,
+				04E150ED2C12375B007C423F /* Color+Brand.swift in Sources */,
+				04E150EE2C12375B007C423F /* CalendarEvent.swift in Sources */,
+				04E150EF2C12375B007C423F /* LooksItem.swift in Sources */,
+				04E150F02C12375B007C423F /* WardrobeItem.swift in Sources */,
+				04E150F12C12375B007C423F /* SplashScreenItem.swift in Sources */,
+				04E150F22C12375B007C423F /* UIDevice+Pad.swift in Sources */,
+				04E150F32C12375B007C423F /* SwiftDataModel.swift in Sources */,
+				04E150F42C12375B007C423F /* StyleSphereApp.swift in Sources */,
+				04E150F52C12375B007C423F /* ModelPreview.swift in Sources */,
 				04FE21702C11F3E60075F53A /* ContentView.swift in Sources */,
 				04FE216E2C11F3E60075F53A /* StyleSphereMacApp.swift in Sources */,
 			);
