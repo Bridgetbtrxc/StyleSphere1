@@ -1,6 +1,6 @@
 StyleSphere
 
-Welcome to StyleSphere, the digital wardrobe application designed to revolutionize how you manage and style your wardrobe. StyleSphere allows you to organize your clothing items digitally and offers personalized outfit recommendations.
+Welcome to StyleSphere, the digital wardrobe application designed to revolutionize how you manage and style your wardrobe. StyleSphere allows you to organize your clothing items digitally and offers personalized digital wardrobe.
 
 Features
 
