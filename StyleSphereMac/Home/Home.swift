@@ -4,11 +4,14 @@ struct Home: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
+                Spacer()
                 Text("Style that Matches You🔥")
                     .font(.system(size: 24, weight: .heavy))
                     .padding(.leading, 20)
                 StyleInfoView()
+                Spacer()
                 Banner()
+                Spacer()
                 HStack {
                     Text("Your Wardrobe")
                         .font(.system(size: 24, weight: .heavy))
@@ -29,11 +32,14 @@ struct Home: View {
     private func mainContentView() -> some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
+                Spacer()
                 Text("Style that Matches You🔥")
                     .font(.system(size: 24, weight: .heavy))
                     .padding(.leading, 20)
                 StyleInfoView()
+                Spacer()
                 Banner()
+                Spacer()
                 HStack {
                     Text("Your Wardrobe")
                         .font(.system(size: 24, weight: .heavy))

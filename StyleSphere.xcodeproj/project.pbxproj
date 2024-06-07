@@ -12,6 +12,8 @@
 		045F3C822C108C9A003F4430 /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C7E2C108C9A003F4430 /* AddNewItemView.swift */; };
 		045F3C832C108C9A003F4430 /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F3C7F2C108C9A003F4430 /* ColorButton.swift */; };
 		046EFCF62C088158002C3E2A /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EFCF52C088158002C3E2A /* CalendarEvent.swift */; };
+		047EFCA72C12A1780056DB37 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 047EFCA62C12A1780056DB37 /* CalendarKit */; };
+		047EFCAB2C12A18E0056DB37 /* SwiftUIMasonry in Frameworks */ = {isa = PBXBuildFile; productRef = 047EFCAA2C12A18E0056DB37 /* SwiftUIMasonry */; };
 		04B43CF22C10C57E00E99242 /* CreateLookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B43CF12C10C57E00E99242 /* CreateLookView.swift */; };
 		04B43CF42C10C89F00E99242 /* LooksItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B43CF32C10C89F00E99242 /* LooksItemView.swift */; };
 		04B953CE2C06B4260015C45D /* AddClothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B953CD2C06B4260015C45D /* AddClothes.swift */; };
@@ -52,9 +54,7 @@
 		04FE21F52C1263720075F53A /* WardrobeThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21F42C1263720075F53A /* WardrobeThings.swift */; };
 		25072D7F2C10B2690020CB76 /* LooksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D7E2C10B2690020CB76 /* LooksItem.swift */; };
 		25072D832C10CB610020CB76 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D822C10CB610020CB76 /* SearchbarView.swift */; };
-		25072D882C10CD890020CB76 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 25072D872C10CD890020CB76 /* CalendarKit */; };
 		25072D8A2C10D29F0020CB76 /* LookCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25072D892C10D29F0020CB76 /* LookCardView.swift */; };
-		25072D8D2C10D7290020CB76 /* SwiftUIMasonry in Frameworks */ = {isa = PBXBuildFile; productRef = 25072D8C2C10D7290020CB76 /* SwiftUIMasonry */; };
 		25464E642C0CAC140019A4B5 /* UIDevice+Pad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E632C0CAC140019A4B5 /* UIDevice+Pad.swift */; };
 		25464E662C0CB1330019A4B5 /* SwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E652C0CB1330019A4B5 /* SwiftDataModel.swift */; };
 		25464E682C0CB2720019A4B5 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25464E672C0CB2720019A4B5 /* ModelPreview.swift */; };
@@ -81,6 +81,7 @@
 		045F3C7E2C108C9A003F4430 /* AddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddNewItemView.swift; path = ../../../AddNewItemView.swift; sourceTree = "<group>"; };
 		045F3C7F2C108C9A003F4430 /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorButton.swift; path = ../../../ColorButton.swift; sourceTree = "<group>"; };
 		046EFCF52C088158002C3E2A /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		047EFCA82C12A17E0056DB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04B43CF12C10C57E00E99242 /* CreateLookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLookView.swift; sourceTree = "<group>"; };
 		04B43CF32C10C89F00E99242 /* LooksItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksItemView.swift; sourceTree = "<group>"; };
 		04B953CD2C06B4260015C45D /* AddClothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClothes.swift; sourceTree = "<group>"; };
@@ -134,8 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25072D8D2C10D7290020CB76 /* SwiftUIMasonry in Frameworks */,
-				25072D882C10CD890020CB76 /* CalendarKit in Frameworks */,
+				047EFCAB2C12A18E0056DB37 /* SwiftUIMasonry in Frameworks */,
+				047EFCA72C12A1780056DB37 /* CalendarKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +253,7 @@
 		04CF61DE2BFF78090053FA09 /* StyleSphere */ = {
 			isa = PBXGroup;
 			children = (
+				047EFCA82C12A17E0056DB37 /* Info.plist */,
 				04BA1EA72C0228BF006F4069 /* View */,
 				04CF61F32BFF7F420053FA09 /* Utils */,
 				04BA1EA02C0228BF006F4069 /* Model */,
@@ -368,8 +370,8 @@
 			);
 			name = StyleSphere;
 			packageProductDependencies = (
-				25072D872C10CD890020CB76 /* CalendarKit */,
-				25072D8C2C10D7290020CB76 /* SwiftUIMasonry */,
+				047EFCA62C12A1780056DB37 /* CalendarKit */,
+				047EFCAA2C12A18E0056DB37 /* SwiftUIMasonry */,
 			);
 			productName = StyleSphere;
 			productReference = 04CF61DC2BFF78090053FA09 /* StyleSphere.app */;
@@ -420,8 +422,8 @@
 			);
 			mainGroup = 04CF61D32BFF78090053FA09;
 			packageReferences = (
-				25072D862C10CD890020CB76 /* XCRemoteSwiftPackageReference "CalendarKit" */,
-				25072D8B2C10D7290020CB76 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */,
+				047EFCA52C12A1780056DB37 /* XCRemoteSwiftPackageReference "CalendarKit" */,
+				047EFCA92C12A18E0056DB37 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */,
 			);
 			productRefGroup = 04CF61DD2BFF78090053FA09 /* Products */;
 			projectDirPath = "";
@@ -650,6 +652,7 @@
 				DEVELOPMENT_TEAM = QH9X33Y55J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StyleSphere/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "This app will have access to show events";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -682,6 +685,7 @@
 				DEVELOPMENT_TEAM = QH9X33Y55J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StyleSphere/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "This app will have access to show events";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -789,7 +793,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		25072D862C10CD890020CB76 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+		047EFCA52C12A1780056DB37 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
 			requirement = {
@@ -797,9 +801,9 @@
 				minimumVersion = 1.1.10;
 			};
 		};
-		25072D8B2C10D7290020CB76 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */ = {
+		047EFCA92C12A18E0056DB37 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ciaranrobrien/SwiftUIMasonry.git";
+			repositoryURL = "https://github.com/ciaranrobrien/SwiftUIMasonry";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -808,14 +812,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		25072D872C10CD890020CB76 /* CalendarKit */ = {
+		047EFCA62C12A1780056DB37 /* CalendarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 25072D862C10CD890020CB76 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			package = 047EFCA52C12A1780056DB37 /* XCRemoteSwiftPackageReference "CalendarKit" */;
 			productName = CalendarKit;
 		};
-		25072D8C2C10D7290020CB76 /* SwiftUIMasonry */ = {
+		047EFCAA2C12A18E0056DB37 /* SwiftUIMasonry */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 25072D8B2C10D7290020CB76 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */;
+			package = 047EFCA92C12A18E0056DB37 /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */;
 			productName = SwiftUIMasonry;
 		};
 /* End XCSwiftPackageProductDependency section */
