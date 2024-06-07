@@ -5,13 +5,9 @@ Welcome to StyleSphere, the digital wardrobe application designed to revolutioni
 Features
 
 Wardrobe: Digitally add and organize your clothing items into categories.
-Looks: Generate and save outfit ideas based on your personal style and wardrobe contents.
-Getting Started
+Looks: Generate Looks from wardrobe item
+Calendar: plan event and create looks for certain events
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-Prerequisites
-What things you need to install the software and how to install them:
 Built With
 
 SwiftUI - The framework used for building the user interface.
