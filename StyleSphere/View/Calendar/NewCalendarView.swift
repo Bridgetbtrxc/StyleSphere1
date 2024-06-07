@@ -1,10 +1,3 @@
-//
-//  NewCalendarView.swift
-//  StyleSphere
-//
-//   on 06/06/24.
-//
-
 import SwiftUI
 import SwiftData
 

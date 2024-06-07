@@ -1,10 +1,3 @@
-//
-//  WardrobeView.swift
-//  StyleSphere
-//
-//  Created by MacBook Pro on 27/05/24.
-//
-
 import SwiftUI
 import SwiftData
 
